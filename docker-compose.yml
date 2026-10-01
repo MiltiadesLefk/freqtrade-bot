@@ -1,0 +1,22 @@
+---
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable_freqai
+    restart: "no"
+    container_name: freqtrade
+    mem_limit: 2560m
+    env_file:
+      - .env
+    environment:
+      - TZ=Europe/Athens
+    volumes:
+      - "./user_data:/freqtrade/user_data"
+    # Default: the daily trend bot, dry-run. Override the command to backtest, e.g.
+    #   docker compose run --rm freqtrade backtesting --config user_data/config_trend.json \
+    #     --strategy BTCTrendATR --timeframe 1d --timeframe-detail 1h --timerange 20231201-
+    command: >
+      trade
+      --logfile /freqtrade/user_data/logs/freqtrade.log
+      --db-url sqlite:////freqtrade/user_data/tradesv3_trend.sqlite
+      --config /freqtrade/user_data/config_trend.json
+      --strategy BTCTrendATR

@@ -1,0 +1,35 @@
+# ============================================
+# SECRETS — never commit
+# ============================================
+.env
+**/.env
+
+# ============================================
+# LARGE DATA — too big for git
+# ============================================
+user_data/data/
+user_data/models/
+user_data/backtest_results/
+user_data/plot/
+user_data/hyperopt_results/
+
+# ============================================
+# RUNTIME FILES — generated, not source
+# ============================================
+user_data/logs/
+user_data/*.sqlite-shm
+user_data/*.sqlite-wal
+
+# ============================================
+# PYTHON
+# ============================================
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# ============================================
+# SYSTEM
+# ============================================
+.DS_Store
+Thumbs.db
