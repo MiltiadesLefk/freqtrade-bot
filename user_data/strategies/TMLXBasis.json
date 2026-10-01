@@ -1,0 +1,17 @@
+{
+  "strategy_name": "TMLXBasis",
+  "params": {
+    "buy": {
+      "prob_threshold": 0.60,
+      "prob_margin": 0.25,
+      "vol_regime_max": 1.5
+    },
+    "sell": {
+      "exit_prob_threshold": 0.55,
+      "lock_hours": 3.0,
+      "reentry_cooldown_hours": 2.0
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "config-F-equivalent-for-X1"
+}
