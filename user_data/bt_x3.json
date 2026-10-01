@@ -1,0 +1,14 @@
+{
+    "freqai": {
+        "identifier": "bt_x3",
+        "feature_parameters": {
+            "include_corr_pairlist": ["ETH/USDT:USDT", "SOL/USDT:USDT"]
+        }
+    },
+    "telegram": {
+        "enabled": false
+    },
+    "api_server": {
+        "enabled": false
+    }
+}
