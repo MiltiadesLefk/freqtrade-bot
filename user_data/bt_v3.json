@@ -1,0 +1,11 @@
+{
+    "freqai": {
+        "identifier": "bt_v3"
+    },
+    "telegram": {
+        "enabled": false
+    },
+    "api_server": {
+        "enabled": false
+    }
+}
