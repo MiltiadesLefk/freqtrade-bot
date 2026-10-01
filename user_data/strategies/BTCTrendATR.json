@@ -1,0 +1,9 @@
+{
+  "strategy_name": "BTCTrendATR",
+  "params": {
+    "buy": { "sma_period": 50 },
+    "sell": { "tp_atr": 2.0, "sl_atr": 2.0 }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-09-06 regime-minimax pick. freqtrade --timeframe-detail 1h: FULL PF 1.22 (+53.8%, 105tr, DD 26.6%, mkt +44.8%); OOS PF 1.33 (+38.8%, 61tr, DD 26.8%, mkt -27.6%). Regime PFs bull 1.51 / bear 1.46 / sideways 1.52. DO NOT hyperopt - overfits on <30 trades."
+}
