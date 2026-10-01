@@ -1,0 +1,17 @@
+{
+  "strategy_name": "TradingMLStrategyV2",
+  "params": {
+    "buy": {
+      "prob_threshold": 0.60,
+      "prob_margin": 0.25,
+      "vol_regime_max": 1.5
+    },
+    "sell": {
+      "exit_prob_threshold": 0.55,
+      "lock_hours": 3.0,
+      "reentry_cooldown_hours": 2.0
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "config-F-2026-07-14-postaudit (hyperopt epoch-136 rejected: +2.09% dev was noise, -9.22% on May15-Jul14 validation vs config F -8.37%)"
+}
