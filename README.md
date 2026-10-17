@@ -62,6 +62,62 @@ stops (as ML filters and as standalone strategies), and a 200-epoch hyperopt.
   insufficient evidence", not "proven".
 - Diversifying across assets diluted the result rather than helping.
 
+## Results
+
+All ML configurations lost money over meaningful windows; the value of this repo is the method
+(out-of-sample testing, look-ahead bug detection, cost/turnover analysis), not profit. Full notes:
+[results/README.md](results/README.md). Raw zips, logs and FreqAI models are in `results/`.
+
+Below, 42 of the 120 runs, copied unchanged from
+[results/backtest_summary.csv](results/backtest_summary.csv): each strategy's worst run, every
+run flagged as suspicious (⚠), and the best run of the strategies that had a positive one. The
+rest are in the summary file. TF = timeframe, PF = profit factor, DD = drawdown.
+
+| Strategy | TF | Period | Trades | PF | Profit % | Max DD % | Flag |
+|---|---|---|---|---|---|---|---|
+| TradingMLStrategyOld | 15m | 2026-04-20 to 2026-07-06 | 108 | 0.77 | -9.5 | 9.5 |  |
+| TradingMLStrategy | 15m | 2026-04-20 to 2026-07-06 | 237 | 0.62 | -30.45 | 32.88 |  |
+| TradingMLStrategyV2 | 15m | 2025-10-15 to 2026-05-15 | 1057 | 0.79 | -45.02 | 46.61 | ⚠ trade count far above median (~80): 1057 |
+| TradingMLStrategyV3 | 1h | 2026-05-15 to 2026-07-06 | 30 | 0.62 | -5.04 | 6.07 |  |
+| TMLXLong | 15m | 2026-05-15 to 2026-07-14 | 98 | 0.55 | -14.7 | 15.09 |  |
+| TMLXShort | 15m | 2026-05-15 to 2026-07-14 | 80 | 0.98 | -0.45 | 6.85 |  |
+| TMLXEV6 | 15m | 2026-05-15 to 2026-07-14 | 141 | 0.81 | -8.01 | 11.25 |  |
+| TMLXEV9 | 15m | 2026-05-15 to 2026-07-14 | 139 | 0.76 | -10.18 | 13.44 |  |
+| TMLXTP60 | 15m | 2026-05-15 to 2026-07-14 | 150 | 0.81 | -8.08 | 10.31 |  |
+| TMLXRange25 | 15m | 2026-05-15 to 2026-07-14 | 92 | 0.66 | -10.75 | 14.83 |  |
+| TradingMLStrategyV2 | 15m | 2026-07-12 to 2026-07-14 | 6 | 2.73 | 1.97 | 1.13 | ⚠ very low trade count: 6 (low statistical significance) |
+| TradingMLStrategyV2 | 15m | 2026-07-12 to 2026-07-14 | 6 | 2.73 | 1.97 | 1.13 | ⚠ very low trade count: 6 (low statistical significance) |
+| TMLXBasis | 15m | 2026-05-15 to 2026-07-14 | 139 | 0.67 | -15.03 | 19.12 |  |
+| TMLX4h | 15m | 2026-05-15 to 2026-07-14 | 142 | 0.75 | -10.82 | 14.31 |  |
+| TMLXK6 | 15m | 2026-05-15 to 2026-07-14 | 47 | 0.34 | -10.35 | 10.64 |  |
+| TMLXLiq | 15m | 2026-05-15 to 2026-07-14 | 149 | 0.59 | -17.54 | 21.3 |  |
+| TMLXLiq192 | 15m | 2026-05-15 to 2026-07-14 | 139 | 0.72 | -10.33 | 14.32 |  |
+| TMLXFvg | 15m | 2026-05-15 to 2026-07-14 | 47 | 1.02 | 0.23 | 5.08 |  |
+| TMLXIfvg | 15m | 2026-05-15 to 2026-07-14 | 100 | 0.76 | -7.94 | 10.02 |  |
+| TMLXBosFade | 15m | 2026-05-15 to 2026-07-14 | 119 | 0.54 | -17.79 | 19.72 |  |
+| TMLXSweep | 15m | 2026-05-15 to 2026-07-14 | 46 | 0.59 | -8.66 | 10.71 |  |
+| TMLXPdhTarget | 15m | 2026-05-15 to 2026-07-14 | 134 | 0.63 | -15.79 | 18.09 |  |
+| TMLXFvg | 15m | 2025-10-15 to 2026-07-14 | 181 | 0.78 | -13.16 | 17.51 |  |
+| TMLXBosAlign | 15m | 2025-10-15 to 2026-07-14 | 394 | 0.79 | -24.71 | 31.36 |  |
+| PureFvg | 15m | 2025-10-15 to 2026-07-14 | 26 | 3.17 | 37.08 | 17.07 |  |
+| PureBos | 15m | 2025-10-15 to 2026-07-14 | 17 | 4.25 | 42.26 | 13.02 |  |
+| PureSweep | 15m | 2025-10-15 to 2026-07-14 | 396 | 0.78 | -36.57 | 44.65 |  |
+| PureFvg | 15m | 2025-10-15 to 2026-07-14 | 1564 | 0.84 | -72.79 | 72.99 | ⚠ trade count far above median (~80): 1564 |
+| PureBos | 15m | 2025-10-15 to 2026-07-14 | 499 | 0.82 | -43.41 | 44.77 |  |
+| TMLXFlow | 15m | 2026-07-12 to 2026-07-14 | 4 | 0.51 | -0.6 | 1.13 | ⚠ very low trade count: 4 (low statistical significance) |
+| TMLXFlow | 15m | 2025-10-15 to 2026-07-14 | 431 | 0.83 | -24.9 | 29.87 |  |
+| TMLXFlow | 15m | 2026-07-12 to 2026-07-14 | 4 | 0.51 | -0.6 | 1.13 | ⚠ very low trade count: 4 (low statistical significance) |
+| TradingMLStrategyV2 | 15m | 2024-04-01 to 2024-12-31 | 401 | 0.63 | -50.69 | 51.19 |  |
+| BTCTrendDaily | 1d | 2024-08-07 to 2026-09-05 | 15 | 3.45 | 140.66 | 16.67 |  |
+| BTCTrendDaily | 1d | 2024-08-07 to 2026-09-05 | 27 | 0.88 | -13.15 | 47.64 |  |
+| BTCTrendDaily | 1d | 2024-08-07 to 2025-06-08 | 4 | 5.21 | 30.63 | 7.28 | ⚠ very low trade count: 4 (low statistical significance) |
+| BTCTrendDaily | 1d | 2025-06-09 to 2026-09-05 | 4 | 0.92 | -0.97 | 12.88 | ⚠ very low trade count: 4 (low statistical significance) |
+| BTCTrendDaily | 1d | 2024-08-07 to 2025-06-08 | 10 | 3.07 | 45.06 | 9.53 | ⚠ very low trade count: 10 (low statistical significance) |
+| BTCTrendATR | 1d | 2025-06-09 to 2026-09-05 | 37 | 0.85 | -14.64 | 35.78 |  |
+| BTCTriMA1h | 1h | 2023-12-17 to 2026-09-06 | 213 | 1.25 | 29.13 | 10.81 |  |
+| BTCTriMA1h | 1h | 2025-06-09 to 2026-09-06 | 240 | 1.0 | -0.66 | 14.46 |  |
+| BTCTrendATR | 1d | 2025-02-23 to 2026-09-05 | 76 | 1.48 | 90.87 | 23.36 |  |
+
 ## Layout
 
 ```
@@ -72,6 +128,7 @@ user_data/
   config_trend.json       # BTCTrendATR config (1d)
   strategies/             # all strategies + their .json parameter files
   bt_*.json               # backtest overlays (identifier + one change each)
+results/                  # backtest summary, raw result zips, logs, FreqAI models
 ```
 
 `TMLXFlow` expects pre-processed flow/OI data in `user_data/flowdata/` (built from Binance

@@ -1,0 +1,767 @@
+ Container ft_userdata-freqtrade-run-5b5bf6cf79d9 Creating 
+ Container ft_userdata-freqtrade-run-5b5bf6cf79d9 Created 
+2026-07-16 09:01:40,936 - freqtrade - INFO - freqtrade 2026.3
+2026-07-16 09:01:41,344 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 09:01:43,137 - freqtrade.configuration.load_config - INFO - Using config: user_data/config.json ...
+2026-07-16 09:01:43,140 - freqtrade.configuration.load_config - INFO - Using config: user_data/bt_x8.json ...
+2026-07-16 09:01:43,141 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__JWT_SECRET_KEY'
+2026-07-16 09:01:43,142 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'JWT_SECRET_KEY']
+2026-07-16 09:01:43,143 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__PASSWORD'
+2026-07-16 09:01:43,144 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'PASSWORD']
+2026-07-16 09:01:43,145 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__USERNAME'
+2026-07-16 09:01:43,146 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'USERNAME']
+2026-07-16 09:01:43,147 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__WS_TOKEN'
+2026-07-16 09:01:43,148 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'WS_TOKEN']
+2026-07-16 09:01:43,148 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__KEY'
+2026-07-16 09:01:43,149 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'KEY']
+2026-07-16 09:01:43,150 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__SECRET'
+2026-07-16 09:01:43,151 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'SECRET']
+2026-07-16 09:01:43,152 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__CHAT_ID'
+2026-07-16 09:01:43,153 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'CHAT_ID']
+2026-07-16 09:01:43,154 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__TOKEN'
+2026-07-16 09:01:43,155 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'TOKEN']
+2026-07-16 09:01:43,159 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 09:01:43,160 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 09:01:43,161 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 09:01:43,162 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2026-07-16 09:01:43,163 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20260515-20260714 ...
+2026-07-16 09:01:43,275 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 09:01:43,276 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 09:01:43,276 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2026-07-16 09:01:43,277 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20260515-20260714
+2026-07-16 09:01:43,277 - freqtrade.configuration.configuration - INFO - Using freqaimodel class name: LightGBMClassifier
+2026-07-16 09:01:43,280 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 09:01:43,290 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 09:01:43,291 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-07-16 09:01:43,291 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 09:01:43,294 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-07-16 09:01:43,295 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 09:01:43,296 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.44
+2026-07-16 09:01:43,297 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-07-16 09:01:43,307 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-07-16 09:01:43,316 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 09:01:45,028 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 09:01:45,043 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy TradingMLStrategyV2 from '/freqtrade/user_data/strategies/TradingMLStrategyV2.py'...
+2026-07-16 09:01:45,044 - freqtrade.strategy.hyper - INFO - Loading parameters from file /freqtrade/user_data/strategies/TradingMLStrategyV2.json
+2026-07-16 09:01:45,044 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'minimal_roi' with value from the configuration: {'0': 99}.
+2026-07-16 09:01:45,045 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 15m.
+2026-07-16 09:01:45,045 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stoploss' with value from the configuration: -0.15.
+2026-07-16 09:01:45,046 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'trailing_stop' with value from the configuration: False.
+2026-07-16 09:01:45,046 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-07-16 09:01:45,047 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-07-16 09:01:45,047 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 
+'unit': 'minutes'}.
+2026-07-16 09:01:45,047 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-07-16 09:01:45,048 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 99}
+2026-07-16 09:01:45,048 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 15m
+2026-07-16 09:01:45,049 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.15
+2026-07-16 09:01:45,049 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-07-16 09:01:45,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-07-16 09:01:45,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-07-16 09:01:45,050 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: True
+2026-07-16 09:01:45,051 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-07-16 09:01:45,051 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': True, 
+'stoploss_on_exchange_interval': 60}
+2026-07-16 09:01:45,052 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-07-16 09:01:45,052 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-07-16 09:01:45,053 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-07-16 09:01:45,053 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
+2026-07-16 09:01:45,054 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2026-07-16 09:01:45,054 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-07-16 09:01:45,055 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-07-16 09:01:45,055 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
+2026-07-16 09:01:45,056 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-07-16 09:01:45,056 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-07-16 09:01:45,057 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-07-16 09:01:45,057 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-07-16 09:01:45,058 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-07-16 09:01:45,058 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-07-16 09:01:45,059 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 09:01:45,064 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-07-16 09:01:45,078 - freqtrade.optimize.backtesting - INFO - Using fee 0.0500% - worst case fee from exchange (lowest tier).
+2026-07-16 09:01:45,079 - freqtrade.exchange.exchange - WARNING - Using 2 calls to get OHLCV. This can result in slower operations for the bot. Please check if you really need 800 candles for your 
+strategy.
+2026-07-16 09:01:45,080 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 15m to 5120
+2026-07-16 09:01:45,126 - freqtrade.optimize.backtesting - INFO - Loading data from 2026-03-22 16:00:00 up to 2026-07-14 00:00:00 (113 days).
+2026-07-16 09:01:45,272 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-07-16 09:01:45,274 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy TradingMLStrategyV2
+2026-07-16 09:01:46,279 - freqtrade.resolvers.iresolver - INFO - Using resolved freqaimodel LightGBMClassifier from '/freqtrade/freqtrade/freqai/prediction_models/LightGBMClassifier.py'...
+2026-07-16 09:01:46,280 - freqtrade.freqai.data_drawer - INFO - Could not find existing datadrawer, starting from scratch
+2026-07-16 09:01:46,280 - freqtrade.freqai.data_drawer - INFO - Could not find existing historic_predictions, starting from scratch
+2026-07-16 09:01:46,281 - freqtrade.freqai.freqai_interface - INFO - Set fresh train queue from whitelist. Queue: ['BTC/USDT:USDT']
+2026-07-16 09:01:46,282 - freqtrade.strategy.hyper - INFO - Strategy Parameter: exit_prob_threshold = 0.55
+2026-07-16 09:01:46,282 - freqtrade.strategy.hyper - INFO - Strategy Parameter: lock_hours = 3.0
+2026-07-16 09:01:46,283 - freqtrade.strategy.hyper - INFO - Strategy Parameter: reentry_cooldown_hours = 2.0
+2026-07-16 09:01:46,283 - freqtrade.strategy.hyper - INFO - Strategy Parameter: prob_margin = 0.25
+2026-07-16 09:01:46,283 - freqtrade.strategy.hyper - INFO - Strategy Parameter: prob_threshold = 0.6
+2026-07-16 09:01:46,284 - freqtrade.strategy.hyper - INFO - Strategy Parameter: vol_regime_max = 1.5
+2026-07-16 09:01:46,288 - freqtrade.freqai.freqai_interface - INFO - Training 30 timeranges
+2026-07-16 09:01:46,290 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-31 00:00:00 to 2026-05-15 00:00:00, 1/30 trains
+2026-07-16 09:01:46,296 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1778803200_prediction.feather
+2026-07-16 09:01:46,317 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 1880
+2026-07-16 09:01:46,318 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2026-02-25 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 09:01:46,375 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 1880
+2026-07-16 09:01:46,376 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2026-02-25 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 09:01:46,392 - freqtrade.data.converter.converter - INFO - Missing data fillup for BTC/USDT:USDT, 1h: before: 416 - after: 3321 - 698.32%
+2026-07-16 09:01:46,398 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 15m to 5120
+2026-07-16 09:01:46,398 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 15m from 2026-03-22 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 09:01:46,463 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 1880
+2026-07-16 09:01:46,463 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 1h from 2026-02-25 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 09:01:46,516 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-02 00:00:00 to 2026-05-17 00:00:00, 2/30 trains
+2026-07-16 09:01:46,518 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1778976000_prediction.feather
+2026-07-16 09:01:46,521 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-04 00:00:00 to 2026-05-19 00:00:00, 3/30 trains
+2026-07-16 09:01:46,522 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1779148800_prediction.feather
+2026-07-16 09:01:46,525 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-06 00:00:00 to 2026-05-21 00:00:00, 4/30 trains
+2026-07-16 09:01:46,527 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1779321600_prediction.feather
+2026-07-16 09:01:46,529 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-08 00:00:00 to 2026-05-23 00:00:00, 5/30 trains
+2026-07-16 09:01:46,532 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1779494400_prediction.feather
+2026-07-16 09:01:46,535 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-10 00:00:00 to 2026-05-25 00:00:00, 6/30 trains
+2026-07-16 09:01:46,537 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1779667200_prediction.feather
+2026-07-16 09:01:46,539 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-12 00:00:00 to 2026-05-27 00:00:00, 7/30 trains
+2026-07-16 09:01:46,544 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1779840000_prediction.feather
+2026-07-16 09:01:46,547 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-14 00:00:00 to 2026-05-29 00:00:00, 8/30 trains
+2026-07-16 09:01:46,548 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1780012800_prediction.feather
+2026-07-16 09:01:46,551 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-16 00:00:00 to 2026-05-31 00:00:00, 9/30 trains
+2026-07-16 09:01:46,552 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1780185600_prediction.feather
+2026-07-16 09:01:46,555 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-18 00:00:00 to 2026-06-02 00:00:00, 10/30 trains
+2026-07-16 09:01:46,556 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1780358400_prediction.feather
+2026-07-16 09:01:46,559 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-20 00:00:00 to 2026-06-04 00:00:00, 11/30 trains
+2026-07-16 09:01:46,561 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1780531200_prediction.feather
+2026-07-16 09:01:46,565 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-22 00:00:00 to 2026-06-06 00:00:00, 12/30 trains
+2026-07-16 09:01:46,567 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1780704000_prediction.feather
+2026-07-16 09:01:46,570 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-24 00:00:00 to 2026-06-08 00:00:00, 13/30 trains
+2026-07-16 09:01:46,572 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1780876800_prediction.feather
+2026-07-16 09:01:46,574 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-26 00:00:00 to 2026-06-10 00:00:00, 14/30 trains
+2026-07-16 09:01:46,576 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1781049600_prediction.feather
+2026-07-16 09:01:46,579 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-28 00:00:00 to 2026-06-12 00:00:00, 15/30 trains
+2026-07-16 09:01:46,583 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1781222400_prediction.feather
+2026-07-16 09:01:46,585 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-30 00:00:00 to 2026-06-14 00:00:00, 16/30 trains
+2026-07-16 09:01:46,587 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1781395200_prediction.feather
+2026-07-16 09:01:46,590 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-02 00:00:00 to 2026-06-16 00:00:00, 17/30 trains
+2026-07-16 09:01:46,592 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1781568000_prediction.feather
+2026-07-16 09:01:46,597 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-04 00:00:00 to 2026-06-18 00:00:00, 18/30 trains
+2026-07-16 09:01:46,599 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1781740800_prediction.feather
+2026-07-16 09:01:46,601 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-06 00:00:00 to 2026-06-20 00:00:00, 19/30 trains
+2026-07-16 09:01:46,603 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1781913600_prediction.feather
+2026-07-16 09:01:46,606 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-08 00:00:00 to 2026-06-22 00:00:00, 20/30 trains
+2026-07-16 09:01:46,606 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1782086400_prediction.feather
+2026-07-16 09:01:47,108 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1782086400/cb_btc_1782086400
+2026-07-16 09:01:47,129 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 09:01:47,151 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 09:01:47,152 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-08 to 2026-06-21 --------------------
+2026-07-16 09:01:48,334 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 09:01:48,334 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2026-07-16 09:04:27,028 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (695.98 secs) --------------------
+2026-07-16 09:04:27,032 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 09:04:27,158 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-10 00:00:00 to 2026-06-24 00:00:00, 21/30 trains
+2026-07-16 09:04:27,159 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1782259200_prediction.feather
+2026-07-16 09:04:27,387 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1782259200/cb_btc_1782259200
+2026-07-16 09:04:27,387 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 09:04:27,400 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 09:04:27,401 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-10 to 2026-06-23 --------------------
+2026-07-16 09:04:28,025 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 09:04:28,026 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 09:11:58,528 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (451.14 secs) --------------------
+2026-07-16 09:11:58,533 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 09:11:58,700 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-12 00:00:00 to 2026-06-26 00:00:00, 22/30 trains
+2026-07-16 09:11:58,701 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1782432000_prediction.feather
+2026-07-16 09:11:58,926 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1782432000/cb_btc_1782432000
+2026-07-16 09:11:58,927 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 09:11:58,940 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 09:11:58,941 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-12 to 2026-06-25 --------------------
+2026-07-16 09:11:59,701 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 09:11:59,702 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 09:22:38,304 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (639.38 secs) --------------------
+2026-07-16 09:22:38,308 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 09:22:38,544 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-14 00:00:00 to 2026-06-28 00:00:00, 23/30 trains
+2026-07-16 09:22:38,547 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1782604800_prediction.feather
+2026-07-16 09:22:38,776 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1782604800/cb_btc_1782604800
+2026-07-16 09:22:38,777 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 09:22:38,790 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 09:22:38,791 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-14 to 2026-06-27 --------------------
+2026-07-16 09:22:39,441 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 09:22:39,442 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 09:32:05,279 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (566.50 secs) --------------------
+2026-07-16 09:32:05,284 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 09:32:05,385 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-16 00:00:00 to 2026-06-30 00:00:00, 24/30 trains
+2026-07-16 09:32:05,385 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1782777600_prediction.feather
+2026-07-16 09:32:05,740 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1782777600/cb_btc_1782777600
+2026-07-16 09:32:05,740 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 09:32:05,754 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 09:32:05,755 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-16 to 2026-06-29 --------------------
+2026-07-16 09:32:06,321 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 09:32:06,321 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 09:43:15,814 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (670.07 secs) --------------------
+2026-07-16 09:43:15,818 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 09:43:15,999 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-18 00:00:00 to 2026-07-02 00:00:00, 25/30 trains
+2026-07-16 09:43:16,000 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1782950400_prediction.feather
+2026-07-16 09:43:16,240 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1782950400/cb_btc_1782950400
+2026-07-16 09:43:16,240 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 09:43:16,253 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 09:43:16,254 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-18 to 2026-07-01 --------------------
+2026-07-16 09:43:16,965 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 09:43:16,966 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 09:54:06,691 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (650.45 secs) --------------------
+2026-07-16 09:54:06,695 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 09:54:06,857 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-20 00:00:00 to 2026-07-04 00:00:00, 26/30 trains
+2026-07-16 09:54:06,857 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1783123200_prediction.feather
+2026-07-16 09:54:07,106 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1783123200/cb_btc_1783123200
+2026-07-16 09:54:07,107 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 09:54:07,120 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 09:54:07,121 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-20 to 2026-07-03 --------------------
+2026-07-16 09:54:07,719 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 09:54:07,720 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 10:05:07,318 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (660.21 secs) --------------------
+2026-07-16 10:05:07,322 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 10:05:07,536 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-22 00:00:00 to 2026-07-06 00:00:00, 27/30 trains
+2026-07-16 10:05:07,536 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1783296000_prediction.feather
+2026-07-16 10:05:07,802 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1783296000/cb_btc_1783296000
+2026-07-16 10:05:07,803 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 10:05:07,816 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 10:05:07,816 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-22 to 2026-07-05 --------------------
+2026-07-16 10:05:08,559 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 10:05:08,561 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+
+[LightGBM] [Info] Total Bins 60086
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.947123
+[LightGBM] [Info] Start training from score -1.092490
+[LightGBM] [Info] Start training from score -1.284588
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.039468 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60086
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.940780
+[LightGBM] [Info] Start training from score -1.059548
+[LightGBM] [Info] Start training from score -1.335357
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.021465 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60086
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -1.003547
+[LightGBM] [Info] Start training from score -1.024178
+[LightGBM] [Info] Start training from score -1.293419
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003454 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60085
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.928529
+[LightGBM] [Info] Start training from score -1.105419
+[LightGBM] [Info] Start training from score -1.295381
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.054426 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60085
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.917147
+[LightGBM] [Info] Start training from score -1.104095
+[LightGBM] [Info] Start training from score -1.313671
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.043415 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60085
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.940102
+[LightGBM] [Info] Start training from score -1.062614
+[LightGBM] [Info] Start training from score -1.332335
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.023486 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60085
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.933788
+[LightGBM] [Info] Start training from score -1.058198
+[LightGBM] [Info] Start training from score -1.347623
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.003459 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60085
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.911810
+[LightGBM] [Info] Start training from score -1.120012
+[LightGBM] [Info] Start training from score -1.302219
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.044487 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60082
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.962719
+[LightGBM] [Info] Start training from score -1.128419
+[LightGBM] [Info] Start training from score -1.222129
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.72026-07-16 10:17:52,124 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (764.32 secs) --------------------
+2026-07-16 10:17:52,128 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 10:17:52,307 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-24 00:00:00 to 2026-07-08 00:00:00, 28/30 trains
+2026-07-16 10:17:52,307 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1783468800_prediction.feather
+2026-07-16 10:17:52,617 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1783468800/cb_btc_1783468800
+2026-07-16 10:17:52,617 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 10:17:52,635 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 10:17:52,636 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-24 to 2026-07-07 --------------------
+2026-07-16 10:17:53,269 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 10:17:53,272 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 10:28:17,243 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (624.63 secs) --------------------
+2026-07-16 10:28:17,245 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 10:28:17,425 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-26 00:00:00 to 2026-07-10 00:00:00, 29/30 trains
+2026-07-16 10:28:17,429 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1783641600_prediction.feather
+2026-07-16 10:28:17,717 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1783641600/cb_btc_1783641600
+2026-07-16 10:28:17,717 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 10:28:17,731 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 10:28:17,732 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-26 to 2026-07-09 --------------------
+2026-07-16 10:28:18,404 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 10:28:18,405 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 10:39:03,517 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (645.80 secs) --------------------
+2026-07-16 10:39:03,521 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 10:39:03,677 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-05-28 00:00:00 to 2026-07-12 00:00:00, 30/30 trains
+2026-07-16 10:39:03,678 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x8/backtesting_predictions/cb_btc_1783814400_prediction.feather
+2026-07-16 10:39:03,957 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x8/sub-train-BTC_1783814400/cb_btc_1783814400
+2026-07-16 10:39:03,957 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 10:39:03,970 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 4320.
+2026-07-16 10:39:03,971 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-05-28 to 2026-07-11 --------------------
+2026-07-16 10:39:04,582 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 10:39:04,586 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 4272 data points
+2026-07-16 10:49:22,588 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (618.63 secs) --------------------
+2026-07-16 10:49:22,592 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 10:49:22,762 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2026-05-15 00:00:00 up to 2026-07-14 00:00:00 (60 days).
+2026-07-16 10:49:22,764 - TradingMLStrategyV2 - INFO - 🔎 BTC/USDT:USDT | P(up)=0.00 P(down)=0.00 do_predict=0.0 | need p>0.6 margin>0.25
+2026-07-16 10:49:28,203 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/backtest_results/backtest-result-2026-07-16_10-49-28.meta.json"
+
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.005735 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 60083
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -0.998465
+[LightGBM] [Info] Start training from score -1.110442
+[LightGBM] [Info] Start training from score -1.196858
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.036497 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60079
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -1.005833
+[LightGBM] [Info] Start training from score -1.160574
+[LightGBM] [Info] Start training from score -1.136458
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.022453 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60079
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -1.001079
+[LightGBM] [Info] Start training from score -1.153037
+[LightGBM] [Info] Start training from score -1.149356
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.039372 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 60080
+[LightGBM] [Info] Number of data points in the train set: 4272, number of used features: 238
+[LightGBM] [Info] Start training from score -1.073454
+[LightGBM] [Info] Start training from score -1.074688
+[LightGBM] [Info] Start training from score -1.149580
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+[LightGBM] [Warning] feature_fraction is set=0.7, colsample_bytree=1.0 will be ignored. Current value: feature_fraction=0.7
+Result for strategy TradingMLStrategyV2
+                                                BACKTESTING REPORT                                                
+┏━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT:USDT │    133 │        -0.46 │        -185.040 │        -18.5 │      5:31:00 │   67     0    66  50.4 │
+│         TOTAL │    133 │        -0.46 │        -185.040 │        -18.5 │      5:31:00 │   67     0    66  50.4 │
+└───────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                             LEFT OPEN TRADES REPORT                                              
+┏━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT:USDT │      1 │        -1.03 │          -2.768 │        -0.28 │      1:45:00 │    0     0     1     0 │
+│         TOTAL │      1 │        -1.03 │          -2.768 │        -0.28 │      1:45:00 │    0     0     1     0 │
+└───────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                ENTER TAG STATS                                                
+┏━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Entries ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   0.00875 │       1 │         4.44 │          14.117 │         1.41 │      3:15:00 │    1     0     0   100 │
+│   0.00885 │       1 │          3.1 │          11.134 │         1.11 │      9:45:00 │    1     0     0   100 │
+│   0.00827 │       1 │         2.89 │          10.364 │         1.04 │      8:15:00 │    1     0     0   100 │
+│   0.00781 │       1 │         2.65 │           9.645 │         0.96 │      7:00:00 │    1     0     0   100 │
+│   0.01886 │       1 │         6.46 │           9.429 │         0.94 │      7:45:00 │    1     0     0   100 │
+│   0.01058 │       1 │          3.5 │           9.240 │         0.92 │      6:45:00 │    1     0     0   100 │
+│   0.01375 │       1 │         5.12 │           9.239 │         0.92 │     10:45:00 │    1     0     0   100 │
+│    0.0135 │       1 │         4.67 │           8.783 │         0.88 │      9:30:00 │    1     0     0   100 │
+│      0.01 │       1 │         2.83 │           8.660 │         0.87 │      9:30:00 │    1     0     0   100 │
+│   0.01973 │       1 │         6.52 │           8.357 │         0.84 │      9:15:00 │    1     0     0   100 │
+│    0.0134 │       1 │         3.72 │           7.759 │         0.78 │      8:30:00 │    1     0     0   100 │
+│    0.0094 │       1 │         2.56 │           7.501 │         0.75 │      3:45:00 │    1     0     0   100 │
+│   0.00884 │       1 │         2.45 │           7.215 │         0.72 │      2:45:00 │    1     0     0   100 │
+│     0.011 │       1 │          2.4 │           6.488 │         0.65 │     12:00:00 │    1     0     0   100 │
+│   0.01139 │       2 │         1.33 │           6.455 │         0.65 │      6:38:00 │    2     0     0   100 │
+│    0.0079 │       1 │         1.51 │           5.549 │         0.55 │      1:45:00 │    1     0     0   100 │
+│   0.00746 │       1 │         1.22 │           4.784 │         0.48 │      1:15:00 │    1     0     0   100 │
+│   0.01789 │       1 │         3.13 │           4.611 │         0.46 │      6:30:00 │    1     0     0   100 │
+│   0.01458 │       1 │         2.58 │           4.448 │         0.44 │     10:00:00 │    1     0     0   100 │
+│   0.01363 │       1 │         2.09 │           3.870 │         0.39 │      1:45:00 │    1     0     0   100 │
+│   0.01476 │       1 │         2.09 │           3.769 │         0.38 │      0:45:00 │    1     0     0   100 │
+│   0.01307 │       1 │         1.88 │           3.570 │         0.36 │     12:00:00 │    1     0     0   100 │
+│   0.01377 │       1 │         1.86 │           3.511 │         0.35 │      4:00:00 │    1     0     0   100 │
+│   0.00874 │       1 │         0.91 │           3.289 │         0.33 │     11:00:00 │    1     0     0   100 │
+│   0.00994 │       1 │         1.21 │           3.280 │         0.33 │      0:45:00 │    1     0     0   100 │
+│   0.01423 │       1 │         1.72 │           3.273 │         0.33 │     12:00:00 │    1     0     0   100 │
+│   0.00947 │       1 │         0.94 │           3.157 │         0.32 │     12:00:00 │    1     0     0   100 │
+│   0.01264 │       1 │         1.39 │           2.968 │          0.3 │      1:00:00 │    1     0     0   100 │
+│   0.00907 │       1 │         0.98 │           2.882 │         0.29 │      2:45:00 │    1     0     0   100 │
+│   0.02024 │       1 │         2.23 │           2.824 │         0.28 │     12:00:00 │    1     0     0   100 │
+│   0.01315 │       1 │         1.32 │           2.740 │         0.27 │      1:00:00 │    1     0     0   100 │
+│   0.01437 │       1 │         1.54 │           2.716 │         0.27 │      0:30:00 │    1     0     0   100 │
+│   0.00938 │       1 │         0.95 │           2.616 │         0.26 │      0:30:00 │    1     0     0   100 │
+│   0.01327 │       1 │          1.3 │           2.569 │         0.26 │      1:15:00 │    1     0     0   100 │
+│   0.01047 │       1 │         0.83 │           2.550 │         0.26 │     12:00:00 │    1     0     0   100 │
+│   0.01445 │       1 │         1.39 │           2.481 │         0.25 │      4:00:00 │    1     0     0   100 │
+│   0.01095 │       1 │         0.98 │           2.429 │         0.24 │      0:45:00 │    1     0     0   100 │
+│   0.00764 │       1 │         0.57 │           2.392 │         0.24 │     12:00:00 │    1     0     0   100 │
+│   0.01019 │       1 │         0.96 │           2.380 │         0.24 │      1:00:00 │    1     0     0   100 │
+│    0.0144 │       1 │         1.19 │           2.157 │         0.22 │      1:15:00 │    1     0     0   100 │
+│   0.01132 │       1 │         0.88 │           2.071 │         0.21 │     12:00:00 │    1     0     0   100 │
+│   0.00929 │       1 │         0.76 │           2.056 │         0.21 │      3:00:00 │    1     0     0   100 │
+│   0.01271 │       1 │         0.96 │           2.050 │          0.2 │      1:15:00 │    1     0     0   100 │
+│    0.0147 │       1 │         1.07 │           1.954 │          0.2 │      1:00:00 │    1     0     0   100 │
+│   0.00881 │       1 │         0.52 │           1.875 │         0.19 │      8:30:00 │    1     0     0   100 │
+│   0.00898 │       1 │         0.49 │           1.658 │         0.17 │      2:15:00 │    1     0     0   100 │
+│   0.00762 │       1 │         0.47 │           1.593 │         0.16 │     12:00:00 │    1     0     0   100 │
+│   0.01121 │       1 │         0.63 │           1.495 │         0.15 │      5:00:00 │    1     0     0   100 │
+│   0.01562 │       1 │          0.9 │           1.486 │         0.15 │     12:00:00 │    1     0     0   100 │
+│   0.00777 │       1 │         0.36 │           1.397 │         0.14 │      0:15:00 │    1     0     0   100 │
+│    0.0149 │       1 │         0.66 │           1.184 │         0.12 │      3:15:00 │    1     0     0   100 │
+│   0.00735 │       1 │         0.29 │           1.154 │         0.12 │     12:00:00 │    1     0     0   100 │
+│   0.01255 │       1 │          0.5 │           1.051 │         0.11 │      1:45:00 │    1     0     0   100 │
+│   0.01546 │       1 │         0.62 │           1.043 │          0.1 │      4:15:00 │    1     0     0   100 │
+│   0.00838 │       1 │         0.25 │           0.816 │         0.08 │      7:45:00 │    1     0     0   100 │
+│    0.0089 │       1 │         0.22 │           0.779 │         0.08 │      5:15:00 │    1     0     0   100 │
+│   0.00825 │       1 │         0.13 │           0.438 │         0.04 │      1:45:00 │    1     0     0   100 │
+│   0.01093 │       1 │         0.13 │           0.346 │         0.03 │      6:00:00 │    1     0     0   100 │
+│   0.01398 │       1 │         0.11 │           0.223 │         0.02 │      0:30:00 │    1     0     0   100 │
+│   0.00913 │       1 │         0.06 │           0.215 │         0.02 │      0:30:00 │    1     0     0   100 │
+│   0.00812 │       1 │         0.02 │           0.065 │         0.01 │      0:15:00 │    1     0     0   100 │
+│   0.00892 │       1 │         0.02 │           0.064 │         0.01 │      2:15:00 │    1     0     0   100 │
+│   0.00973 │       1 │        -0.04 │          -0.105 │        -0.01 │      3:00:00 │    0     0     1     0 │
+│   0.00896 │       1 │        -0.05 │          -0.145 │        -0.01 │     12:00:00 │    0     0     1     0 │
+│   0.01247 │       1 │         -0.3 │          -0.632 │        -0.06 │      3:00:00 │    0     0     1     0 │
+│   0.01277 │       1 │        -0.31 │          -0.647 │        -0.06 │      4:45:00 │    0     0     1     0 │
+│   0.01459 │       1 │         -0.4 │          -0.703 │        -0.07 │      2:45:00 │    0     0     1     0 │
+│    0.0115 │       1 │        -0.38 │          -0.862 │        -0.09 │      8:15:00 │    0     0     1     0 │
+│   0.01424 │       2 │        -0.19 │          -0.996 │         -0.1 │      6:30:00 │    1     0     1  50.0 │
+│   0.01321 │       1 │         -0.5 │          -1.040 │         -0.1 │      3:15:00 │    0     0     1     0 │
+│   0.01177 │       1 │        -0.51 │          -1.085 │        -0.11 │     12:00:00 │    0     0     1     0 │
+│   0.00903 │       1 │        -0.41 │          -1.377 │        -0.14 │      3:00:00 │    0     0     1     0 │
+│   0.01451 │       1 │        -0.79 │          -1.415 │        -0.14 │      4:00:00 │    0     0     1     0 │
+│   0.01303 │       1 │        -0.73 │          -1.530 │        -0.15 │      1:00:00 │    0     0     1     0 │
+│   0.01128 │       2 │        -0.42 │          -1.986 │         -0.2 │      6:22:00 │    1     0     1  50.0 │
+│   0.01228 │       1 │        -0.98 │          -2.057 │        -0.21 │     12:00:00 │    0     0     1     0 │
+│   0.01479 │       1 │        -1.41 │          -2.555 │        -0.26 │      2:15:00 │    0     0     1     0 │
+│   0.01411 │       1 │        -1.42 │          -2.716 │        -0.27 │     12:00:00 │    0     0     1     0 │
+│   0.01011 │       1 │        -1.03 │          -2.768 │        -0.28 │      1:45:00 │    0     0     1     0 │
+│   0.02648 │       1 │        -2.77 │          -2.805 │        -0.28 │     12:00:00 │    0     0     1     0 │
+│   0.01326 │       1 │        -1.42 │          -2.852 │        -0.29 │     12:00:00 │    0     0     1     0 │
+│   0.01202 │       1 │         -1.3 │          -2.983 │         -0.3 │      2:30:00 │    0     0     1     0 │
+│   0.00957 │       1 │        -1.19 │          -3.597 │        -0.36 │     12:00:00 │    0     0     1     0 │
+│   0.01037 │       1 │        -1.49 │          -4.142 │        -0.41 │      5:30:00 │    0     0     1     0 │
+│   0.01059 │       1 │        -1.43 │          -4.401 │        -0.44 │     12:00:00 │    0     0     1     0 │
+│   0.01292 │       1 │         -2.5 │          -5.133 │        -0.51 │     12:00:00 │    0     0     1     0 │
+│   0.01779 │       2 │        -2.73 │          -7.849 │        -0.78 │     11:38:00 │    1     0     1  50.0 │
+│   0.02067 │       1 │        -6.51 │          -8.002 │         -0.8 │      4:15:00 │    0     0     1     0 │
+│   0.01568 │       1 │        -5.01 │          -8.103 │        -0.81 │      8:45:00 │    0     0     1     0 │
+│   0.01322 │       1 │        -4.26 │          -8.167 │        -0.82 │      1:45:00 │    0     0     1     0 │
+│   0.01552 │       1 │        -4.95 │          -8.289 │        -0.83 │      8:30:00 │    0     0     1     0 │
+│    0.0123 │       1 │        -3.99 │          -8.393 │        -0.84 │      3:00:00 │    0     0     1     0 │
+│   0.01605 │       1 │        -5.13 │          -8.415 │        -0.84 │      8:30:00 │    0     0     1     0 │
+│   0.00797 │       1 │        -2.69 │          -8.583 │        -0.86 │      0:45:00 │    0     0     1     0 │
+│   0.01291 │       1 │        -4.18 │          -8.634 │        -0.86 │      4:00:00 │    0     0     1     0 │
+│   0.00826 │       1 │        -2.78 │          -8.782 │        -0.88 │      0:15:00 │    0     0     1     0 │
+│   0.01043 │       1 │        -3.43 │          -8.803 │        -0.88 │      2:45:00 │    0     0     1     0 │
+│    0.0118 │       1 │        -3.84 │          -8.819 │        -0.88 │      8:45:00 │    0     0     1     0 │
+│   0.01143 │       1 │        -3.73 │          -8.822 │        -0.88 │      5:45:00 │    0     0     1     0 │
+│   0.01124 │       1 │        -3.68 │          -8.873 │        -0.89 │      6:45:00 │    0     0     1     0 │
+│   0.01339 │       1 │        -4.31 │          -8.874 │        -0.89 │      0:00:00 │    0     0     1     0 │
+│   0.00681 │       1 │        -2.34 │          -9.013 │         -0.9 │      2:45:00 │    0     0     1     0 │
+│   0.00959 │       1 │        -3.17 │          -9.019 │         -0.9 │     11:15:00 │    0     0     1     0 │
+│    0.0103 │       1 │        -3.39 │          -9.025 │         -0.9 │      1:15:00 │    0     0     1     0 │
+│   0.01158 │       1 │        -3.79 │          -9.045 │         -0.9 │      1:00:00 │    0     0     1     0 │
+│   0.01081 │       1 │        -3.54 │          -9.250 │        -0.93 │      2:45:00 │    0     0     1     0 │
+│   0.00795 │       1 │        -2.71 │          -9.274 │        -0.93 │     11:00:00 │    0     0     1     0 │
+│   0.00941 │       1 │        -3.15 │          -9.306 │        -0.93 │      5:45:00 │    0     0     1     0 │
+│    0.0122 │       1 │        -3.97 │          -9.308 │        -0.93 │      3:15:00 │    0     0     1     0 │
+│   0.01041 │       1 │        -3.42 │          -9.351 │        -0.94 │      2:15:00 │    0     0     1     0 │
+│   0.01087 │       1 │        -3.59 │          -9.360 │        -0.94 │      4:30:00 │    0     0     1     0 │
+│   0.00852 │       2 │         -1.3 │          -9.445 │        -0.94 │      1:22:00 │    1     0     1  50.0 │
+│   0.01016 │       1 │        -3.37 │          -9.662 │        -0.97 │      1:00:00 │    0     0     1     0 │
+│   0.00981 │       1 │        -3.24 │          -9.732 │        -0.97 │      0:15:00 │    0     0     1     0 │
+│   0.00647 │       1 │        -2.24 │          -9.888 │        -0.99 │      3:00:00 │    0     0     1     0 │
+│   0.00639 │       1 │        -2.23 │          -9.897 │        -0.99 │      2:30:00 │    0     0     1     0 │
+│   0.01035 │       1 │         -3.4 │         -10.163 │        -1.02 │      5:15:00 │    0     0     1     0 │
+│   0.01056 │       1 │        -3.46 │         -10.236 │        -1.02 │      4:15:00 │    0     0     1     0 │
+│   0.00801 │       1 │        -2.69 │         -10.317 │        -1.03 │      6:15:00 │    0     0     1     0 │
+│   0.00828 │       1 │        -2.79 │         -10.591 │        -1.06 │      0:15:00 │    0     0     1     0 │
+│    0.0088 │       1 │        -2.93 │         -10.640 │        -1.06 │      9:15:00 │    0     0     1     0 │
+│    0.0071 │       1 │        -2.43 │         -10.731 │        -1.07 │      8:45:00 │    0     0     1     0 │
+│   0.00969 │       2 │        -2.01 │         -12.373 │        -1.24 │      3:30:00 │    0     0     2     0 │
+│   0.00939 │       2 │        -2.03 │         -13.531 │        -1.35 │     10:30:00 │    0     0     2     0 │
+│   0.00829 │       2 │        -2.79 │         -20.158 │        -2.02 │      1:15:00 │    0     0     2     0 │
+│     TOTAL │     133 │        -0.46 │        -185.040 │        -18.5 │      5:31:00 │   67     0    66  50.4 │
+└───────────┴─────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                               EXIT REASON STATS                                                
+┏━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Exit Reason ┃ Exits ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   tp_barrier │    12 │          4.0 │         105.091 │        10.51 │      8:06:00 │   12     0     0   100 │
+│  exit_signal │    55 │         0.62 │          83.650 │         8.37 │      3:13:00 │   41     0    14  74.5 │
+│ time_barrier │    23 │         0.27 │          18.318 │         1.83 │     12:00:00 │   14     0     9  60.9 │
+│   force_exit │     1 │        -1.03 │          -2.768 │        -0.28 │      1:45:00 │    0     0     1     0 │
+│    stop_loss │    42 │        -3.55 │        -389.331 │       -38.93 │      4:21:00 │    0     0    42     0 │
+│        TOTAL │   133 │        -0.46 │        -185.040 │        -18.5 │      5:31:00 │   67     0    66  50.4 │
+└──────────────┴───────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                       MIXED TAG STATS                                                       
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃  Exit Reason ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   0.00875 │  exit_signal │      1 │         4.44 │          14.117 │         1.41 │      3:15:00 │    1     0     0   100 │
+│   0.00885 │   tp_barrier │      1 │          3.1 │          11.134 │         1.11 │      9:45:00 │    1     0     0   100 │
+│   0.00827 │   tp_barrier │      1 │         2.89 │          10.364 │         1.04 │      8:15:00 │    1     0     0   100 │
+│   0.00781 │  exit_signal │      1 │         2.65 │           9.645 │         0.96 │      7:00:00 │    1     0     0   100 │
+│   0.01886 │   tp_barrier │      1 │         6.46 │           9.429 │         0.94 │      7:45:00 │    1     0     0   100 │
+│   0.01058 │   tp_barrier │      1 │          3.5 │           9.240 │         0.92 │      6:45:00 │    1     0     0   100 │
+│   0.01375 │   tp_barrier │      1 │         5.12 │           9.239 │         0.92 │     10:45:00 │    1     0     0   100 │
+│    0.0135 │   tp_barrier │      1 │         4.67 │           8.783 │         0.88 │      9:30:00 │    1     0     0   100 │
+│      0.01 │   tp_barrier │      1 │         2.83 │           8.660 │         0.87 │      9:30:00 │    1     0     0   100 │
+│   0.01973 │   tp_barrier │      1 │         6.52 │           8.357 │         0.84 │      9:15:00 │    1     0     0   100 │
+│    0.0134 │   tp_barrier │      1 │         3.72 │           7.759 │         0.78 │      8:30:00 │    1     0     0   100 │
+│    0.0094 │   tp_barrier │      1 │         2.56 │           7.501 │         0.75 │      3:45:00 │    1     0     0   100 │
+│   0.01424 │   tp_barrier │      1 │         4.19 │           7.411 │         0.74 │     10:45:00 │    1     0     0   100 │
+│   0.00884 │   tp_barrier │      1 │         2.45 │           7.215 │         0.72 │      2:45:00 │    1     0     0   100 │
+│   0.01128 │ time_barrier │      1 │         2.83 │           6.581 │         0.66 │     12:00:00 │    1     0     0   100 │
+│     0.011 │ time_barrier │      1 │          2.4 │           6.488 │         0.65 │     12:00:00 │    1     0     0   100 │
+│   0.01139 │ time_barrier │      1 │         2.33 │           5.676 │         0.57 │     12:00:00 │    1     0     0   100 │
+│    0.0079 │  exit_signal │      1 │         1.51 │           5.549 │         0.55 │      1:45:00 │    1     0     0   100 │
+│   0.00746 │  exit_signal │      1 │         1.22 │           4.784 │         0.48 │      1:15:00 │    1     0     0   100 │
+│   0.01789 │  exit_signal │      1 │         3.13 │           4.611 │         0.46 │      6:30:00 │    1     0     0   100 │
+│   0.01458 │  exit_signal │      1 │         2.58 │           4.448 │         0.44 │     10:00:00 │    1     0     0   100 │
+│   0.01363 │  exit_signal │      1 │         2.09 │           3.870 │         0.39 │      1:45:00 │    1     0     0   100 │
+│   0.01476 │  exit_signal │      1 │         2.09 │           3.769 │         0.38 │      0:45:00 │    1     0     0   100 │
+│   0.01307 │ time_barrier │      1 │         1.88 │           3.570 │         0.36 │     12:00:00 │    1     0     0   100 │
+│   0.01377 │  exit_signal │      1 │         1.86 │           3.511 │         0.35 │      4:00:00 │    1     0     0   100 │
+│   0.00874 │  exit_signal │      1 │         0.91 │           3.289 │         0.33 │     11:00:00 │    1     0     0   100 │
+│   0.00994 │  exit_signal │      1 │         1.21 │           3.280 │         0.33 │      0:45:00 │    1     0     0   100 │
+│   0.01423 │ time_barrier │      1 │         1.72 │           3.273 │         0.33 │     12:00:00 │    1     0     0   100 │
+│   0.00947 │ time_barrier │      1 │         0.94 │           3.157 │         0.32 │     12:00:00 │    1     0     0   100 │
+│   0.01264 │  exit_signal │      1 │         1.39 │           2.968 │          0.3 │      1:00:00 │    1     0     0   100 │
+│   0.00907 │  exit_signal │      1 │         0.98 │           2.882 │         0.29 │      2:45:00 │    1     0     0   100 │
+│   0.02024 │ time_barrier │      1 │         2.23 │           2.824 │         0.28 │     12:00:00 │    1     0     0   100 │
+│   0.01315 │  exit_signal │      1 │         1.32 │           2.740 │         0.27 │      1:00:00 │    1     0     0   100 │
+│   0.01437 │  exit_signal │      1 │         1.54 │           2.716 │         0.27 │      0:30:00 │    1     0     0   100 │
+│   0.00938 │  exit_signal │      1 │         0.95 │           2.616 │         0.26 │      0:30:00 │    1     0     0   100 │
+│   0.01327 │  exit_signal │      1 │          1.3 │           2.569 │         0.26 │      1:15:00 │    1     0     0   100 │
+│   0.01047 │ time_barrier │      1 │         0.83 │           2.550 │         0.26 │     12:00:00 │    1     0     0   100 │
+│   0.01445 │  exit_signal │      1 │         1.39 │           2.481 │         0.25 │      4:00:00 │    1     0     0   100 │
+│   0.01095 │  exit_signal │      1 │         0.98 │           2.429 │         0.24 │      0:45:00 │    1     0     0   100 │
+│   0.00764 │ time_barrier │      1 │         0.57 │           2.392 │         0.24 │     12:00:00 │    1     0     0   100 │
+│   0.01019 │  exit_signal │      1 │         0.96 │           2.380 │         0.24 │      1:00:00 │    1     0     0   100 │
+│    0.0144 │  exit_signal │      1 │         1.19 │           2.157 │         0.22 │      1:15:00 │    1     0     0   100 │
+│   0.01132 │ time_barrier │      1 │         0.88 │           2.071 │         0.21 │     12:00:00 │    1     0     0   100 │
+│   0.00929 │  exit_signal │      1 │         0.76 │           2.056 │         0.21 │      3:00:00 │    1     0     0   100 │
+│   0.01271 │  exit_signal │      1 │         0.96 │           2.050 │          0.2 │      1:15:00 │    1     0     0   100 │
+│    0.0147 │  exit_signal │      1 │         1.07 │           1.954 │          0.2 │      1:00:00 │    1     0     0   100 │
+│   0.00881 │  exit_signal │      1 │         0.52 │           1.875 │         0.19 │      8:30:00 │    1     0     0   100 │
+│   0.00898 │  exit_signal │      1 │         0.49 │           1.658 │         0.17 │      2:15:00 │    1     0     0   100 │
+│   0.00762 │ time_barrier │      1 │         0.47 │           1.593 │         0.16 │     12:00:00 │    1     0     0   100 │
+│   0.01121 │  exit_signal │      1 │         0.63 │           1.495 │         0.15 │      5:00:00 │    1     0     0   100 │
+│   0.01562 │ time_barrier │      1 │          0.9 │           1.486 │         0.15 │     12:00:00 │    1     0     0   100 │
+│   0.00777 │  exit_signal │      1 │         0.36 │           1.397 │         0.14 │      0:15:00 │    1     0     0   100 │
+│    0.0149 │  exit_signal │      1 │         0.66 │           1.184 │         0.12 │      3:15:00 │    1     0     0   100 │
+│   0.00735 │ time_barrier │      1 │         0.29 │           1.154 │         0.12 │     12:00:00 │    1     0     0   100 │
+│   0.01255 │  exit_signal │      1 │          0.5 │           1.051 │         0.11 │      1:45:00 │    1     0     0   100 │
+│   0.01546 │  exit_signal │      1 │         0.62 │           1.043 │          0.1 │      4:15:00 │    1     0     0   100 │
+│   0.00838 │  exit_signal │      1 │         0.25 │           0.816 │         0.08 │      7:45:00 │    1     0     0   100 │
+│   0.00852 │  exit_signal │      1 │         0.26 │           0.803 │         0.08 │      1:45:00 │    1     0     0   100 │
+│   0.01139 │  exit_signal │      1 │         0.33 │           0.779 │         0.08 │      1:15:00 │    1     0     0   100 │
+│    0.0089 │  exit_signal │      1 │         0.22 │           0.779 │         0.08 │      5:15:00 │    1     0     0   100 │
+│   0.00825 │  exit_signal │      1 │         0.13 │           0.438 │         0.04 │      1:45:00 │    1     0     0   100 │
+│   0.01093 │  exit_signal │      1 │         0.13 │           0.346 │         0.03 │      6:00:00 │    1     0     0   100 │
+│   0.01779 │ time_barrier │      1 │         0.18 │           0.294 │         0.03 │     12:00:00 │    1     0     0   100 │
+│   0.01398 │  exit_signal │      1 │         0.11 │           0.223 │         0.02 │      0:30:00 │    1     0     0   100 │
+│   0.00913 │  exit_signal │      1 │         0.06 │           0.215 │         0.02 │      0:30:00 │    1     0     0   100 │
+│   0.00812 │  exit_signal │      1 │         0.02 │           0.065 │         0.01 │      0:15:00 │    1     0     0   100 │
+│   0.00892 │  exit_signal │      1 │         0.02 │           0.064 │         0.01 │      2:15:00 │    1     0     0   100 │
+│   0.00973 │  exit_signal │      1 │        -0.04 │          -0.105 │        -0.01 │      3:00:00 │    0     0     1     0 │
+│   0.00896 │ time_barrier │      1 │        -0.05 │          -0.145 │        -0.01 │     12:00:00 │    0     0     1     0 │
+│   0.01247 │  exit_signal │      1 │         -0.3 │          -0.632 │        -0.06 │      3:00:00 │    0     0     1     0 │
+│   0.01277 │  exit_signal │      1 │        -0.31 │          -0.647 │        -0.06 │      4:45:00 │    0     0     1     0 │
+│   0.01459 │  exit_signal │      1 │         -0.4 │          -0.703 │        -0.07 │      2:45:00 │    0     0     1     0 │
+│    0.0115 │  exit_signal │      1 │        -0.38 │          -0.862 │        -0.09 │      8:15:00 │    0     0     1     0 │
+│   0.01321 │  exit_signal │      1 │         -0.5 │          -1.040 │         -0.1 │      3:15:00 │    0     0     1     0 │
+│   0.01177 │ time_barrier │      1 │        -0.51 │          -1.085 │        -0.11 │     12:00:00 │    0     0     1     0 │
+│   0.00903 │  exit_signal │      1 │        -0.41 │          -1.377 │        -0.14 │      3:00:00 │    0     0     1     0 │
+│   0.01451 │  exit_signal │      1 │        -0.79 │          -1.415 │        -0.14 │      4:00:00 │    0     0     1     0 │
+│   0.01303 │  exit_signal │      1 │        -0.73 │          -1.530 │        -0.15 │      1:00:00 │    0     0     1     0 │
+│   0.01228 │ time_barrier │      1 │        -0.98 │          -2.057 │        -0.21 │     12:00:00 │    0     0     1     0 │
+│   0.00969 │  exit_signal │      1 │        -0.82 │          -2.246 │        -0.22 │      1:45:00 │    0     0     1     0 │
+│   0.01479 │  exit_signal │      1 │        -1.41 │          -2.555 │        -0.26 │      2:15:00 │    0     0     1     0 │
+│   0.01411 │ time_barrier │      1 │        -1.42 │          -2.716 │        -0.27 │     12:00:00 │    0     0     1     0 │
+│   0.01011 │   force_exit │      1 │        -1.03 │          -2.768 │        -0.28 │      1:45:00 │    0     0     1     0 │
+│   0.02648 │ time_barrier │      1 │        -2.77 │          -2.805 │        -0.28 │     12:00:00 │    0     0     1     0 │
+│   0.01326 │ time_barrier │      1 │        -1.42 │          -2.852 │        -0.29 │     12:00:00 │    0     0     1     0 │
+│   0.01202 │  exit_signal │      1 │         -1.3 │          -2.983 │         -0.3 │      2:30:00 │    0     0     1     0 │
+│   0.00939 │  exit_signal │      1 │        -0.96 │          -3.215 │        -0.32 │     11:45:00 │    0     0     1     0 │
+│   0.00957 │ time_barrier │      1 │        -1.19 │          -3.597 │        -0.36 │     12:00:00 │    0     0     1     0 │
+│   0.01037 │  exit_signal │      1 │        -1.49 │          -4.142 │        -0.41 │      5:30:00 │    0     0     1     0 │
+│   0.01059 │ time_barrier │      1 │        -1.43 │          -4.401 │        -0.44 │     12:00:00 │    0     0     1     0 │
+│   0.01292 │ time_barrier │      1 │         -2.5 │          -5.133 │        -0.51 │     12:00:00 │    0     0     1     0 │
+│   0.02067 │    stop_loss │      1 │        -6.51 │          -8.002 │         -0.8 │      4:15:00 │    0     0     1     0 │
+│   0.01568 │    stop_loss │      1 │        -5.01 │          -8.103 │        -0.81 │      8:45:00 │    0     0     1     0 │
+│   0.01779 │    stop_loss │      1 │        -5.64 │          -8.143 │        -0.81 │     11:15:00 │    0     0     1     0 │
+│   0.01322 │    stop_loss │      1 │        -4.26 │          -8.167 │        -0.82 │      1:45:00 │    0     0     1     0 │
+│   0.01552 │    stop_loss │      1 │        -4.95 │          -8.289 │        -0.83 │      8:30:00 │    0     0     1     0 │
+│    0.0123 │    stop_loss │      1 │        -3.99 │          -8.393 │        -0.84 │      3:00:00 │    0     0     1     0 │
+│   0.01424 │    stop_loss │      1 │        -4.58 │          -8.407 │        -0.84 │      2:15:00 │    0     0     1     0 │
+│   0.01605 │    stop_loss │      1 │        -5.13 │          -8.415 │        -0.84 │      8:30:00 │    0     0     1     0 │
+│   0.01128 │    stop_loss │      1 │        -3.68 │          -8.567 │        -0.86 │      0:45:00 │    0     0     1     0 │
+│   0.00797 │    stop_loss │      1 │        -2.69 │          -8.583 │        -0.86 │      0:45:00 │    0     0     1     0 │
+│   0.01291 │    stop_loss │      1 │        -4.18 │          -8.634 │        -0.86 │      4:00:00 │    0     0     1     0 │
+│   0.00826 │    stop_loss │      1 │        -2.78 │          -8.782 │        -0.88 │      0:15:00 │    0     0     1     0 │
+│   0.01043 │    stop_loss │      1 │        -3.43 │          -8.803 │        -0.88 │      2:45:00 │    0     0     1     0 │
+│    0.0118 │    stop_loss │      1 │        -3.84 │          -8.819 │        -0.88 │      8:45:00 │    0     0     1     0 │
+│   0.01143 │    stop_loss │      1 │        -3.73 │          -8.822 │        -0.88 │      5:45:00 │    0     0     1     0 │
+│   0.01124 │    stop_loss │      1 │        -3.68 │          -8.873 │        -0.89 │      6:45:00 │    0     0     1     0 │
+│   0.01339 │    stop_loss │      1 │        -4.31 │          -8.874 │        -0.89 │      0:00:00 │    0     0     1     0 │
+│   0.00681 │    stop_loss │      1 │        -2.34 │          -9.013 │         -0.9 │      2:45:00 │    0     0     1     0 │
+│   0.00959 │    stop_loss │      1 │        -3.17 │          -9.019 │         -0.9 │     11:15:00 │    0     0     1     0 │
+│    0.0103 │    stop_loss │      1 │        -3.39 │          -9.025 │         -0.9 │      1:15:00 │    0     0     1     0 │
+│   0.01158 │    stop_loss │      1 │        -3.79 │          -9.045 │         -0.9 │      1:00:00 │    0     0     1     0 │
+│   0.01081 │    stop_loss │      1 │        -3.54 │          -9.250 │        -0.93 │      2:45:00 │    0     0     1     0 │
+│   0.00795 │    stop_loss │      1 │        -2.71 │          -9.274 │        -0.93 │     11:00:00 │    0     0     1     0 │
+│   0.00941 │    stop_loss │      1 │        -3.15 │          -9.306 │        -0.93 │      5:45:00 │    0     0     1     0 │
+│    0.0122 │    stop_loss │      1 │        -3.97 │          -9.308 │        -0.93 │      3:15:00 │    0     0     1     0 │
+│   0.01041 │    stop_loss │      1 │        -3.42 │          -9.351 │        -0.94 │      2:15:00 │    0     0     1     0 │
+│   0.01087 │    stop_loss │      1 │        -3.59 │          -9.360 │        -0.94 │      4:30:00 │    0     0     1     0 │
+│   0.01016 │    stop_loss │      1 │        -3.37 │          -9.662 │        -0.97 │      1:00:00 │    0     0     1     0 │
+│   0.00981 │    stop_loss │      1 │        -3.24 │          -9.732 │        -0.97 │      0:15:00 │    0     0     1     0 │
+│   0.00647 │    stop_loss │      1 │        -2.24 │          -9.888 │        -0.99 │      3:00:00 │    0     0     1     0 │
+│   0.00639 │    stop_loss │      1 │        -2.23 │          -9.897 │        -0.99 │      2:30:00 │    0     0     1     0 │
+│   0.00969 │    stop_loss │      1 │         -3.2 │         -10.127 │        -1.01 │      5:15:00 │    0     0     1     0 │
+│   0.01035 │    stop_loss │      1 │         -3.4 │         -10.163 │        -1.02 │      5:15:00 │    0     0     1     0 │
+│   0.01056 │    stop_loss │      1 │        -3.46 │         -10.236 │        -1.02 │      4:15:00 │    0     0     1     0 │
+│   0.00852 │    stop_loss │      1 │        -2.85 │         -10.248 │        -1.02 │      1:00:00 │    0     0     1     0 │
+│   0.00939 │    stop_loss │      1 │         -3.1 │         -10.316 │        -1.03 │      9:15:00 │    0     0     1     0 │
+│   0.00801 │    stop_loss │      1 │        -2.69 │         -10.317 │        -1.03 │      6:15:00 │    0     0     1     0 │
+│   0.00828 │    stop_loss │      1 │        -2.79 │         -10.591 │        -1.06 │      0:15:00 │    0     0     1     0 │
+│    0.0088 │    stop_loss │      1 │        -2.93 │         -10.640 │        -1.06 │      9:15:00 │    0     0     1     0 │
+│    0.0071 │    stop_loss │      1 │        -2.43 │         -10.731 │        -1.07 │      8:45:00 │    0     0     1     0 │
+│   0.00829 │    stop_loss │      2 │        -2.79 │         -20.158 │        -2.02 │      1:15:00 │    0     0     2     0 │
+│     TOTAL │              │    133 │        -0.46 │        -185.040 │        -18.5 │      5:31:00 │   67     0    66  50.4 │
+└───────────┴──────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                         SUMMARY METRICS                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                        ┃ Value                          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Backtesting from              │ 2026-05-15 00:00:00            │
+│ Backtesting to                │ 2026-07-14 00:00:00            │
+│ Trading Mode                  │ Isolated Futures               │
+│ Max open trades               │ 1                              │
+│                               │                                │
+│ Total/Daily Avg Trades        │ 133 / 2.22                     │
+│ Starting balance              │ 1000 USDT                      │
+│ Final balance                 │ 814.96 USDT                    │
+│ Absolute profit               │ -185.04 USDT                   │
+│ Total profit %                │ -18.50%                        │
+│ CAGR %                        │ -71.20%                        │
+│ Sortino                       │ -16.43                         │
+│ Sharpe                        │ -9.43                          │
+│ Calmar                        │ -29.88                         │
+│ SQN                           │ -2.56                          │
+│ Profit factor                 │ 0.58                           │
+│ Expectancy (Ratio)            │ -1.39 (-0.21)                  │
+│ Avg. daily profit             │ -3.084 USDT                    │
+│ Avg. stake amount             │ 260.909 USDT                   │
+│ Total trade volume            │ 208284.074 USDT                │
+│                               │                                │
+│ Long / Short trades           │ 70 / 63                        │
+│ Long / Short profit %         │ -11.37% / -7.14%               │
+│ Long / Short profit USDT      │ -113.672 / -71.368             │
+│                               │                                │
+│ Best Pair                     │ BTC/USDT:USDT -18.50%          │
+│ Worst Pair                    │ BTC/USDT:USDT -18.50%          │
+│ Best trade                    │ BTC/USDT:USDT 6.52%            │
+│ Worst trade                   │ BTC/USDT:USDT -6.51%           │
+│ Best day                      │ 12.968 USDT                    │
+│ Worst day                     │ -27.542 USDT                   │
+│ Days win/draw/lose            │ 24 / 6 / 31                    │
+│ Min/Max/Avg. Duration Winners │ 0d 00:15 / 0d 12:00 / 0d 05:45 │
+│ Min/Max/Avg. Duration Losers  │ 0d 00:00 / 0d 12:00 / 0d 05:17 │
+│ Max Consecutive Wins / Loss   │ 6 / 7                          │
+│ Rejected Entry signals        │ 0                              │
+│ Entry/Exit Timeouts           │ 0 / 0                          │
+│                               │                                │
+│ Min balance                   │ 802.797 USDT                   │
+│ Max balance                   │ 989.837 USDT                   │
+│ Max % of account underwater   │ 19.72%                         │
+│ Absolute drawdown             │ 197.203 USDT (19.72%)          │
+│ Drawdown duration             │ 58 days 20:30:00               │
+│ Profit at drawdown start      │ 0 USDT                         │
+│ Profit at drawdown end        │ -197.203 USDT                  │
+│ Drawdown start                │ 2026-05-15 05:30:00            │
+│ Drawdown end                  │ 2026-07-13 02:00:00            │
+│ Market change                 │ -23.36%                        │
+└───────────────────────────────┴────────────────────────────────┘
+
+Backtested 2026-05-15 00:00:00 -> 2026-07-14 00:00:00 | Max open trades : 1
+                                                               STRATEGY SUMMARY                                                                
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┓
+┃            Strategy ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃             Drawdown ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━┩
+│ TradingMLStrategyV2 │    133 │        -0.46 │        -185.040 │        -18.5 │      5:31:00 │   67     0    66  50.4 │ 197.203 USDT  19.72% │
+└─────────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┴──────────────────────┘

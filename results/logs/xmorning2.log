@@ -1,0 +1,13 @@
+WAITING for batch-D containers to drain
+BATCH-D drained
+BATCH-E start (X5 lean-features, X16 RandomForest)
+DONE x16 rc=1
+DONE x5 rc=0
+BATCH-E done
+BATCH-F start (X17 PyTorch MLP)
+DONE x17 rc=2
+BATCH-F done
+BATCH-G start (X20 COMBO: XGBoost + lean features)
+DONE x20_combo rc=0
+BATCH-G done
+ALL_EXPERIMENTS_DONE

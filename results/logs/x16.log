@@ -1,0 +1,161 @@
+ Container ft_userdata-freqtrade-run-f6007484993a Creating 
+ Container ft_userdata-freqtrade-run-f6007484993a Created 
+2026-07-16 10:50:56,806 - freqtrade - INFO - freqtrade 2026.3
+2026-07-16 10:50:57,096 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 10:50:58,468 - freqtrade.configuration.load_config - INFO - Using config: user_data/config.json ...
+2026-07-16 10:50:58,469 - freqtrade.configuration.load_config - INFO - Using config: user_data/bt_x16.json ...
+2026-07-16 10:50:58,469 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__JWT_SECRET_KEY'
+2026-07-16 10:50:58,470 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'JWT_SECRET_KEY']
+2026-07-16 10:50:58,471 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__PASSWORD'
+2026-07-16 10:50:58,471 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'PASSWORD']
+2026-07-16 10:50:58,472 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__USERNAME'
+2026-07-16 10:50:58,472 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'USERNAME']
+2026-07-16 10:50:58,473 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__WS_TOKEN'
+2026-07-16 10:50:58,473 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'WS_TOKEN']
+2026-07-16 10:50:58,474 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__KEY'
+2026-07-16 10:50:58,474 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'KEY']
+2026-07-16 10:50:58,475 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__SECRET'
+2026-07-16 10:50:58,475 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'SECRET']
+2026-07-16 10:50:58,476 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__CHAT_ID'
+2026-07-16 10:50:58,476 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'CHAT_ID']
+2026-07-16 10:50:58,477 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__TOKEN'
+2026-07-16 10:50:58,477 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'TOKEN']
+2026-07-16 10:50:58,481 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 10:50:58,482 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 10:50:58,482 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 10:50:58,483 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2026-07-16 10:50:58,484 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20260515-20260714 ...
+2026-07-16 10:50:58,527 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 10:50:58,527 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 10:50:58,528 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2026-07-16 10:50:58,529 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20260515-20260714
+2026-07-16 10:50:58,529 - freqtrade.configuration.configuration - INFO - Using freqaimodel class name: SKLearnRandomForestClassifier
+2026-07-16 10:50:58,530 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 10:50:58,539 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 10:50:58,539 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-07-16 10:50:58,540 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 10:50:58,544 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-07-16 10:50:58,544 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 10:50:58,545 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.44
+2026-07-16 10:50:58,545 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-07-16 10:50:58,553 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-07-16 10:50:58,563 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 10:51:00,053 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 10:51:00,065 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy TradingMLStrategyV2 from '/freqtrade/user_data/strategies/TradingMLStrategyV2.py'...
+2026-07-16 10:51:00,065 - freqtrade.strategy.hyper - INFO - Loading parameters from file /freqtrade/user_data/strategies/TradingMLStrategyV2.json
+2026-07-16 10:51:00,066 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'minimal_roi' with value from the configuration: {'0': 99}.
+2026-07-16 10:51:00,066 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 15m.
+2026-07-16 10:51:00,067 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stoploss' with value from the configuration: -0.15.
+2026-07-16 10:51:00,067 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'trailing_stop' with value from the configuration: False.
+2026-07-16 10:51:00,068 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-07-16 10:51:00,068 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-07-16 10:51:00,069 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 
+'unit': 'minutes'}.
+2026-07-16 10:51:00,069 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-07-16 10:51:00,070 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 99}
+2026-07-16 10:51:00,070 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 15m
+2026-07-16 10:51:00,071 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.15
+2026-07-16 10:51:00,071 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-07-16 10:51:00,072 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-07-16 10:51:00,072 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-07-16 10:51:00,072 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: True
+2026-07-16 10:51:00,073 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-07-16 10:51:00,073 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': True, 
+'stoploss_on_exchange_interval': 60}
+2026-07-16 10:51:00,074 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-07-16 10:51:00,074 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-07-16 10:51:00,075 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-07-16 10:51:00,075 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
+2026-07-16 10:51:00,076 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2026-07-16 10:51:00,076 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-07-16 10:51:00,077 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-07-16 10:51:00,077 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
+2026-07-16 10:51:00,078 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-07-16 10:51:00,078 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-07-16 10:51:00,079 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-07-16 10:51:00,079 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-07-16 10:51:00,080 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-07-16 10:51:00,080 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-07-16 10:51:00,081 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 10:51:00,085 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-07-16 10:51:00,097 - freqtrade.optimize.backtesting - INFO - Using fee 0.0500% - worst case fee from exchange (lowest tier).
+2026-07-16 10:51:00,098 - freqtrade.exchange.exchange - WARNING - Using 2 calls to get OHLCV. This can result in slower operations for the bot. Please check if you really need 800 candles for your 
+strategy.
+2026-07-16 10:51:00,099 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 15m to 9440
+2026-07-16 10:51:00,138 - freqtrade.optimize.backtesting - INFO - Loading data from 2026-02-05 16:00:00 up to 2026-07-14 00:00:00 (158 days).
+2026-07-16 10:51:00,283 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-07-16 10:51:00,285 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy TradingMLStrategyV2
+2026-07-16 10:51:01,147 - freqtrade.resolvers.iresolver - INFO - Using resolved freqaimodel SKLearnRandomForestClassifier from 
+'/freqtrade/freqtrade/freqai/prediction_models/SKLearnRandomForestClassifier.py'...
+2026-07-16 10:51:01,148 - freqtrade.freqai.data_drawer - INFO - Could not find existing datadrawer, starting from scratch
+2026-07-16 10:51:01,148 - freqtrade.freqai.data_drawer - INFO - Could not find existing historic_predictions, starting from scratch
+2026-07-16 10:51:01,149 - freqtrade.freqai.freqai_interface - INFO - Set fresh train queue from whitelist. Queue: ['BTC/USDT:USDT']
+2026-07-16 10:51:01,150 - freqtrade.strategy.hyper - INFO - Strategy Parameter: exit_prob_threshold = 0.55
+2026-07-16 10:51:01,150 - freqtrade.strategy.hyper - INFO - Strategy Parameter: lock_hours = 3.0
+2026-07-16 10:51:01,151 - freqtrade.strategy.hyper - INFO - Strategy Parameter: reentry_cooldown_hours = 2.0
+2026-07-16 10:51:01,151 - freqtrade.strategy.hyper - INFO - Strategy Parameter: prob_margin = 0.25
+2026-07-16 10:51:01,151 - freqtrade.strategy.hyper - INFO - Strategy Parameter: prob_threshold = 0.6
+2026-07-16 10:51:01,152 - freqtrade.strategy.hyper - INFO - Strategy Parameter: vol_regime_max = 1.5
+2026-07-16 10:51:01,157 - freqtrade.freqai.freqai_interface - INFO - Training 30 timeranges
+2026-07-16 10:51:01,158 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-14 00:00:00 to 2026-05-15 00:00:00, 1/30 trains
+2026-07-16 10:51:01,158 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x16/backtesting_predictions/cb_btc_1778803200_prediction.feather
+2026-07-16 10:51:01,216 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-16 10:51:01,216 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2026-01-11 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 10:51:01,326 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-16 10:51:01,326 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2026-01-11 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 10:51:01,338 - freqtrade.data.converter.converter - INFO - Missing data fillup for BTC/USDT:USDT, 1h: before: 551 - after: 4401 - 698.73%
+2026-07-16 10:51:01,361 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 15m to 9440
+2026-07-16 10:51:01,361 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 15m from 2026-02-05 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 10:51:01,436 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-16 10:51:01,437 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 1h from 2026-01-11 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 10:51:01,726 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x16/sub-train-BTC_1778803200/cb_btc_1778803200
+2026-07-16 10:51:01,744 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-16 10:51:01,772 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-16 10:51:01,773 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-14 to 2026-05-14 --------------------
+2026-07-16 10:51:04,530 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-16 10:51:04,530 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+2026-07-16 10:51:04,531 - freqtrade.freqai.freqai_interface - WARNING - Training BTC/USDT:USDT raised exception TypeError. Message: RandomForestClassifier.__init__() got an unexpected keyword argument
+'learning_rate', skipping.
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/freqai/freqai_interface.py", line 374, in start_backtesting
+    self.model = self.train(dataframe_train, pair, dk)
+                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/freqai/base_models/BaseClassifierModel.py", line 76, in train
+    model = self.fit(dd, dk)
+  File "/freqtrade/freqtrade/freqai/prediction_models/SKLearnRandomForestClassifier.py", line 53, in fit
+    model = RandomForestClassifier(**self.model_training_parameters)
+TypeError: RandomForestClassifier.__init__() got an unexpected keyword argument 'learning_rate'
+2026-07-16 10:51:04,533 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-16 10:51:04,663 - freqtrade - ERROR - Fatal exception!
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/main.py", line 52, in main
+    return_code = args["func"](args)
+  File "/freqtrade/freqtrade/commands/optimize_commands.py", line 61, in start_backtesting
+    backtesting.start()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/freqtrade/freqtrade/optimize/backtesting.py", line 1844, in start
+    min_date, max_date = self.backtest_one_strategy(strat, data, timerange)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/optimize/backtesting.py", line 1754, in backtest_one_strategy
+    preprocessed = self.strategy.advise_all_indicators(data)
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1749, in advise_all_indicators
+    res[pair] = self.advise_indicators(pair_data.copy(), {"pair": pair}).copy()
+                ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/strategy/interface.py", line 1811, in advise_indicators
+    dataframe = self.populate_indicators(dataframe, metadata)
+  File "/freqtrade/user_data/strategies/TradingMLStrategyV2.py", line 364, in populate_indicators
+    dataframe = self.freqai.start(dataframe, metadata, self)
+  File "/freqtrade/freqtrade/freqai/freqai_interface.py", line 161, in start
+    dk = self.start_backtesting(dataframe, metadata, self.dk, strategy)
+  File "/freqtrade/freqtrade/freqai/freqai_interface.py", line 396, in start_backtesting
+    pred_df, do_preds = self.predict(dataframe_backtest, dk)
+                        ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/freqai/prediction_models/SKLearnRandomForestClassifier.py", line 73, in predict
+    (pred_df, dk.do_predict) = super().predict(unfiltered_df, dk, **kwargs)
+                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/freqtrade/freqtrade/freqai/base_models/BaseClassifierModel.py", line 110, in predict
+    predictions = self.model.predict(dk.data_dictionary["prediction_features"])
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'predict'
+

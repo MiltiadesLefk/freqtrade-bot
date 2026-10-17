@@ -1,0 +1,5 @@
+BATCH-A start (X4 regularized resume, X3 SOL resume)
+DONE x3 rc=137
+DONE x4 rc=137
+BATCH-A done
+BATCH-B start (X1 basis FIXED restart, X2 4h-lean)

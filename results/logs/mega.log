@@ -1,0 +1,48 @@
+ Container ft_userdata-freqtrade-run-7a5cd35dbf33 Creating 
+ Container ft_userdata-freqtrade-run-7a5cd35dbf33 Created 
+  1d   done  cum=   6536 configs  (+2s, total 2s)
+  4h   done  cum=  34768 configs  (+5s, total 8s)
+  1h   done  cum=  65635 configs  (+9s, total 17s)
+  15m  done  cum=  96748 configs  (+22s, total 39s)
+  5m   done  cum= 127977 configs  (+60s, total 99s)
+  1m   done  cum= 159067 configs  (+183s, total 282s)
+
+TOTAL 159,067 configs recorded in 284s
+empirical base rate: mean blocks won = 0.96/8.0  (p=0.121)
+configs >=7/8 blocks: observed 265  expected by chance 0  -> excess 622.9x
+overall median PF: 0.637
+
+====================================================================================================
+TOP BY TIME-CONSISTENCY (>=7/8 blocks, >=80 trades)
+====================================================================================================
+tf   rule        lb dir  tp  sl  tr      n     PF  blkPF  w      ret%    dd%
+1h   donch      200  LS   0   8   0    105  1.331  1.282  8     +60.0   31.4
+1h   donch      200  LS   6   0   0    205  1.195  1.185  8     +76.3   36.7
+1h   donch      200  LS   8   8   0    183  1.162  1.162  8     +46.0   36.5
+1h   donch      200  LS   6   8   0    224  1.127  1.092  8     +36.6   36.6
+1d   atrbrk      10  LS   2   2   0     82  1.591  1.888  7    +155.0   37.5
+1d   atrbrk      10  LS   3   1   0     96  1.554  1.810  7    +152.2   36.7
+1d   atrbrk      10  LS   3   1   3     96  1.468  1.746  7    +113.4   36.4
+1d   atrbrk      20  LS   3   1   0     91  1.524  1.740  7    +124.5   36.0
+1h   donch      500   L   4   0   0     86  1.635  1.732  7    +109.8   24.3
+1d   atrbrk      20  LS   4   1   0     80  1.630  1.684  7    +140.3   31.3
+4h   macd        50   L   8   1   0    151  1.377  1.626  7     +61.9   25.6
+1h   donch      500   L   3   0   0    112  1.574  1.620  7    +104.6   24.7
+4h   tsmom      500  LS   6   6   0    110  1.298  1.603  7     +67.2   53.1
+1h   donch      500   L   4   8   0    105  1.348  1.590  7     +65.0   26.4
+1d   atrbrk      10  LS   2   2   3     88  1.343  1.587  7     +75.1   44.0
+4h   cross3      80   L   4   4   0     90  1.517  1.569  7    +114.1   24.9
+1h   donch      500   L   2   0   0    162  1.444  1.548  7     +78.7   28.3
+4h   dualma      80   L   4   0   0     91  1.472  1.547  7     +92.9   30.7
+4h   dualma      80   L   4   8   0     94  1.450  1.547  7     +89.0   31.3
+4h   tsmom      500  LS   6   0   0    102  1.311  1.530  7     +67.4   51.9
+4h   cross3      80   L   3   0   0     95  1.551  1.496  7    +117.6   26.8
+1d   atrbrk      10  LS   1   2   0    133  1.277  1.496  7     +69.4   37.4
+1h   macd       300   L   6   0   0     83  1.458  1.479  7     +89.1   30.0
+1d   atrbrk      10  LS   2   1   0    113  1.402  1.470  7    +106.8   32.2
+1d   atrbrk      10  LS   1   2   3    133  1.198  1.469  7     +41.9   43.7
+
+qualifying configs: 179
+
+by timeframe: {'1d': 100, '1h': 57, '4h': 108}
+by rule:      {'atrbrk': 50, 'bb': 23, 'cross3': 19, 'donch': 37, 'dualma': 28, 'keltner': 22, 'macd': 34, 'roc': 2, 'rsi': 3, 'tsmom': 39, 'volf': 8}

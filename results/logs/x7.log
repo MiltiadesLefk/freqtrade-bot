@@ -1,0 +1,855 @@
+ Container ft_userdata-freqtrade-run-c1ee491703c9 Creating 
+ Container ft_userdata-freqtrade-run-c1ee491703c9 Created 
+2026-07-15 19:42:03,376 - freqtrade - INFO - freqtrade 2026.3
+2026-07-15 19:42:03,683 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-15 19:42:05,242 - freqtrade.configuration.load_config - INFO - Using config: user_data/config.json ...
+2026-07-15 19:42:05,243 - freqtrade.configuration.load_config - INFO - Using config: user_data/bt_x7.json ...
+2026-07-15 19:42:05,243 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__JWT_SECRET_KEY'
+2026-07-15 19:42:05,243 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'JWT_SECRET_KEY']
+2026-07-15 19:42:05,244 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__PASSWORD'
+2026-07-15 19:42:05,245 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'PASSWORD']
+2026-07-15 19:42:05,245 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__USERNAME'
+2026-07-15 19:42:05,246 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'USERNAME']
+2026-07-15 19:42:05,246 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__WS_TOKEN'
+2026-07-15 19:42:05,247 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'WS_TOKEN']
+2026-07-15 19:42:05,247 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__KEY'
+2026-07-15 19:42:05,248 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'KEY']
+2026-07-15 19:42:05,248 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__SECRET'
+2026-07-15 19:42:05,249 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'SECRET']
+2026-07-15 19:42:05,249 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__CHAT_ID'
+2026-07-15 19:42:05,250 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'CHAT_ID']
+2026-07-15 19:42:05,250 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__TOKEN'
+2026-07-15 19:42:05,251 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'TOKEN']
+2026-07-15 19:42:05,256 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-15 19:42:05,256 - freqtrade.loggers - INFO - Logfile configured
+2026-07-15 19:42:05,256 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-15 19:42:05,257 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2026-07-15 19:42:05,258 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20260515-20260714 ...
+2026-07-15 19:42:05,288 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-15 19:42:05,289 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-15 19:42:05,289 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2026-07-15 19:42:05,290 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20260515-20260714
+2026-07-15 19:42:05,290 - freqtrade.configuration.configuration - INFO - Using freqaimodel class name: XGBoostClassifier
+2026-07-15 19:42:05,292 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-15 19:42:05,300 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-15 19:42:05,301 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-07-15 19:42:05,301 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-15 19:42:05,305 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-07-15 19:42:05,305 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-15 19:42:05,306 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.44
+2026-07-15 19:42:05,306 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-07-15 19:42:05,314 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-07-15 19:42:05,321 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-15 19:42:06,841 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-15 19:42:06,853 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy TradingMLStrategyV2 from '/freqtrade/user_data/strategies/TradingMLStrategyV2.py'...
+2026-07-15 19:42:06,854 - freqtrade.strategy.hyper - INFO - Loading parameters from file /freqtrade/user_data/strategies/TradingMLStrategyV2.json
+2026-07-15 19:42:06,854 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'minimal_roi' with value from the configuration: {'0': 99}.
+2026-07-15 19:42:06,855 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 15m.
+2026-07-15 19:42:06,855 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stoploss' with value from the configuration: -0.15.
+2026-07-15 19:42:06,855 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'trailing_stop' with value from the configuration: False.
+2026-07-15 19:42:06,856 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-07-15 19:42:06,856 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-07-15 19:42:06,857 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 
+'unit': 'minutes'}.
+2026-07-15 19:42:06,857 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-07-15 19:42:06,858 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 99}
+2026-07-15 19:42:06,858 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 15m
+2026-07-15 19:42:06,859 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.15
+2026-07-15 19:42:06,859 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-07-15 19:42:06,860 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-07-15 19:42:06,860 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-07-15 19:42:06,861 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: True
+2026-07-15 19:42:06,861 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-07-15 19:42:06,861 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': True, 
+'stoploss_on_exchange_interval': 60}
+2026-07-15 19:42:06,862 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-07-15 19:42:06,863 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-07-15 19:42:06,863 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-07-15 19:42:06,864 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
+2026-07-15 19:42:06,864 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2026-07-15 19:42:06,864 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-07-15 19:42:06,865 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-07-15 19:42:06,865 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
+2026-07-15 19:42:06,866 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-07-15 19:42:06,866 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-07-15 19:42:06,867 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-07-15 19:42:06,867 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-07-15 19:42:06,868 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-07-15 19:42:06,869 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-07-15 19:42:06,869 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-15 19:42:06,875 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-07-15 19:42:06,887 - freqtrade.optimize.backtesting - INFO - Using fee 0.0500% - worst case fee from exchange (lowest tier).
+2026-07-15 19:42:06,888 - freqtrade.exchange.exchange - WARNING - Using 2 calls to get OHLCV. This can result in slower operations for the bot. Please check if you really need 800 candles for your 
+strategy.
+2026-07-15 19:42:06,888 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 15m to 9440
+2026-07-15 19:42:06,943 - freqtrade.optimize.backtesting - INFO - Loading data from 2026-02-05 16:00:00 up to 2026-07-14 00:00:00 (158 days).
+2026-07-15 19:42:07,086 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-07-15 19:42:07,088 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy TradingMLStrategyV2
+2026-07-15 19:42:07,886 - freqtrade.resolvers.iresolver - INFO - Using resolved freqaimodel XGBoostClassifier from '/freqtrade/freqtrade/freqai/prediction_models/XGBoostClassifier.py'...
+2026-07-15 19:42:07,886 - freqtrade.freqai.data_drawer - INFO - Could not find existing datadrawer, starting from scratch
+2026-07-15 19:42:07,887 - freqtrade.freqai.data_drawer - INFO - Could not find existing historic_predictions, starting from scratch
+2026-07-15 19:42:07,887 - freqtrade.freqai.freqai_interface - INFO - Set fresh train queue from whitelist. Queue: ['BTC/USDT:USDT']
+2026-07-15 19:42:07,889 - freqtrade.strategy.hyper - INFO - Strategy Parameter: exit_prob_threshold = 0.55
+2026-07-15 19:42:07,889 - freqtrade.strategy.hyper - INFO - Strategy Parameter: lock_hours = 3.0
+2026-07-15 19:42:07,890 - freqtrade.strategy.hyper - INFO - Strategy Parameter: reentry_cooldown_hours = 2.0
+2026-07-15 19:42:07,890 - freqtrade.strategy.hyper - INFO - Strategy Parameter: prob_margin = 0.25
+2026-07-15 19:42:07,891 - freqtrade.strategy.hyper - INFO - Strategy Parameter: prob_threshold = 0.6
+2026-07-15 19:42:07,891 - freqtrade.strategy.hyper - INFO - Strategy Parameter: vol_regime_max = 1.5
+2026-07-15 19:42:07,896 - freqtrade.freqai.freqai_interface - INFO - Training 30 timeranges
+2026-07-15 19:42:07,897 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-14 00:00:00 to 2026-05-15 00:00:00, 1/30 trains
+2026-07-15 19:42:07,898 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1778803200_prediction.feather
+2026-07-15 19:42:07,960 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-15 19:42:07,961 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2026-01-11 16:00:00 to 2026-07-14 00:00:00
+2026-07-15 19:42:08,070 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-15 19:42:08,071 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2026-01-11 16:00:00 to 2026-07-14 00:00:00
+2026-07-15 19:42:08,084 - freqtrade.data.converter.converter - INFO - Missing data fillup for BTC/USDT:USDT, 1h: before: 551 - after: 4401 - 698.73%
+2026-07-15 19:42:08,107 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 15m to 9440
+2026-07-15 19:42:08,108 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 15m from 2026-02-05 16:00:00 to 2026-07-14 00:00:00
+2026-07-15 19:42:08,200 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-15 19:42:08,201 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 1h from 2026-01-11 16:00:00 to 2026-07-14 00:00:00
+2026-07-15 19:42:08,480 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1778803200/cb_btc_1778803200
+2026-07-15 19:42:08,483 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 19:42:08,511 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 19:42:08,512 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-14 to 2026-05-14 --------------------
+2026-07-15 19:42:11,521 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 19:42:11,522 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [19:42:11] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 19:45:46,279 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (217.80 secs) --------------------
+2026-07-15 19:45:46,280 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 19:45:46,591 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-16 00:00:00 to 2026-05-17 00:00:00, 2/30 trains
+2026-07-15 19:45:46,592 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1778976000_prediction.feather
+2026-07-15 19:45:46,827 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1778976000/cb_btc_1778976000
+2026-07-15 19:45:46,827 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 19:45:46,854 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 19:45:46,855 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-16 to 2026-05-16 --------------------
+2026-07-15 19:45:48,897 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 19:45:48,897 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [19:45:49] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 19:49:10,931 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (204.10 secs) --------------------
+2026-07-15 19:49:10,938 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 19:49:11,153 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-18 00:00:00 to 2026-05-19 00:00:00, 3/30 trains
+2026-07-15 19:49:11,153 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779148800_prediction.feather
+2026-07-15 19:49:11,393 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1779148800/cb_btc_1779148800
+2026-07-15 19:49:11,394 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 19:49:11,418 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 19:49:11,419 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-18 to 2026-05-18 --------------------
+2026-07-15 19:49:13,323 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 19:49:13,324 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [19:49:13] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 19:52:12,400 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (181.01 secs) --------------------
+2026-07-15 19:52:12,404 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 19:52:12,629 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-20 00:00:00 to 2026-05-21 00:00:00, 4/30 trains
+2026-07-15 19:52:12,630 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779321600_prediction.feather
+2026-07-15 19:52:12,874 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1779321600/cb_btc_1779321600
+2026-07-15 19:52:12,875 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 19:52:12,904 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 19:52:12,905 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-20 to 2026-05-20 --------------------
+2026-07-15 19:52:14,913 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 19:52:14,914 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [19:52:15] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 19:55:35,692 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (202.82 secs) --------------------
+2026-07-15 19:55:35,693 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 19:55:35,938 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-22 00:00:00 to 2026-05-23 00:00:00, 5/30 trains
+2026-07-15 19:55:35,938 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779494400_prediction.feather
+2026-07-15 19:55:36,183 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1779494400/cb_btc_1779494400
+2026-07-15 19:55:36,184 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 19:55:36,214 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 19:55:36,215 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-22 to 2026-05-22 --------------------
+2026-07-15 19:55:38,099 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 19:55:38,100 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [19:55:38] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 19:59:06,040 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (209.86 secs) --------------------
+2026-07-15 19:59:06,042 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 19:59:06,311 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-24 00:00:00 to 2026-05-25 00:00:00, 6/30 trains
+2026-07-15 19:59:06,315 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779667200_prediction.feather
+2026-07-15 19:59:06,574 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1779667200/cb_btc_1779667200
+2026-07-15 19:59:06,574 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 19:59:06,601 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 19:59:06,602 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-24 to 2026-05-24 --------------------
+2026-07-15 19:59:08,546 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 19:59:08,547 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [19:59:08] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:02:35,047 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (208.47 secs) --------------------
+2026-07-15 20:02:35,051 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:02:35,273 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-26 00:00:00 to 2026-05-27 00:00:00, 7/30 trains
+2026-07-15 20:02:35,274 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779840000_prediction.feather
+2026-07-15 20:02:35,529 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1779840000/cb_btc_1779840000
+2026-07-15 20:02:35,530 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:02:35,553 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:02:35,554 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-26 to 2026-05-26 --------------------
+2026-07-15 20:02:37,563 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:02:37,564 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:02:37] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:06:01,338 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (205.81 secs) --------------------
+2026-07-15 20:06:01,340 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:06:01,628 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-28 00:00:00 to 2026-05-29 00:00:00, 8/30 trains
+2026-07-15 20:06:01,629 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780012800_prediction.feather
+2026-07-15 20:06:01,891 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1780012800/cb_btc_1780012800
+2026-07-15 20:06:01,892 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:06:01,919 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:06:01,920 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-02-28 to 2026-05-28 --------------------
+2026-07-15 20:06:03,966 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:06:03,967 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:06:04] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:09:25,997 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (204.10 secs) --------------------
+2026-07-15 20:09:26,001 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:09:26,261 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-02 00:00:00 to 2026-05-31 00:00:00, 9/30 trains
+2026-07-15 20:09:26,262 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780185600_prediction.feather
+2026-07-15 20:09:26,539 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1780185600/cb_btc_1780185600
+2026-07-15 20:09:26,540 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:09:26,563 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:09:26,564 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-02 to 2026-05-30 --------------------
+2026-07-15 20:09:28,471 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:09:28,472 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:09:28] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:12:55,851 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (209.31 secs) --------------------
+2026-07-15 20:12:55,853 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:12:56,115 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-04 00:00:00 to 2026-06-02 00:00:00, 10/30 trains
+2026-07-15 20:12:56,116 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780358400_prediction.feather
+2026-07-15 20:12:56,397 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1780358400/cb_btc_1780358400
+2026-07-15 20:12:56,397 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:12:56,421 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:12:56,422 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-04 to 2026-06-01 --------------------
+2026-07-15 20:12:58,511 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:12:58,511 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:12:58] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:16:14,811 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (198.41 secs) --------------------
+2026-07-15 20:16:14,812 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:16:15,109 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-06 00:00:00 to 2026-06-04 00:00:00, 11/30 trains
+2026-07-15 20:16:15,110 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780531200_prediction.feather
+2026-07-15 20:16:15,417 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1780531200/cb_btc_1780531200
+2026-07-15 20:16:15,418 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:16:15,441 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:16:15,442 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-06 to 2026-06-03 --------------------
+2026-07-15 20:16:17,324 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:16:17,325 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:16:17] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:19:18,017 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (182.60 secs) --------------------
+2026-07-15 20:19:18,018 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:19:18,310 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-08 00:00:00 to 2026-06-06 00:00:00, 12/30 trains
+2026-07-15 20:19:18,310 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780704000_prediction.feather
+2026-07-15 20:19:18,632 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1780704000/cb_btc_1780704000
+2026-07-15 20:19:18,633 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:19:18,657 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:19:18,658 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-08 to 2026-06-05 --------------------
+2026-07-15 20:19:20,610 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:19:20,611 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:19:20] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:22:35,153 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (196.52 secs) --------------------
+2026-07-15 20:22:35,154 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:22:35,398 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-10 00:00:00 to 2026-06-08 00:00:00, 13/30 trains
+2026-07-15 20:22:35,399 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780876800_prediction.feather
+2026-07-15 20:22:35,721 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1780876800/cb_btc_1780876800
+2026-07-15 20:22:35,722 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:22:35,745 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:22:35,746 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-10 to 2026-06-07 --------------------
+2026-07-15 20:22:37,803 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:22:37,803 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:22:38] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:26:04,073 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (208.35 secs) --------------------
+2026-07-15 20:26:04,074 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:26:04,347 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-12 00:00:00 to 2026-06-10 00:00:00, 14/30 trains
+2026-07-15 20:26:04,348 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781049600_prediction.feather
+2026-07-15 20:26:04,643 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1781049600/cb_btc_1781049600
+2026-07-15 20:26:04,643 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:26:04,670 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:26:04,670 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-12 to 2026-06-09 --------------------
+2026-07-15 20:26:06,732 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:26:06,733 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:26:06] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:29:24,469 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (199.82 secs) --------------------
+2026-07-15 20:29:24,470 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:29:24,729 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-14 00:00:00 to 2026-06-12 00:00:00, 15/30 trains
+2026-07-15 20:29:24,731 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781222400_prediction.feather
+2026-07-15 20:29:25,024 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1781222400/cb_btc_1781222400
+2026-07-15 20:29:25,024 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:29:25,047 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:29:25,048 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-14 to 2026-06-11 --------------------
+2026-07-15 20:29:27,000 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:29:27,001 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:29:27] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:32:44,049 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (199.02 secs) --------------------
+2026-07-15 20:32:44,050 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:32:44,334 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-16 00:00:00 to 2026-06-14 00:00:00, 16/30 trains
+2026-07-15 20:32:44,336 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781395200_prediction.feather
+2026-07-15 20:32:44,638 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1781395200/cb_btc_1781395200
+2026-07-15 20:32:44,638 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:32:44,662 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:32:44,662 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-16 to 2026-06-13 --------------------
+2026-07-15 20:32:46,704 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:32:46,704 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:32:46] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:36:10,219 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (205.58 secs) --------------------
+2026-07-15 20:36:10,220 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:36:10,509 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-18 00:00:00 to 2026-06-16 00:00:00, 17/30 trains
+2026-07-15 20:36:10,509 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781568000_prediction.feather
+2026-07-15 20:36:10,814 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1781568000/cb_btc_1781568000
+2026-07-15 20:36:10,815 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:36:10,838 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:36:10,838 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-18 to 2026-06-15 --------------------
+2026-07-15 20:36:12,935 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:36:12,936 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:36:13] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:39:30,445 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (199.63 secs) --------------------
+2026-07-15 20:39:30,446 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:39:30,667 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-20 00:00:00 to 2026-06-18 00:00:00, 18/30 trains
+2026-07-15 20:39:30,668 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781740800_prediction.feather
+2026-07-15 20:39:31,040 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1781740800/cb_btc_1781740800
+2026-07-15 20:39:31,041 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:39:31,065 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:39:31,065 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-20 to 2026-06-17 --------------------
+2026-07-15 20:39:32,968 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:39:32,969 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:39:33] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:42:10,689 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (159.65 secs) --------------------
+2026-07-15 20:42:10,694 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:42:10,934 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-22 00:00:00 to 2026-06-20 00:00:00, 19/30 trains
+2026-07-15 20:42:10,935 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781913600_prediction.feather
+2026-07-15 20:42:11,293 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1781913600/cb_btc_1781913600
+2026-07-15 20:42:11,294 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:42:11,322 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:42:11,323 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-22 to 2026-06-19 --------------------
+2026-07-15 20:42:13,270 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:42:13,271 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:42:13] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:45:31,977 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (200.68 secs) --------------------
+2026-07-15 20:45:31,978 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:45:32,261 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-24 00:00:00 to 2026-06-22 00:00:00, 20/30 trains
+2026-07-15 20:45:32,262 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782086400_prediction.feather
+2026-07-15 20:45:32,578 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1782086400/cb_btc_1782086400
+2026-07-15 20:45:32,579 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:45:32,603 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:45:32,604 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-24 to 2026-06-21 --------------------
+2026-07-15 20:45:34,504 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:45:34,505 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:45:34] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:49:03,247 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (210.67 secs) --------------------
+2026-07-15 20:49:03,248 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:49:03,515 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-26 00:00:00 to 2026-06-24 00:00:00, 21/30 trains
+2026-07-15 20:49:03,517 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782259200_prediction.feather
+2026-07-15 20:49:03,838 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1782259200/cb_btc_1782259200
+2026-07-15 20:49:03,839 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:49:03,867 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:49:03,868 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-26 to 2026-06-23 --------------------
+2026-07-15 20:49:05,738 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:49:05,738 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:49:05] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:52:36,715 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (212.88 secs) --------------------
+2026-07-15 20:52:36,716 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:52:36,981 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-28 00:00:00 to 2026-06-26 00:00:00, 22/30 trains
+2026-07-15 20:52:36,981 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782432000_prediction.feather
+2026-07-15 20:52:37,340 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1782432000/cb_btc_1782432000
+2026-07-15 20:52:37,341 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:52:37,369 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:52:37,370 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-28 to 2026-06-25 --------------------
+2026-07-15 20:52:39,371 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:52:39,372 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:52:39] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:56:02,674 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (205.33 secs) --------------------
+2026-07-15 20:56:02,676 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:56:02,964 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-30 00:00:00 to 2026-06-28 00:00:00, 23/30 trains
+2026-07-15 20:56:02,965 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782604800_prediction.feather
+2026-07-15 20:56:03,295 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1782604800/cb_btc_1782604800
+2026-07-15 20:56:03,295 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:56:03,320 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:56:03,321 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-03-30 to 2026-06-27 --------------------
+2026-07-15 20:56:05,366 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:56:05,367 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:56:05] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 20:59:02,430 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (179.13 secs) --------------------
+2026-07-15 20:59:02,433 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 20:59:02,645 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-01 00:00:00 to 2026-06-30 00:00:00, 24/30 trains
+2026-07-15 20:59:02,646 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782777600_prediction.feather
+2026-07-15 20:59:02,989 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1782777600/cb_btc_1782777600
+2026-07-15 20:59:02,989 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 20:59:03,012 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 20:59:03,013 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-04-01 to 2026-06-29 --------------------
+2026-07-15 20:59:05,053 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 20:59:05,054 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [20:59:05] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 21:02:00,282 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (177.29 secs) --------------------
+2026-07-15 21:02:00,283 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 21:02:00,504 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-03 00:00:00 to 2026-07-02 00:00:00, 25/30 trains
+2026-07-15 21:02:00,505 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782950400_prediction.feather
+2026-07-15 21:02:00,853 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1782950400/cb_btc_1782950400
+2026-07-15 21:02:00,854 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 21:02:00,878 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 21:02:00,879 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-04-03 to 2026-07-01 --------------------
+2026-07-15 21:02:02,812 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 21:02:02,812 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [21:02:03] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 21:05:31,607 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (210.75 secs) --------------------
+2026-07-15 21:05:31,608 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 21:05:31,861 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-05 00:00:00 to 2026-07-04 00:00:00, 26/30 trains
+2026-07-15 21:05:31,864 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783123200_prediction.feather
+2026-07-15 21:05:32,228 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1783123200/cb_btc_1783123200
+2026-07-15 21:05:32,229 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 21:05:32,256 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 21:05:32,257 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-04-05 to 2026-07-03 --------------------
+2026-07-15 21:05:34,380 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 21:05:34,380 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [21:05:34] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 21:08:54,066 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (201.84 secs) --------------------
+2026-07-15 21:08:54,069 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 21:08:54,401 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-07 00:00:00 to 2026-07-06 00:00:00, 27/30 trains
+2026-07-15 21:08:54,402 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783296000_prediction.feather
+2026-07-15 21:08:54,774 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1783296000/cb_btc_1783296000
+2026-07-15 21:08:54,774 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 21:08:54,798 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 21:08:54,799 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-04-07 to 2026-07-05 --------------------
+2026-07-15 21:08:56,820 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 21:08:56,820 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [21:08:57] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 21:12:08,526 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (193.75 secs) --------------------
+2026-07-15 21:12:08,527 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 21:12:08,755 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-09 00:00:00 to 2026-07-08 00:00:00, 28/30 trains
+2026-07-15 21:12:08,756 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783468800_prediction.feather
+2026-07-15 21:12:09,117 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1783468800/cb_btc_1783468800
+2026-07-15 21:12:09,118 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 21:12:09,144 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 21:12:09,145 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-04-09 to 2026-07-07 --------------------
+2026-07-15 21:12:10,876 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 21:12:10,877 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [21:12:11] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 21:15:43,671 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (214.55 secs) --------------------
+2026-07-15 21:15:43,672 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 21:15:43,993 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-11 00:00:00 to 2026-07-10 00:00:00, 29/30 trains
+2026-07-15 21:15:43,993 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783641600_prediction.feather
+2026-07-15 21:15:44,366 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1783641600/cb_btc_1783641600
+2026-07-15 21:15:44,367 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 21:15:44,393 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 21:15:44,394 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-04-11 to 2026-07-09 --------------------
+2026-07-15 21:15:46,270 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 21:15:46,271 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [21:15:46] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 21:19:01,900 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (197.53 secs) --------------------
+2026-07-15 21:19:01,901 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 21:19:02,155 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-13 00:00:00 to 2026-07-12 00:00:00, 30/30 trains
+2026-07-15 21:19:02,156 - freqtrade.freqai.data_kitchen - INFO - Could not find backtesting prediction file at 
+/freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783814400_prediction.feather
+2026-07-15 21:19:02,516 - freqtrade.freqai.freqai_interface - INFO - Could not find model at /freqtrade/user_data/models/bt_x7/sub-train-BTC_1783814400/cb_btc_1783814400
+2026-07-15 21:19:02,516 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Starting training BTC/USDT:USDT --------------------
+2026-07-15 21:19:02,540 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT:USDT: dropped 48 training points due to NaNs in populated dataset 8640.
+2026-07-15 21:19:02,540 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Training on data from 2026-04-13 to 2026-07-11 --------------------
+2026-07-15 21:19:04,489 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 238 features
+2026-07-15 21:19:04,490 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - Training model on 8592 data points
+/home/ftuser/.local/lib/python3.13/site-packages/xgboost/training.py:200: UserWarning: [21:19:04] WARNING: /__w/xgboost/xgboost/src/learner.cc:782: 
+Parameters: { "feature_fraction", "min_child_samples", "num_leaves", "subsample_freq" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+2026-07-15 21:22:29,814 - freqtrade.freqai.base_models.BaseClassifierModel - INFO - -------------------- Done training BTC/USDT:USDT (207.30 secs) --------------------
+2026-07-15 21:22:29,816 - freqtrade.freqai.freqai_interface - INFO - Saving metadata to disk.
+2026-07-15 21:22:30,114 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2026-05-15 00:00:00 up to 2026-07-14 00:00:00 (60 days).
+2026-07-15 21:22:30,116 - TradingMLStrategyV2 - INFO - 🔎 BTC/USDT:USDT | P(up)=0.00 P(down)=0.00 do_predict=0.0 | need p>0.6 margin>0.25
+2026-07-15 21:22:34,428 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/backtest_results/backtest-result-2026-07-15_21-22-34.meta.json"
+Result for strategy TradingMLStrategyV2
+                                                BACKTESTING REPORT                                                
+┏━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT:USDT │    101 │        -0.16 │         -44.159 │        -4.42 │      6:00:00 │   49     0    52  48.5 │
+│         TOTAL │    101 │        -0.16 │         -44.159 │        -4.42 │      6:00:00 │   49     0    52  48.5 │
+└───────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                         LEFT OPEN TRADES REPORT                                          
+┏━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ TOTAL │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└───────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                ENTER TAG STATS                                                
+┏━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Entries ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   0.00853 │       1 │         4.15 │          14.994 │          1.5 │      4:00:00 │    1     0     0   100 │
+│   0.01106 │       1 │         4.02 │          11.461 │         1.15 │      1:00:00 │    1     0     0   100 │
+│   0.01886 │       1 │         6.46 │          10.776 │         1.08 │      7:45:00 │    1     0     0   100 │
+│    0.0088 │       1 │         2.94 │          10.560 │         1.06 │     10:00:00 │    1     0     0   100 │
+│   0.01178 │       1 │         3.83 │          10.429 │         1.04 │      0:45:00 │    1     0     0   100 │
+│   0.01291 │       1 │         4.42 │          10.024 │          1.0 │      3:15:00 │    1     0     0   100 │
+│   0.01089 │       1 │         3.52 │           9.914 │         0.99 │      5:15:00 │    1     0     0   100 │
+│   0.01047 │       1 │          3.3 │           9.894 │         0.99 │      8:45:00 │    1     0     0   100 │
+│   0.01484 │       1 │         4.84 │           9.676 │         0.97 │      8:00:00 │    1     0     0   100 │
+│   0.00846 │       1 │          2.5 │           9.659 │         0.97 │      3:45:00 │    1     0     0   100 │
+│   0.01228 │       1 │         3.78 │           9.548 │         0.95 │      2:30:00 │    1     0     0   100 │
+│   0.01456 │       1 │          4.3 │           9.497 │         0.95 │      2:15:00 │    1     0     0   100 │
+│   0.01034 │       1 │         3.04 │           9.492 │         0.95 │      8:15:00 │    1     0     0   100 │
+│   0.01494 │       1 │         4.61 │           9.188 │         0.92 │     11:30:00 │    1     0     0   100 │
+│   0.01196 │       1 │         3.37 │           8.753 │         0.88 │      2:30:00 │    1     0     0   100 │
+│      0.01 │       1 │         2.83 │           8.660 │         0.87 │      9:30:00 │    1     0     0   100 │
+│    0.0113 │       1 │         3.11 │           8.658 │         0.87 │      4:15:00 │    1     0     0   100 │
+│   0.00827 │       1 │          2.3 │           8.643 │         0.86 │      3:45:00 │    1     0     0   100 │
+│    0.0092 │       1 │         2.56 │           8.630 │         0.86 │     10:30:00 │    1     0     0   100 │
+│   0.01393 │       1 │         3.97 │           8.333 │         0.83 │      2:45:00 │    1     0     0   100 │
+│   0.00889 │       1 │         2.46 │           8.247 │         0.82 │      1:45:00 │    1     0     0   100 │
+│   0.01454 │       1 │         2.96 │           6.442 │         0.64 │      3:15:00 │    1     0     0   100 │
+│   0.01139 │       1 │         2.33 │           6.244 │         0.62 │     12:00:00 │    1     0     0   100 │
+│   0.01384 │       2 │         1.38 │           5.493 │         0.55 │     11:38:00 │    1     0     1  50.0 │
+│   0.01143 │       1 │         2.05 │           5.406 │         0.54 │     11:15:00 │    1     0     0   100 │
+│   0.00807 │       1 │         1.39 │           5.360 │         0.54 │      2:00:00 │    1     0     0   100 │
+│   0.00969 │       1 │         1.63 │           5.204 │         0.52 │      7:00:00 │    1     0     0   100 │
+│   0.00913 │       1 │         1.37 │           4.639 │         0.46 │      7:45:00 │    1     0     0   100 │
+│   0.01144 │       1 │         1.64 │           4.530 │         0.45 │     12:00:00 │    1     0     0   100 │
+│   0.00929 │       1 │         1.31 │           4.376 │         0.44 │      4:00:00 │    1     0     0   100 │
+│   0.00904 │       1 │         1.16 │           4.185 │         0.42 │      1:45:00 │    1     0     0   100 │
+│   0.00959 │       1 │         1.26 │           4.148 │         0.41 │      1:30:00 │    1     0     0   100 │
+│   0.00837 │       1 │         1.06 │           4.098 │         0.41 │      2:00:00 │    1     0     0   100 │
+│   0.01059 │       2 │         0.83 │           4.089 │         0.41 │      9:30:00 │    1     0     1  50.0 │
+│   0.00674 │       1 │         0.86 │           4.009 │          0.4 │      7:00:00 │    1     0     0   100 │
+│   0.00947 │       1 │         0.94 │           3.157 │         0.32 │     12:00:00 │    1     0     0   100 │
+│   0.00893 │       1 │         0.84 │           3.032 │          0.3 │      1:30:00 │    1     0     0   100 │
+│   0.01775 │       1 │         1.81 │           2.973 │          0.3 │     12:00:00 │    1     0     0   100 │
+│    0.0089 │       1 │         0.79 │           2.808 │         0.28 │      1:15:00 │    1     0     0   100 │
+│   0.00764 │       1 │         0.57 │           2.392 │         0.24 │     12:00:00 │    1     0     0   100 │
+│   0.01017 │       1 │         0.57 │           1.761 │         0.18 │      6:45:00 │    1     0     0   100 │
+│     0.019 │       1 │         1.18 │           1.741 │         0.17 │     12:00:00 │    1     0     0   100 │
+│   0.00976 │       1 │         0.49 │           1.645 │         0.16 │     12:00:00 │    1     0     0   100 │
+│   0.01366 │       1 │         0.75 │           1.593 │         0.16 │      9:45:00 │    1     0     0   100 │
+│   0.00881 │       1 │         0.42 │           1.530 │         0.15 │     12:00:00 │    1     0     0   100 │
+│     0.008 │       1 │         0.37 │           1.418 │         0.14 │      1:15:00 │    1     0     0   100 │
+│   0.00656 │       1 │         0.24 │           1.163 │         0.12 │      9:30:00 │    1     0     0   100 │
+│    0.0132 │       1 │         0.47 │           1.074 │         0.11 │     12:00:00 │    1     0     0   100 │
+│   0.01285 │       1 │         0.45 │           1.028 │          0.1 │      1:45:00 │    1     0     0   100 │
+│   0.00996 │       1 │        -0.08 │          -0.233 │        -0.02 │      1:15:00 │    0     0     1     0 │
+│   0.00925 │       1 │        -0.16 │          -0.523 │        -0.05 │      1:30:00 │    0     0     1     0 │
+│   0.00865 │       1 │        -0.17 │          -0.614 │        -0.06 │      3:00:00 │    0     0     1     0 │
+│   0.00834 │       1 │        -0.17 │          -0.623 │        -0.06 │      5:15:00 │    0     0     1     0 │
+│   0.00825 │       1 │        -0.22 │          -0.806 │        -0.08 │      1:30:00 │    0     0     1     0 │
+│   0.01188 │       1 │        -0.33 │          -0.845 │        -0.08 │     12:00:00 │    0     0     1     0 │
+│   0.00804 │       1 │        -0.22 │          -0.918 │        -0.09 │      5:15:00 │    0     0     1     0 │
+│   0.00927 │       1 │        -0.51 │          -1.636 │        -0.16 │      4:45:00 │    0     0     1     0 │
+│   0.01273 │       1 │        -0.75 │          -1.908 │        -0.19 │      1:00:00 │    0     0     1     0 │
+│   0.01193 │       1 │        -0.94 │          -2.553 │        -0.26 │      4:00:00 │    0     0     1     0 │
+│   0.00844 │       1 │        -0.73 │          -2.645 │        -0.26 │     12:00:00 │    0     0     1     0 │
+│   0.00784 │       1 │         -0.7 │          -2.850 │        -0.29 │     12:00:00 │    0     0     1     0 │
+│   0.01426 │       1 │        -1.29 │          -2.898 │        -0.29 │     12:00:00 │    0     0     1     0 │
+│   0.01449 │       1 │        -1.38 │          -2.974 │         -0.3 │     12:00:00 │    0     0     1     0 │
+│   0.01497 │       1 │        -1.54 │          -2.976 │         -0.3 │     12:00:00 │    0     0     1     0 │
+│   0.00738 │       1 │        -0.67 │          -2.979 │         -0.3 │      1:15:00 │    0     0     1     0 │
+│   0.02648 │       1 │        -2.77 │          -3.366 │        -0.34 │     12:00:00 │    0     0     1     0 │
+│   0.00957 │       1 │        -1.19 │          -3.897 │        -0.39 │     12:00:00 │    0     0     1     0 │
+│   0.01223 │       1 │        -1.66 │          -4.141 │        -0.41 │     12:00:00 │    0     0     1     0 │
+│   0.02018 │       1 │        -3.37 │          -4.947 │        -0.49 │     12:00:00 │    0     0     1     0 │
+│   0.00862 │       1 │        -1.45 │          -5.534 │        -0.55 │      8:45:00 │    0     0     1     0 │
+│   0.00833 │       1 │        -2.08 │          -7.569 │        -0.76 │     12:00:00 │    0     0     1     0 │
+│   0.02067 │       1 │        -6.51 │          -9.335 │        -0.93 │      4:15:00 │    0     0     1     0 │
+│   0.01562 │       1 │        -4.98 │          -9.388 │        -0.94 │     10:15:00 │    0     0     1     0 │
+│   0.01597 │       1 │        -5.11 │          -9.433 │        -0.94 │      8:15:00 │    0     0     1     0 │
+│   0.01851 │       1 │        -5.86 │          -9.643 │        -0.96 │      0:00:00 │    0     0     1     0 │
+│   0.01397 │       1 │        -4.49 │          -9.660 │        -0.97 │      0:30:00 │    0     0     1     0 │
+│   0.01304 │       1 │        -4.21 │          -9.797 │        -0.98 │      2:15:00 │    0     0     1     0 │
+│   0.01302 │       1 │        -4.21 │          -9.976 │         -1.0 │      1:30:00 │    0     0     1     0 │
+│    0.0105 │       1 │        -3.45 │          -9.992 │         -1.0 │      5:00:00 │    0     0     1     0 │
+│   0.01108 │       1 │        -3.62 │         -10.108 │        -1.01 │      6:00:00 │    0     0     1     0 │
+│   0.01076 │       1 │        -3.53 │         -10.122 │        -1.01 │      4:30:00 │    0     0     1     0 │
+│   0.01247 │       1 │        -4.03 │         -10.153 │        -1.02 │      4:00:00 │    0     0     1     0 │
+│   0.01035 │       1 │         -3.4 │         -10.163 │        -1.02 │      5:15:00 │    0     0     1     0 │
+│   0.01156 │       1 │        -3.77 │         -10.201 │        -1.02 │      0:30:00 │    0     0     1     0 │
+│   0.01051 │       1 │        -3.45 │         -10.272 │        -1.03 │      3:00:00 │    0     0     1     0 │
+│   0.00797 │       1 │        -2.69 │         -10.299 │        -1.03 │      0:45:00 │    0     0     1     0 │
+│   0.01021 │       1 │        -3.39 │         -10.506 │        -1.05 │      0:45:00 │    0     0     1     0 │
+│   0.00794 │       1 │        -2.69 │         -10.510 │        -1.05 │      1:45:00 │    0     0     1     0 │
+│   0.00952 │       1 │        -3.15 │         -10.575 │        -1.06 │      1:30:00 │    0     0     1     0 │
+│   0.00943 │       1 │        -3.15 │         -10.639 │        -1.06 │      5:45:00 │    0     0     1     0 │
+│    0.0095 │       1 │        -3.15 │         -10.786 │        -1.08 │      4:15:00 │    0     0     1     0 │
+│   0.00829 │       1 │        -2.78 │         -10.793 │        -1.08 │      0:30:00 │    0     0     1     0 │
+│   0.00708 │       1 │        -2.42 │         -10.879 │        -1.09 │      5:30:00 │    0     0     1     0 │
+│   0.00845 │       1 │        -2.83 │         -10.897 │        -1.09 │      1:45:00 │    0     0     1     0 │
+│   0.01001 │       1 │        -3.32 │         -11.001 │         -1.1 │      3:00:00 │    0     0     1     0 │
+│   0.00785 │       1 │        -2.68 │         -11.051 │        -1.11 │      5:00:00 │    0     0     1     0 │
+│   0.00696 │       1 │        -2.39 │         -11.169 │        -1.12 │      6:30:00 │    0     0     1     0 │
+│     0.013 │       2 │         -4.2 │         -19.949 │        -1.99 │      1:38:00 │    0     0     2     0 │
+│     TOTAL │     101 │        -0.16 │         -44.159 │        -4.42 │      6:00:00 │   49     0    52  48.5 │
+└───────────┴─────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                               EXIT REASON STATS                                                
+┏━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Exit Reason ┃ Exits ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   tp_barrier │    22 │         3.69 │         213.997 │         21.4 │      5:50:00 │   22     0     0   100 │
+│  exit_signal │    29 │         0.56 │          50.589 │         5.06 │      4:05:00 │   18     0    11  62.1 │
+│ time_barrier │    22 │        -0.46 │         -21.447 │        -2.14 │     12:00:00 │    9     0    13  40.9 │
+│    stop_loss │    28 │         -3.7 │        -287.298 │       -28.73 │      3:25:00 │    0     0    28     0 │
+│        TOTAL │   101 │        -0.16 │         -44.159 │        -4.42 │      6:00:00 │   49     0    52  48.5 │
+└──────────────┴───────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                       MIXED TAG STATS                                                       
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃  Exit Reason ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   0.00853 │   tp_barrier │      1 │         4.15 │          14.994 │          1.5 │      4:00:00 │    1     0     0   100 │
+│   0.01106 │   tp_barrier │      1 │         4.02 │          11.461 │         1.15 │      1:00:00 │    1     0     0   100 │
+│   0.01886 │   tp_barrier │      1 │         6.46 │          10.776 │         1.08 │      7:45:00 │    1     0     0   100 │
+│    0.0088 │   tp_barrier │      1 │         2.94 │          10.560 │         1.06 │     10:00:00 │    1     0     0   100 │
+│   0.01178 │   tp_barrier │      1 │         3.83 │          10.429 │         1.04 │      0:45:00 │    1     0     0   100 │
+│   0.01291 │   tp_barrier │      1 │         4.42 │          10.024 │          1.0 │      3:15:00 │    1     0     0   100 │
+│   0.01089 │   tp_barrier │      1 │         3.52 │           9.914 │         0.99 │      5:15:00 │    1     0     0   100 │
+│   0.01047 │   tp_barrier │      1 │          3.3 │           9.894 │         0.99 │      8:45:00 │    1     0     0   100 │
+│   0.01484 │   tp_barrier │      1 │         4.84 │           9.676 │         0.97 │      8:00:00 │    1     0     0   100 │
+│   0.00846 │   tp_barrier │      1 │          2.5 │           9.659 │         0.97 │      3:45:00 │    1     0     0   100 │
+│   0.01228 │   tp_barrier │      1 │         3.78 │           9.548 │         0.95 │      2:30:00 │    1     0     0   100 │
+│   0.01456 │   tp_barrier │      1 │          4.3 │           9.497 │         0.95 │      2:15:00 │    1     0     0   100 │
+│   0.01034 │   tp_barrier │      1 │         3.04 │           9.492 │         0.95 │      8:15:00 │    1     0     0   100 │
+│   0.01494 │   tp_barrier │      1 │         4.61 │           9.188 │         0.92 │     11:30:00 │    1     0     0   100 │
+│   0.01196 │   tp_barrier │      1 │         3.37 │           8.753 │         0.88 │      2:30:00 │    1     0     0   100 │
+│   0.01384 │   tp_barrier │      1 │         4.19 │           8.718 │         0.87 │     11:15:00 │    1     0     0   100 │
+│      0.01 │   tp_barrier │      1 │         2.83 │           8.660 │         0.87 │      9:30:00 │    1     0     0   100 │
+│    0.0113 │   tp_barrier │      1 │         3.11 │           8.658 │         0.87 │      4:15:00 │    1     0     0   100 │
+│   0.00827 │   tp_barrier │      1 │          2.3 │           8.643 │         0.86 │      3:45:00 │    1     0     0   100 │
+│    0.0092 │   tp_barrier │      1 │         2.56 │           8.630 │         0.86 │     10:30:00 │    1     0     0   100 │
+│   0.01059 │   tp_barrier │      1 │         3.09 │           8.490 │         0.85 │      7:00:00 │    1     0     0   100 │
+│   0.01393 │   tp_barrier │      1 │         3.97 │           8.333 │         0.83 │      2:45:00 │    1     0     0   100 │
+│   0.00889 │  exit_signal │      1 │         2.46 │           8.247 │         0.82 │      1:45:00 │    1     0     0   100 │
+│   0.01454 │  exit_signal │      1 │         2.96 │           6.442 │         0.64 │      3:15:00 │    1     0     0   100 │
+│   0.01139 │ time_barrier │      1 │         2.33 │           6.244 │         0.62 │     12:00:00 │    1     0     0   100 │
+│   0.01143 │  exit_signal │      1 │         2.05 │           5.406 │         0.54 │     11:15:00 │    1     0     0   100 │
+│   0.00807 │  exit_signal │      1 │         1.39 │           5.360 │         0.54 │      2:00:00 │    1     0     0   100 │
+│   0.00969 │  exit_signal │      1 │         1.63 │           5.204 │         0.52 │      7:00:00 │    1     0     0   100 │
+│   0.00913 │  exit_signal │      1 │         1.37 │           4.639 │         0.46 │      7:45:00 │    1     0     0   100 │
+│   0.01144 │ time_barrier │      1 │         1.64 │           4.530 │         0.45 │     12:00:00 │    1     0     0   100 │
+│   0.00929 │  exit_signal │      1 │         1.31 │           4.376 │         0.44 │      4:00:00 │    1     0     0   100 │
+│   0.00904 │  exit_signal │      1 │         1.16 │           4.185 │         0.42 │      1:45:00 │    1     0     0   100 │
+│   0.00959 │  exit_signal │      1 │         1.26 │           4.148 │         0.41 │      1:30:00 │    1     0     0   100 │
+│   0.00837 │  exit_signal │      1 │         1.06 │           4.098 │         0.41 │      2:00:00 │    1     0     0   100 │
+│   0.00674 │  exit_signal │      1 │         0.86 │           4.009 │          0.4 │      7:00:00 │    1     0     0   100 │
+│   0.00947 │ time_barrier │      1 │         0.94 │           3.157 │         0.32 │     12:00:00 │    1     0     0   100 │
+│   0.00893 │  exit_signal │      1 │         0.84 │           3.032 │          0.3 │      1:30:00 │    1     0     0   100 │
+│   0.01775 │ time_barrier │      1 │         1.81 │           2.973 │          0.3 │     12:00:00 │    1     0     0   100 │
+│    0.0089 │  exit_signal │      1 │         0.79 │           2.808 │         0.28 │      1:15:00 │    1     0     0   100 │
+│   0.00764 │ time_barrier │      1 │         0.57 │           2.392 │         0.24 │     12:00:00 │    1     0     0   100 │
+│   0.01017 │  exit_signal │      1 │         0.57 │           1.761 │         0.18 │      6:45:00 │    1     0     0   100 │
+│     0.019 │ time_barrier │      1 │         1.18 │           1.741 │         0.17 │     12:00:00 │    1     0     0   100 │
+│   0.00976 │ time_barrier │      1 │         0.49 │           1.645 │         0.16 │     12:00:00 │    1     0     0   100 │
+│   0.01366 │  exit_signal │      1 │         0.75 │           1.593 │         0.16 │      9:45:00 │    1     0     0   100 │
+│   0.00881 │ time_barrier │      1 │         0.42 │           1.530 │         0.15 │     12:00:00 │    1     0     0   100 │
+│     0.008 │  exit_signal │      1 │         0.37 │           1.418 │         0.14 │      1:15:00 │    1     0     0   100 │
+│   0.00656 │  exit_signal │      1 │         0.24 │           1.163 │         0.12 │      9:30:00 │    1     0     0   100 │
+│    0.0132 │ time_barrier │      1 │         0.47 │           1.074 │         0.11 │     12:00:00 │    1     0     0   100 │
+│   0.01285 │  exit_signal │      1 │         0.45 │           1.028 │          0.1 │      1:45:00 │    1     0     0   100 │
+│   0.00996 │  exit_signal │      1 │        -0.08 │          -0.233 │        -0.02 │      1:15:00 │    0     0     1     0 │
+│   0.00925 │  exit_signal │      1 │        -0.16 │          -0.523 │        -0.05 │      1:30:00 │    0     0     1     0 │
+│   0.00865 │  exit_signal │      1 │        -0.17 │          -0.614 │        -0.06 │      3:00:00 │    0     0     1     0 │
+│   0.00834 │  exit_signal │      1 │        -0.17 │          -0.623 │        -0.06 │      5:15:00 │    0     0     1     0 │
+│   0.00825 │  exit_signal │      1 │        -0.22 │          -0.806 │        -0.08 │      1:30:00 │    0     0     1     0 │
+│   0.01188 │ time_barrier │      1 │        -0.33 │          -0.845 │        -0.08 │     12:00:00 │    0     0     1     0 │
+│   0.00804 │  exit_signal │      1 │        -0.22 │          -0.918 │        -0.09 │      5:15:00 │    0     0     1     0 │
+│   0.00927 │  exit_signal │      1 │        -0.51 │          -1.636 │        -0.16 │      4:45:00 │    0     0     1     0 │
+│   0.01273 │  exit_signal │      1 │        -0.75 │          -1.908 │        -0.19 │      1:00:00 │    0     0     1     0 │
+│   0.01193 │  exit_signal │      1 │        -0.94 │          -2.553 │        -0.26 │      4:00:00 │    0     0     1     0 │
+│   0.00844 │ time_barrier │      1 │        -0.73 │          -2.645 │        -0.26 │     12:00:00 │    0     0     1     0 │
+│   0.00784 │ time_barrier │      1 │         -0.7 │          -2.850 │        -0.29 │     12:00:00 │    0     0     1     0 │
+│   0.01426 │ time_barrier │      1 │        -1.29 │          -2.898 │        -0.29 │     12:00:00 │    0     0     1     0 │
+│   0.01449 │ time_barrier │      1 │        -1.38 │          -2.974 │         -0.3 │     12:00:00 │    0     0     1     0 │
+│   0.01497 │ time_barrier │      1 │        -1.54 │          -2.976 │         -0.3 │     12:00:00 │    0     0     1     0 │
+│   0.00738 │  exit_signal │      1 │        -0.67 │          -2.979 │         -0.3 │      1:15:00 │    0     0     1     0 │
+│   0.01384 │ time_barrier │      1 │        -1.43 │          -3.225 │        -0.32 │     12:00:00 │    0     0     1     0 │
+│   0.02648 │ time_barrier │      1 │        -2.77 │          -3.366 │        -0.34 │     12:00:00 │    0     0     1     0 │
+│   0.00957 │ time_barrier │      1 │        -1.19 │          -3.897 │        -0.39 │     12:00:00 │    0     0     1     0 │
+│   0.01223 │ time_barrier │      1 │        -1.66 │          -4.141 │        -0.41 │     12:00:00 │    0     0     1     0 │
+│   0.01059 │ time_barrier │      1 │        -1.43 │          -4.401 │        -0.44 │     12:00:00 │    0     0     1     0 │
+│   0.02018 │ time_barrier │      1 │        -3.37 │          -4.947 │        -0.49 │     12:00:00 │    0     0     1     0 │
+│   0.00862 │  exit_signal │      1 │        -1.45 │          -5.534 │        -0.55 │      8:45:00 │    0     0     1     0 │
+│   0.00833 │ time_barrier │      1 │        -2.08 │          -7.569 │        -0.76 │     12:00:00 │    0     0     1     0 │
+│   0.02067 │    stop_loss │      1 │        -6.51 │          -9.335 │        -0.93 │      4:15:00 │    0     0     1     0 │
+│   0.01562 │    stop_loss │      1 │        -4.98 │          -9.388 │        -0.94 │     10:15:00 │    0     0     1     0 │
+│   0.01597 │    stop_loss │      1 │        -5.11 │          -9.433 │        -0.94 │      8:15:00 │    0     0     1     0 │
+│   0.01851 │    stop_loss │      1 │        -5.86 │          -9.643 │        -0.96 │      0:00:00 │    0     0     1     0 │
+│   0.01397 │    stop_loss │      1 │        -4.49 │          -9.660 │        -0.97 │      0:30:00 │    0     0     1     0 │
+│   0.01304 │    stop_loss │      1 │        -4.21 │          -9.797 │        -0.98 │      2:15:00 │    0     0     1     0 │
+│   0.01302 │    stop_loss │      1 │        -4.21 │          -9.976 │         -1.0 │      1:30:00 │    0     0     1     0 │
+│    0.0105 │    stop_loss │      1 │        -3.45 │          -9.992 │         -1.0 │      5:00:00 │    0     0     1     0 │
+│   0.01108 │    stop_loss │      1 │        -3.62 │         -10.108 │        -1.01 │      6:00:00 │    0     0     1     0 │
+│   0.01076 │    stop_loss │      1 │        -3.53 │         -10.122 │        -1.01 │      4:30:00 │    0     0     1     0 │
+│   0.01247 │    stop_loss │      1 │        -4.03 │         -10.153 │        -1.02 │      4:00:00 │    0     0     1     0 │
+│   0.01035 │    stop_loss │      1 │         -3.4 │         -10.163 │        -1.02 │      5:15:00 │    0     0     1     0 │
+│   0.01156 │    stop_loss │      1 │        -3.77 │         -10.201 │        -1.02 │      0:30:00 │    0     0     1     0 │
+│   0.01051 │    stop_loss │      1 │        -3.45 │         -10.272 │        -1.03 │      3:00:00 │    0     0     1     0 │
+│   0.00797 │    stop_loss │      1 │        -2.69 │         -10.299 │        -1.03 │      0:45:00 │    0     0     1     0 │
+│   0.01021 │    stop_loss │      1 │        -3.39 │         -10.506 │        -1.05 │      0:45:00 │    0     0     1     0 │
+│   0.00794 │    stop_loss │      1 │        -2.69 │         -10.510 │        -1.05 │      1:45:00 │    0     0     1     0 │
+│   0.00952 │    stop_loss │      1 │        -3.15 │         -10.575 │        -1.06 │      1:30:00 │    0     0     1     0 │
+│   0.00943 │    stop_loss │      1 │        -3.15 │         -10.639 │        -1.06 │      5:45:00 │    0     0     1     0 │
+│    0.0095 │    stop_loss │      1 │        -3.15 │         -10.786 │        -1.08 │      4:15:00 │    0     0     1     0 │
+│   0.00829 │    stop_loss │      1 │        -2.78 │         -10.793 │        -1.08 │      0:30:00 │    0     0     1     0 │
+│   0.00708 │    stop_loss │      1 │        -2.42 │         -10.879 │        -1.09 │      5:30:00 │    0     0     1     0 │
+│   0.00845 │    stop_loss │      1 │        -2.83 │         -10.897 │        -1.09 │      1:45:00 │    0     0     1     0 │
+│   0.01001 │    stop_loss │      1 │        -3.32 │         -11.001 │         -1.1 │      3:00:00 │    0     0     1     0 │
+│   0.00785 │    stop_loss │      1 │        -2.68 │         -11.051 │        -1.11 │      5:00:00 │    0     0     1     0 │
+│   0.00696 │    stop_loss │      1 │        -2.39 │         -11.169 │        -1.12 │      6:30:00 │    0     0     1     0 │
+│     0.013 │    stop_loss │      2 │         -4.2 │         -19.949 │        -1.99 │      1:38:00 │    0     0     2     0 │
+│     TOTAL │              │    101 │        -0.16 │         -44.159 │        -4.42 │      6:00:00 │   49     0    52  48.5 │
+└───────────┴──────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                         SUMMARY METRICS                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                        ┃ Value                          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Backtesting from              │ 2026-05-15 00:00:00            │
+│ Backtesting to                │ 2026-07-14 00:00:00            │
+│ Trading Mode                  │ Isolated Futures               │
+│ Max open trades               │ 1                              │
+│                               │                                │
+│ Total/Daily Avg Trades        │ 101 / 1.68                     │
+│ Starting balance              │ 1000 USDT                      │
+│ Final balance                 │ 955.841 USDT                   │
+│ Absolute profit               │ -44.159 USDT                   │
+│ Total profit %                │ -4.42%                         │
+│ CAGR %                        │ -24.02%                        │
+│ Sortino                       │ -3.54                          │
+│ Sharpe                        │ -1.87                          │
+│ Calmar                        │ -17.59                         │
+│ SQN                           │ -0.58                          │
+│ Profit factor                 │ 0.87                           │
+│ Expectancy (Ratio)            │ -0.44 (-0.06)                  │
+│ Avg. daily profit             │ -0.736 USDT                    │
+│ Avg. stake amount             │ 299.35 USDT                    │
+│ Total trade volume            │ 181476.028 USDT                │
+│                               │                                │
+│ Long / Short trades           │ 59 / 42                        │
+│ Long / Short profit %         │ -4.53% / 0.12%                 │
+│ Long / Short profit USDT      │ -45.348 / 1.190                │
+│                               │                                │
+│ Best Pair                     │ BTC/USDT:USDT -4.42%           │
+│ Worst Pair                    │ BTC/USDT:USDT -4.42%           │
+│ Best trade                    │ BTC/USDT:USDT 6.46%            │
+│ Worst trade                   │ BTC/USDT:USDT -6.51%           │
+│ Best day                      │ 24.888 USDT                    │
+│ Worst day                     │ -30.646 USDT                   │
+│ Days win/draw/lose            │ 25 / 10 / 25                   │
+│ Min/Max/Avg. Duration Winners │ 0d 00:45 / 0d 12:00 / 0d 06:29 │
+│ Min/Max/Avg. Duration Losers  │ 0d 00:00 / 0d 12:00 / 0d 05:33 │
+│ Max Consecutive Wins / Loss   │ 4 / 5                          │
+│ Rejected Entry signals        │ 0                              │
+│ Entry/Exit Timeouts           │ 0 / 0                          │
+│                               │                                │
+│ Min balance                   │ 923.815 USDT                   │
+│ Max balance                   │ 1004.077 USDT                  │
+│ Max % of account underwater   │ 7.99%                          │
+│ Absolute drawdown             │ 80.262 USDT (7.99%)            │
+│ Drawdown duration             │ 24 days 00:15:00               │
+│ Profit at drawdown start      │ 4.077 USDT                     │
+│ Profit at drawdown end        │ -76.185 USDT                   │
+│ Drawdown start                │ 2026-05-25 15:00:00            │
+│ Drawdown end                  │ 2026-06-18 15:15:00            │
+│ Market change                 │ -23.36%                        │
+└───────────────────────────────┴────────────────────────────────┘
+
+Backtested 2026-05-15 00:00:00 -> 2026-07-14 00:00:00 | Max open trades : 1
+                                                              STRATEGY SUMMARY                                                               
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃            Strategy ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃           Drawdown ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ TradingMLStrategyV2 │    101 │        -0.16 │         -44.159 │        -4.42 │      6:00:00 │   49     0    52  48.5 │ 80.262 USDT  7.99% │
+└─────────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┴────────────────────┘
