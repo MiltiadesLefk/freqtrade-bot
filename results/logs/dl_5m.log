@@ -1,0 +1,62 @@
+ Container ft_userdata-freqtrade-run-ce2ee3261621 Creating 
+ Container ft_userdata-freqtrade-run-ce2ee3261621 Created 
+2026-09-06 17:26:51,390 - freqtrade - INFO - freqtrade 2026.3
+2026-09-06 17:26:51,726 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-09-06 17:26:52,673 - freqtrade.configuration.load_config - INFO - Using config: user_data/config.json ...
+2026-09-06 17:26:52,674 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__JWT_SECRET_KEY'
+2026-09-06 17:26:52,674 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'JWT_SECRET_KEY']
+2026-09-06 17:26:52,675 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__PASSWORD'
+2026-09-06 17:26:52,675 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'PASSWORD']
+2026-09-06 17:26:52,676 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__USERNAME'
+2026-09-06 17:26:52,676 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'USERNAME']
+2026-09-06 17:26:52,677 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__WS_TOKEN'
+2026-09-06 17:26:52,677 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'WS_TOKEN']
+2026-09-06 17:26:52,677 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__KEY'
+2026-09-06 17:26:52,678 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'KEY']
+2026-09-06 17:26:52,678 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__SECRET'
+2026-09-06 17:26:52,679 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'SECRET']
+2026-09-06 17:26:52,679 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__CHAT_ID'
+2026-09-06 17:26:52,680 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'CHAT_ID']
+2026-09-06 17:26:52,680 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__TOKEN'
+2026-09-06 17:26:52,681 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'TOKEN']
+2026-09-06 17:26:52,682 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-09-06 17:26:52,683 - freqtrade.loggers - INFO - Logfile configured
+2026-09-06 17:26:52,683 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-09-06 17:26:52,684 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20231201- ...
+2026-09-06 17:26:52,727 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-09-06 17:26:52,727 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-09-06 17:26:52,728 - freqtrade.configuration.configuration - INFO - Using pairs ['BTC/USDT:USDT']
+2026-09-06 17:26:52,728 - freqtrade.configuration.configuration - INFO - timeframes --timeframes: ['5m']
+2026-09-06 17:26:52,729 - freqtrade.configuration.configuration - INFO - Detected --trading-mode: futures
+2026-09-06 17:26:52,729 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20231201-
+2026-09-06 17:26:52,730 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-09-06 17:26:52,737 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-09-06 17:26:52,738 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-09-06 17:26:53,022 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-09-06 17:26:53,022 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.44
+2026-09-06 17:26:53,023 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-09-06 17:26:53,031 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-09-06 17:26:53,038 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-09-06 17:26:53,039 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-09-06 17:26:53,039 - freqtrade.exchange.exchange - INFO - Markets were not loaded. Loading them now..
+2026-09-06 17:26:55,578 - freqtrade.data.history.history_utils - INFO - About to download pairs: ['BTC/USDT:USDT', 'ETH/USDT:USDT'], intervals: ['5m'] to /freqtrade/user_data/data/binance
+2026-09-06 17:26:55,595 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT:USDT", 5m, futures and store in /freqtrade/user_data/data/binance. From 2023-12-01T00:00:00 
+to now
+2026-09-06 17:27:03,798 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT:USDT, 5m, futures with length 291053.
+2026-09-06 17:27:04,006 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT:USDT", 1h, mark and store in /freqtrade/user_data/data/binance. From 2026-09-06T12:00:00 to 
+now
+2026-09-06 17:27:04,369 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT:USDT, 1h, mark with length 2.
+2026-09-06 17:27:04,393 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT:USDT", 1h, funding_rate and store in /freqtrade/user_data/data/binance. From 
+2026-09-06T00:00:00 to now
+2026-09-06 17:27:04,748 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT:USDT, 1h, funding_rate with length 2.
+2026-09-06 17:27:04,754 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT:USDT", 5m, futures and store in /freqtrade/user_data/data/binance. From 2023-12-01T00:00:00 
+to now
+2026-09-06 17:27:12,308 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT:USDT, 5m, futures with length 291053.
+2026-09-06 17:27:12,568 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT:USDT", 1h, mark and store in /freqtrade/user_data/data/binance. From 2026-09-06T12:00:00 to 
+now
+2026-09-06 17:27:12,922 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT:USDT, 1h, mark with length 2.
+2026-09-06 17:27:12,944 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT:USDT", 1h, funding_rate and store in /freqtrade/user_data/data/binance. From 
+2026-09-06T00:00:00 to now
+2026-09-06 17:27:13,330 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT:USDT, 1h, funding_rate with length 2.
+Timeframe                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3/3 100% • 0:00:09 • 0:00:00
+Downloading ETH/USDT:USDT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 100% • 0:00:17 • 0:00:00

@@ -1,0 +1,31 @@
+ Container ft_userdata-freqtrade-run-789c343cf972 Creating 
+ Container ft_userdata-freqtrade-run-789c343cf972 Created 
+data: {'1d': 1010, '4h': 6062, '1h': 24252}
+
+running REAL grid on IS ...
+  939 configs
+running NULL grids (3 replicates of shuffled returns) ...
+  2670 null configs
+
+====================================================================================
+NOISE CEILING: what the BEST config looks like with NO edge at all
+====================================================================================
+  null PF  median 1.299   p95 3.847   p99 8.850   MAX inf
+  real PF  median 1.315   p95 2.474   p99 3.146   MAX 3.816
+
+  -> a real config must clear the null's p99 of 8.850 to be interesting at all.
+  -> real configs above that: 0/939 (chance alone would give ~9)
+
+====================================================================================
+TOP 15 REAL CONFIGS ON IS -> THEIR OOS RESULT
+====================================================================================
+tf  rule      lb dir tp sl   rr  IS pf  IS n  OOS pf  OOS n  OOS ret%  OOS dd%
+1d  tsmom     20   L  4  0  0.0  3.155    20   3.074     21     +53.2      8.7
+1d  tsmom     20   L  4  4  1.0  3.155    20   3.074     21     +53.2      8.7
+1d  tsmom     50   L  2  0  0.0  3.130    31   1.958     21     +29.7     15.9
+1d  tsmom     50   L  2  4  0.5  3.130    31   1.958     21     +29.7     15.9
+1d  dualma    20   L  2  0  0.0  3.117    26   1.877     15     +21.0     12.6
+1d  dualma    20   L  2  4  0.5  3.117    26   1.877     15     +21.0     12.6
+
+  6/15 of the IS-best configs stayed above PF 1.0 out of sample.
+  (full grids saved to user_data/grid_is.csv, grid_oos.csv)

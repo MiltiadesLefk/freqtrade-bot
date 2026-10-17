@@ -1,0 +1,7 @@
+WAITING for in-flight containers (X1 X2 X3 X4)
+INFLIGHT_DRAINED
+BATCH-C start (X6 K=6 barriers, X7 XGBoost)
+DONE x7 rc=0
+DONE x6 rc=0
+BATCH-C done
+BATCH-D start (X8 45d-train/wf0.9, X11 24h-horizon)

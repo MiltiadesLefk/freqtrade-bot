@@ -1,0 +1,1258 @@
+ Container ft_userdata-freqtrade-run-a82591f441cf Creating 
+ Container ft_userdata-freqtrade-run-a82591f441cf Created 
+2026-07-16 12:29:38,536 - freqtrade - INFO - freqtrade 2026.3
+2026-07-16 12:29:38,789 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2026-07-16 12:29:40,085 - freqtrade.configuration.load_config - INFO - Using config: user_data/config.json ...
+2026-07-16 12:29:40,086 - freqtrade.configuration.load_config - INFO - Using config: user_data/bt_x7.json ...
+2026-07-16 12:29:40,086 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__JWT_SECRET_KEY'
+2026-07-16 12:29:40,086 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'JWT_SECRET_KEY']
+2026-07-16 12:29:40,087 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__PASSWORD'
+2026-07-16 12:29:40,087 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'PASSWORD']
+2026-07-16 12:29:40,088 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__USERNAME'
+2026-07-16 12:29:40,088 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'USERNAME']
+2026-07-16 12:29:40,089 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__API_SERVER__WS_TOKEN'
+2026-07-16 12:29:40,089 - freqtrade.configuration.environment_vars - INFO - Key parts: ['API_SERVER', 'WS_TOKEN']
+2026-07-16 12:29:40,090 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__KEY'
+2026-07-16 12:29:40,090 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'KEY']
+2026-07-16 12:29:40,091 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__EXCHANGE__SECRET'
+2026-07-16 12:29:40,091 - freqtrade.configuration.environment_vars - INFO - Key parts: ['EXCHANGE', 'SECRET']
+2026-07-16 12:29:40,091 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__CHAT_ID'
+2026-07-16 12:29:40,092 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'CHAT_ID']
+2026-07-16 12:29:40,092 - freqtrade.configuration.environment_vars - INFO - Loading variable 'FREQTRADE__TELEGRAM__TOKEN'
+2026-07-16 12:29:40,093 - freqtrade.configuration.environment_vars - INFO - Key parts: ['TELEGRAM', 'TOKEN']
+2026-07-16 12:29:40,095 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-07-16 12:29:40,095 - freqtrade.loggers - INFO - Logfile configured
+2026-07-16 12:29:40,096 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-07-16 12:29:40,096 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2026-07-16 12:29:40,096 - freqtrade.configuration.configuration - INFO - Parameter --timerange detected: 20251015-20260714 ...
+2026-07-16 12:29:40,133 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-07-16 12:29:40,133 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-07-16 12:29:40,134 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2026-07-16 12:29:40,134 - freqtrade.configuration.configuration - INFO - Filter trades by timerange: 20251015-20260714
+2026-07-16 12:29:40,135 - freqtrade.configuration.configuration - INFO - Using freqaimodel class name: XGBoostClassifier
+2026-07-16 12:29:40,136 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-07-16 12:29:40,148 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-07-16 12:29:40,149 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-07-16 12:29:40,150 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 12:29:40,153 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2026-07-16 12:29:40,154 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-07-16 12:29:40,155 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.44
+2026-07-16 12:29:40,156 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-07-16 12:29:40,167 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}}
+2026-07-16 12:29:40,179 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-07-16 12:29:41,733 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2026-07-16 12:29:41,744 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy TradingMLStrategyV2 from '/freqtrade/user_data/strategies/TradingMLStrategyV2.py'...
+2026-07-16 12:29:41,744 - freqtrade.strategy.hyper - INFO - Loading parameters from file /freqtrade/user_data/strategies/TradingMLStrategyV2.json
+2026-07-16 12:29:41,745 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'minimal_roi' with value from the configuration: {'0': 99}.
+2026-07-16 12:29:41,745 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 15m.
+2026-07-16 12:29:41,746 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stoploss' with value from the configuration: -0.15.
+2026-07-16 12:29:41,746 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'trailing_stop' with value from the configuration: False.
+2026-07-16 12:29:41,747 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-07-16 12:29:41,747 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
+2026-07-16 12:29:41,748 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 
+'unit': 'minutes'}.
+2026-07-16 12:29:41,748 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 1.
+2026-07-16 12:29:41,749 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 99}
+2026-07-16 12:29:41,749 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 15m
+2026-07-16 12:29:41,750 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.15
+2026-07-16 12:29:41,750 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-07-16 12:29:41,751 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-07-16 12:29:41,751 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-07-16 12:29:41,752 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: True
+2026-07-16 12:29:41,752 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-07-16 12:29:41,753 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'market', 'exit': 'market', 'stoploss': 'market', 'stoploss_on_exchange': True, 
+'stoploss_on_exchange_interval': 60}
+2026-07-16 12:29:41,753 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-07-16 12:29:41,753 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-07-16 12:29:41,754 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
+2026-07-16 12:29:41,754 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
+2026-07-16 12:29:41,754 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 10, 'exit_timeout_count': 0, 'unit': 'minutes'}
+2026-07-16 12:29:41,755 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-07-16 12:29:41,755 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-07-16 12:29:41,755 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
+2026-07-16 12:29:41,756 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-07-16 12:29:41,756 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-07-16 12:29:41,757 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-07-16 12:29:41,757 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-07-16 12:29:41,758 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-07-16 12:29:41,758 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 1
+2026-07-16 12:29:41,759 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-07-16 12:29:41,763 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-07-16 12:29:41,774 - freqtrade.optimize.backtesting - INFO - Using fee 0.0500% - worst case fee from exchange (lowest tier).
+2026-07-16 12:29:41,775 - freqtrade.exchange.exchange - WARNING - Using 2 calls to get OHLCV. This can result in slower operations for the bot. Please check if you really need 800 candles for your 
+strategy.
+2026-07-16 12:29:41,775 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 15m to 9440
+2026-07-16 12:29:41,822 - freqtrade.optimize.backtesting - INFO - Loading data from 2025-07-08 16:00:00 up to 2026-07-14 00:00:00 (370 days).
+2026-07-16 12:29:42,108 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2026-07-16 12:29:42,110 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy TradingMLStrategyV2
+2026-07-16 12:29:42,871 - freqtrade.resolvers.iresolver - INFO - Using resolved freqaimodel XGBoostClassifier from '/freqtrade/freqtrade/freqai/prediction_models/XGBoostClassifier.py'...
+2026-07-16 12:29:42,872 - freqtrade.freqai.data_drawer - INFO - Could not find existing datadrawer, starting from scratch
+2026-07-16 12:29:42,872 - freqtrade.freqai.data_drawer - INFO - Could not find existing historic_predictions, starting from scratch
+2026-07-16 12:29:42,873 - freqtrade.freqai.freqai_interface - INFO - Set fresh train queue from whitelist. Queue: ['BTC/USDT:USDT']
+2026-07-16 12:29:42,874 - freqtrade.strategy.hyper - INFO - Strategy Parameter: exit_prob_threshold = 0.55
+2026-07-16 12:29:42,874 - freqtrade.strategy.hyper - INFO - Strategy Parameter: lock_hours = 3.0
+2026-07-16 12:29:42,875 - freqtrade.strategy.hyper - INFO - Strategy Parameter: reentry_cooldown_hours = 2.0
+2026-07-16 12:29:42,875 - freqtrade.strategy.hyper - INFO - Strategy Parameter: prob_margin = 0.25
+2026-07-16 12:29:42,876 - freqtrade.strategy.hyper - INFO - Strategy Parameter: prob_threshold = 0.6
+2026-07-16 12:29:42,876 - freqtrade.strategy.hyper - INFO - Strategy Parameter: vol_regime_max = 1.5
+2026-07-16 12:29:42,886 - freqtrade.freqai.freqai_interface - INFO - Training 136 timeranges
+2026-07-16 12:29:42,887 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-07-17 00:00:00 to 2025-10-15 00:00:00, 1/136 trains
+2026-07-16 12:29:42,889 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1760486400_prediction.feather
+2026-07-16 12:29:42,905 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-16 12:29:42,905 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2025-06-13 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 12:29:42,914 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, futures, 1h, data starts at 2025-07-01 00:00:00
+2026-07-16 12:29:42,956 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-16 12:29:42,956 - freqtrade.data.dataprovider - INFO - Loading data for BTC/USDT:USDT 1h from 2025-06-13 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 12:29:42,961 - freqtrade.data.history.datahandlers.idatahandler - WARNING - BTC/USDT:USDT, funding_rate, 1h, data starts at 2025-07-01 00:00:00
+2026-07-16 12:29:42,968 - freqtrade.data.converter.converter - INFO - Missing data fillup for BTC/USDT:USDT, 1h: before: 1135 - after: 9073 - 699.38%
+2026-07-16 12:29:42,973 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 15m to 9440
+2026-07-16 12:29:42,973 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 15m from 2025-07-08 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 12:29:43,060 - freqtrade.data.dataprovider - INFO - Increasing startup_candle_count for freqai on 1h to 2960
+2026-07-16 12:29:43,060 - freqtrade.data.dataprovider - INFO - Loading data for ETH/USDT:USDT 1h from 2025-06-13 16:00:00 to 2026-07-14 00:00:00
+2026-07-16 12:29:43,106 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-07-19 00:00:00 to 2025-10-17 00:00:00, 2/136 trains
+2026-07-16 12:29:43,107 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1760659200_prediction.feather
+2026-07-16 12:29:43,110 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-07-21 00:00:00 to 2025-10-19 00:00:00, 3/136 trains
+2026-07-16 12:29:43,112 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1760832000_prediction.feather
+2026-07-16 12:29:43,114 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-07-23 00:00:00 to 2025-10-21 00:00:00, 4/136 trains
+2026-07-16 12:29:43,115 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1761004800_prediction.feather
+2026-07-16 12:29:43,118 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-07-25 00:00:00 to 2025-10-23 00:00:00, 5/136 trains
+2026-07-16 12:29:43,119 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1761177600_prediction.feather
+2026-07-16 12:29:43,122 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-07-27 00:00:00 to 2025-10-25 00:00:00, 6/136 trains
+2026-07-16 12:29:43,123 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1761350400_prediction.feather
+2026-07-16 12:29:43,126 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-07-29 00:00:00 to 2025-10-27 00:00:00, 7/136 trains
+2026-07-16 12:29:43,127 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1761523200_prediction.feather
+2026-07-16 12:29:43,129 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-07-31 00:00:00 to 2025-10-29 00:00:00, 8/136 trains
+2026-07-16 12:29:43,131 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1761696000_prediction.feather
+2026-07-16 12:29:43,133 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-02 00:00:00 to 2025-10-31 00:00:00, 9/136 trains
+2026-07-16 12:29:43,135 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1761868800_prediction.feather
+2026-07-16 12:29:43,137 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-04 00:00:00 to 2025-11-02 00:00:00, 10/136 trains
+2026-07-16 12:29:43,139 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1762041600_prediction.feather
+2026-07-16 12:29:43,141 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-06 00:00:00 to 2025-11-04 00:00:00, 11/136 trains
+2026-07-16 12:29:43,143 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1762214400_prediction.feather
+2026-07-16 12:29:43,146 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-08 00:00:00 to 2025-11-06 00:00:00, 12/136 trains
+2026-07-16 12:29:43,148 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1762387200_prediction.feather
+2026-07-16 12:29:43,150 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-10 00:00:00 to 2025-11-08 00:00:00, 13/136 trains
+2026-07-16 12:29:43,152 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1762560000_prediction.feather
+2026-07-16 12:29:43,154 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-12 00:00:00 to 2025-11-10 00:00:00, 14/136 trains
+2026-07-16 12:29:43,156 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1762732800_prediction.feather
+2026-07-16 12:29:43,159 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-14 00:00:00 to 2025-11-12 00:00:00, 15/136 trains
+2026-07-16 12:29:43,161 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1762905600_prediction.feather
+2026-07-16 12:29:43,164 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-16 00:00:00 to 2025-11-14 00:00:00, 16/136 trains
+2026-07-16 12:29:43,165 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1763078400_prediction.feather
+2026-07-16 12:29:43,168 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-18 00:00:00 to 2025-11-16 00:00:00, 17/136 trains
+2026-07-16 12:29:43,169 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1763251200_prediction.feather
+2026-07-16 12:29:43,172 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-20 00:00:00 to 2025-11-18 00:00:00, 18/136 trains
+2026-07-16 12:29:43,174 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1763424000_prediction.feather
+2026-07-16 12:29:43,176 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-22 00:00:00 to 2025-11-20 00:00:00, 19/136 trains
+2026-07-16 12:29:43,178 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1763596800_prediction.feather
+2026-07-16 12:29:43,180 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-24 00:00:00 to 2025-11-22 00:00:00, 20/136 trains
+2026-07-16 12:29:43,182 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1763769600_prediction.feather
+2026-07-16 12:29:43,185 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-26 00:00:00 to 2025-11-24 00:00:00, 21/136 trains
+2026-07-16 12:29:43,186 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1763942400_prediction.feather
+2026-07-16 12:29:43,189 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-28 00:00:00 to 2025-11-26 00:00:00, 22/136 trains
+2026-07-16 12:29:43,190 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1764115200_prediction.feather
+2026-07-16 12:29:43,193 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-08-30 00:00:00 to 2025-11-28 00:00:00, 23/136 trains
+2026-07-16 12:29:43,195 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1764288000_prediction.feather
+2026-07-16 12:29:43,197 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-01 00:00:00 to 2025-11-30 00:00:00, 24/136 trains
+2026-07-16 12:29:43,199 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1764460800_prediction.feather
+2026-07-16 12:29:43,201 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-03 00:00:00 to 2025-12-02 00:00:00, 25/136 trains
+2026-07-16 12:29:43,203 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1764633600_prediction.feather
+2026-07-16 12:29:43,205 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-05 00:00:00 to 2025-12-04 00:00:00, 26/136 trains
+2026-07-16 12:29:43,207 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1764806400_prediction.feather
+2026-07-16 12:29:43,210 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-07 00:00:00 to 2025-12-06 00:00:00, 27/136 trains
+2026-07-16 12:29:43,212 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1764979200_prediction.feather
+2026-07-16 12:29:43,214 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-09 00:00:00 to 2025-12-08 00:00:00, 28/136 trains
+2026-07-16 12:29:43,216 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1765152000_prediction.feather
+2026-07-16 12:29:43,219 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-11 00:00:00 to 2025-12-10 00:00:00, 29/136 trains
+2026-07-16 12:29:43,220 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1765324800_prediction.feather
+2026-07-16 12:29:43,223 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-13 00:00:00 to 2025-12-12 00:00:00, 30/136 trains
+2026-07-16 12:29:43,225 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1765497600_prediction.feather
+2026-07-16 12:29:43,228 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-15 00:00:00 to 2025-12-14 00:00:00, 31/136 trains
+2026-07-16 12:29:43,229 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1765670400_prediction.feather
+2026-07-16 12:29:43,232 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-17 00:00:00 to 2025-12-16 00:00:00, 32/136 trains
+2026-07-16 12:29:43,233 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1765843200_prediction.feather
+2026-07-16 12:29:43,235 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-19 00:00:00 to 2025-12-18 00:00:00, 33/136 trains
+2026-07-16 12:29:43,237 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1766016000_prediction.feather
+2026-07-16 12:29:43,240 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-21 00:00:00 to 2025-12-20 00:00:00, 34/136 trains
+2026-07-16 12:29:43,241 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1766188800_prediction.feather
+2026-07-16 12:29:43,244 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-23 00:00:00 to 2025-12-22 00:00:00, 35/136 trains
+2026-07-16 12:29:43,245 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1766361600_prediction.feather
+2026-07-16 12:29:43,248 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-25 00:00:00 to 2025-12-24 00:00:00, 36/136 trains
+2026-07-16 12:29:43,250 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1766534400_prediction.feather
+2026-07-16 12:29:43,252 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-27 00:00:00 to 2025-12-26 00:00:00, 37/136 trains
+2026-07-16 12:29:43,254 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1766707200_prediction.feather
+2026-07-16 12:29:43,257 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-09-29 00:00:00 to 2025-12-28 00:00:00, 38/136 trains
+2026-07-16 12:29:43,259 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1766880000_prediction.feather
+2026-07-16 12:29:43,261 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-01 00:00:00 to 2025-12-30 00:00:00, 39/136 trains
+2026-07-16 12:29:43,263 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1767052800_prediction.feather
+2026-07-16 12:29:43,266 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-03 00:00:00 to 2026-01-01 00:00:00, 40/136 trains
+2026-07-16 12:29:43,267 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1767225600_prediction.feather
+2026-07-16 12:29:43,270 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-05 00:00:00 to 2026-01-03 00:00:00, 41/136 trains
+2026-07-16 12:29:43,271 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1767398400_prediction.feather
+2026-07-16 12:29:43,274 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-07 00:00:00 to 2026-01-05 00:00:00, 42/136 trains
+2026-07-16 12:29:43,275 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1767571200_prediction.feather
+2026-07-16 12:29:43,278 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-09 00:00:00 to 2026-01-07 00:00:00, 43/136 trains
+2026-07-16 12:29:43,280 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1767744000_prediction.feather
+2026-07-16 12:29:43,283 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-11 00:00:00 to 2026-01-09 00:00:00, 44/136 trains
+2026-07-16 12:29:43,285 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1767916800_prediction.feather
+2026-07-16 12:29:43,287 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-13 00:00:00 to 2026-01-11 00:00:00, 45/136 trains
+2026-07-16 12:29:43,289 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1768089600_prediction.feather
+2026-07-16 12:29:43,291 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-15 00:00:00 to 2026-01-13 00:00:00, 46/136 trains
+2026-07-16 12:29:43,293 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1768262400_prediction.feather
+2026-07-16 12:29:43,295 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-17 00:00:00 to 2026-01-15 00:00:00, 47/136 trains
+2026-07-16 12:29:43,297 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1768435200_prediction.feather
+2026-07-16 12:29:43,300 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-19 00:00:00 to 2026-01-17 00:00:00, 48/136 trains
+2026-07-16 12:29:43,302 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1768608000_prediction.feather
+2026-07-16 12:29:43,305 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-21 00:00:00 to 2026-01-19 00:00:00, 49/136 trains
+2026-07-16 12:29:43,307 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1768780800_prediction.feather
+2026-07-16 12:29:43,309 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-23 00:00:00 to 2026-01-21 00:00:00, 50/136 trains
+2026-07-16 12:29:43,311 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1768953600_prediction.feather
+2026-07-16 12:29:43,313 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-25 00:00:00 to 2026-01-23 00:00:00, 51/136 trains
+2026-07-16 12:29:43,315 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1769126400_prediction.feather
+2026-07-16 12:29:43,318 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-27 00:00:00 to 2026-01-25 00:00:00, 52/136 trains
+2026-07-16 12:29:43,320 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1769299200_prediction.feather
+2026-07-16 12:29:43,323 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-29 00:00:00 to 2026-01-27 00:00:00, 53/136 trains
+2026-07-16 12:29:43,324 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1769472000_prediction.feather
+2026-07-16 12:29:43,327 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-10-31 00:00:00 to 2026-01-29 00:00:00, 54/136 trains
+2026-07-16 12:29:43,329 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1769644800_prediction.feather
+2026-07-16 12:29:43,332 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-02 00:00:00 to 2026-01-31 00:00:00, 55/136 trains
+2026-07-16 12:29:43,333 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1769817600_prediction.feather
+2026-07-16 12:29:43,336 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-04 00:00:00 to 2026-02-02 00:00:00, 56/136 trains
+2026-07-16 12:29:43,338 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1769990400_prediction.feather
+2026-07-16 12:29:43,341 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-06 00:00:00 to 2026-02-04 00:00:00, 57/136 trains
+2026-07-16 12:29:43,343 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1770163200_prediction.feather
+2026-07-16 12:29:43,345 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-08 00:00:00 to 2026-02-06 00:00:00, 58/136 trains
+2026-07-16 12:29:43,347 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1770336000_prediction.feather
+2026-07-16 12:29:43,349 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-10 00:00:00 to 2026-02-08 00:00:00, 59/136 trains
+2026-07-16 12:29:43,351 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1770508800_prediction.feather
+2026-07-16 12:29:43,354 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-12 00:00:00 to 2026-02-10 00:00:00, 60/136 trains
+2026-07-16 12:29:43,356 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1770681600_prediction.feather
+2026-07-16 12:29:43,359 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-14 00:00:00 to 2026-02-12 00:00:00, 61/136 trains
+2026-07-16 12:29:43,361 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1770854400_prediction.feather
+2026-07-16 12:29:43,364 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-16 00:00:00 to 2026-02-14 00:00:00, 62/136 trains
+2026-07-16 12:29:43,365 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1771027200_prediction.feather
+2026-07-16 12:29:43,368 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-18 00:00:00 to 2026-02-16 00:00:00, 63/136 trains
+2026-07-16 12:29:43,370 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1771200000_prediction.feather
+2026-07-16 12:29:43,372 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-20 00:00:00 to 2026-02-18 00:00:00, 64/136 trains
+2026-07-16 12:29:43,374 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1771372800_prediction.feather
+2026-07-16 12:29:43,376 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-22 00:00:00 to 2026-02-20 00:00:00, 65/136 trains
+2026-07-16 12:29:43,377 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1771545600_prediction.feather
+2026-07-16 12:29:43,380 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-24 00:00:00 to 2026-02-22 00:00:00, 66/136 trains
+2026-07-16 12:29:43,382 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1771718400_prediction.feather
+2026-07-16 12:29:43,384 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-26 00:00:00 to 2026-02-24 00:00:00, 67/136 trains
+2026-07-16 12:29:43,386 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1771891200_prediction.feather
+2026-07-16 12:29:43,388 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-28 00:00:00 to 2026-02-26 00:00:00, 68/136 trains
+2026-07-16 12:29:43,390 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1772064000_prediction.feather
+2026-07-16 12:29:43,393 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-11-30 00:00:00 to 2026-02-28 00:00:00, 69/136 trains
+2026-07-16 12:29:43,395 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1772236800_prediction.feather
+2026-07-16 12:29:43,398 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-02 00:00:00 to 2026-03-02 00:00:00, 70/136 trains
+2026-07-16 12:29:43,399 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1772409600_prediction.feather
+2026-07-16 12:29:43,402 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-04 00:00:00 to 2026-03-04 00:00:00, 71/136 trains
+2026-07-16 12:29:43,404 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1772582400_prediction.feather
+2026-07-16 12:29:43,407 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-06 00:00:00 to 2026-03-06 00:00:00, 72/136 trains
+2026-07-16 12:29:43,409 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1772755200_prediction.feather
+2026-07-16 12:29:43,412 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-08 00:00:00 to 2026-03-08 00:00:00, 73/136 trains
+2026-07-16 12:29:43,414 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1772928000_prediction.feather
+2026-07-16 12:29:43,417 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-10 00:00:00 to 2026-03-10 00:00:00, 74/136 trains
+2026-07-16 12:29:43,418 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1773100800_prediction.feather
+2026-07-16 12:29:43,421 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-12 00:00:00 to 2026-03-12 00:00:00, 75/136 trains
+2026-07-16 12:29:43,423 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1773273600_prediction.feather
+2026-07-16 12:29:43,426 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-14 00:00:00 to 2026-03-14 00:00:00, 76/136 trains
+2026-07-16 12:29:43,428 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1773446400_prediction.feather
+2026-07-16 12:29:43,431 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-16 00:00:00 to 2026-03-16 00:00:00, 77/136 trains
+2026-07-16 12:29:43,432 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1773619200_prediction.feather
+2026-07-16 12:29:43,435 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-18 00:00:00 to 2026-03-18 00:00:00, 78/136 trains
+2026-07-16 12:29:43,436 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1773792000_prediction.feather
+2026-07-16 12:29:43,439 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-20 00:00:00 to 2026-03-20 00:00:00, 79/136 trains
+2026-07-16 12:29:43,441 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1773964800_prediction.feather
+2026-07-16 12:29:43,444 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-22 00:00:00 to 2026-03-22 00:00:00, 80/136 trains
+2026-07-16 12:29:43,446 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1774137600_prediction.feather
+2026-07-16 12:29:43,448 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-24 00:00:00 to 2026-03-24 00:00:00, 81/136 trains
+2026-07-16 12:29:43,450 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1774310400_prediction.feather
+2026-07-16 12:29:43,453 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-26 00:00:00 to 2026-03-26 00:00:00, 82/136 trains
+2026-07-16 12:29:43,454 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1774483200_prediction.feather
+2026-07-16 12:29:43,457 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-28 00:00:00 to 2026-03-28 00:00:00, 83/136 trains
+2026-07-16 12:29:43,458 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1774656000_prediction.feather
+2026-07-16 12:29:43,461 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2025-12-30 00:00:00 to 2026-03-30 00:00:00, 84/136 trains
+2026-07-16 12:29:43,463 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1774828800_prediction.feather
+2026-07-16 12:29:43,465 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-01 00:00:00 to 2026-04-01 00:00:00, 85/136 trains
+2026-07-16 12:29:43,467 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1775001600_prediction.feather
+2026-07-16 12:29:43,470 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-03 00:00:00 to 2026-04-03 00:00:00, 86/136 trains
+2026-07-16 12:29:43,472 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1775174400_prediction.feather
+2026-07-16 12:29:43,475 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-05 00:00:00 to 2026-04-05 00:00:00, 87/136 trains
+2026-07-16 12:29:43,476 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1775347200_prediction.feather
+2026-07-16 12:29:43,479 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-07 00:00:00 to 2026-04-07 00:00:00, 88/136 trains
+2026-07-16 12:29:43,481 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1775520000_prediction.feather
+2026-07-16 12:29:43,484 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-09 00:00:00 to 2026-04-09 00:00:00, 89/136 trains
+2026-07-16 12:29:43,486 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1775692800_prediction.feather
+2026-07-16 12:29:43,489 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-11 00:00:00 to 2026-04-11 00:00:00, 90/136 trains
+2026-07-16 12:29:43,490 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1775865600_prediction.feather
+2026-07-16 12:29:43,493 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-13 00:00:00 to 2026-04-13 00:00:00, 91/136 trains
+2026-07-16 12:29:43,495 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1776038400_prediction.feather
+2026-07-16 12:29:43,498 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-15 00:00:00 to 2026-04-15 00:00:00, 92/136 trains
+2026-07-16 12:29:43,500 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1776211200_prediction.feather
+2026-07-16 12:29:43,503 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-17 00:00:00 to 2026-04-17 00:00:00, 93/136 trains
+2026-07-16 12:29:43,504 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1776384000_prediction.feather
+2026-07-16 12:29:43,507 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-19 00:00:00 to 2026-04-19 00:00:00, 94/136 trains
+2026-07-16 12:29:43,509 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1776556800_prediction.feather
+2026-07-16 12:29:43,512 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-21 00:00:00 to 2026-04-21 00:00:00, 95/136 trains
+2026-07-16 12:29:43,513 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1776729600_prediction.feather
+2026-07-16 12:29:43,516 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-23 00:00:00 to 2026-04-23 00:00:00, 96/136 trains
+2026-07-16 12:29:43,517 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1776902400_prediction.feather
+2026-07-16 12:29:43,520 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-25 00:00:00 to 2026-04-25 00:00:00, 97/136 trains
+2026-07-16 12:29:43,522 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1777075200_prediction.feather
+2026-07-16 12:29:43,525 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-27 00:00:00 to 2026-04-27 00:00:00, 98/136 trains
+2026-07-16 12:29:43,526 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1777248000_prediction.feather
+2026-07-16 12:29:43,529 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-29 00:00:00 to 2026-04-29 00:00:00, 99/136 trains
+2026-07-16 12:29:43,530 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1777420800_prediction.feather
+2026-07-16 12:29:43,533 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-01-31 00:00:00 to 2026-05-01 00:00:00, 100/136 trains
+2026-07-16 12:29:43,535 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1777593600_prediction.feather
+2026-07-16 12:29:43,538 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-02 00:00:00 to 2026-05-03 00:00:00, 101/136 trains
+2026-07-16 12:29:43,540 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1777766400_prediction.feather
+2026-07-16 12:29:43,543 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-04 00:00:00 to 2026-05-05 00:00:00, 102/136 trains
+2026-07-16 12:29:43,545 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1777939200_prediction.feather
+2026-07-16 12:29:43,547 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-06 00:00:00 to 2026-05-07 00:00:00, 103/136 trains
+2026-07-16 12:29:43,549 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1778112000_prediction.feather
+2026-07-16 12:29:43,552 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-08 00:00:00 to 2026-05-09 00:00:00, 104/136 trains
+2026-07-16 12:29:43,554 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1778284800_prediction.feather
+2026-07-16 12:29:43,557 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-10 00:00:00 to 2026-05-11 00:00:00, 105/136 trains
+2026-07-16 12:29:43,559 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1778457600_prediction.feather
+2026-07-16 12:29:43,562 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-12 00:00:00 to 2026-05-13 00:00:00, 106/136 trains
+2026-07-16 12:29:43,563 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1778630400_prediction.feather
+2026-07-16 12:29:43,566 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-14 00:00:00 to 2026-05-15 00:00:00, 107/136 trains
+2026-07-16 12:29:43,568 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1778803200_prediction.feather
+2026-07-16 12:29:43,571 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-16 00:00:00 to 2026-05-17 00:00:00, 108/136 trains
+2026-07-16 12:29:43,578 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1778976000_prediction.feather
+2026-07-16 12:29:43,581 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-18 00:00:00 to 2026-05-19 00:00:00, 109/136 trains
+2026-07-16 12:29:43,583 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779148800_prediction.feather
+2026-07-16 12:29:43,586 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-20 00:00:00 to 2026-05-21 00:00:00, 110/136 trains
+2026-07-16 12:29:43,588 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779321600_prediction.feather
+2026-07-16 12:29:43,591 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-22 00:00:00 to 2026-05-23 00:00:00, 111/136 trains
+2026-07-16 12:29:43,593 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779494400_prediction.feather
+2026-07-16 12:29:43,596 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-24 00:00:00 to 2026-05-25 00:00:00, 112/136 trains
+2026-07-16 12:29:43,598 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779667200_prediction.feather
+2026-07-16 12:29:43,600 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-26 00:00:00 to 2026-05-27 00:00:00, 113/136 trains
+2026-07-16 12:29:43,602 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1779840000_prediction.feather
+2026-07-16 12:29:43,605 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-02-28 00:00:00 to 2026-05-29 00:00:00, 114/136 trains
+2026-07-16 12:29:43,607 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780012800_prediction.feather
+2026-07-16 12:29:43,610 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-02 00:00:00 to 2026-05-31 00:00:00, 115/136 trains
+2026-07-16 12:29:43,612 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780185600_prediction.feather
+2026-07-16 12:29:43,615 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-04 00:00:00 to 2026-06-02 00:00:00, 116/136 trains
+2026-07-16 12:29:43,617 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780358400_prediction.feather
+2026-07-16 12:29:43,620 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-06 00:00:00 to 2026-06-04 00:00:00, 117/136 trains
+2026-07-16 12:29:43,622 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780531200_prediction.feather
+2026-07-16 12:29:43,625 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-08 00:00:00 to 2026-06-06 00:00:00, 118/136 trains
+2026-07-16 12:29:43,626 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780704000_prediction.feather
+2026-07-16 12:29:43,629 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-10 00:00:00 to 2026-06-08 00:00:00, 119/136 trains
+2026-07-16 12:29:43,631 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1780876800_prediction.feather
+2026-07-16 12:29:43,634 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-12 00:00:00 to 2026-06-10 00:00:00, 120/136 trains
+2026-07-16 12:29:43,636 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781049600_prediction.feather
+2026-07-16 12:29:43,639 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-14 00:00:00 to 2026-06-12 00:00:00, 121/136 trains
+2026-07-16 12:29:43,641 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781222400_prediction.feather
+2026-07-16 12:29:43,644 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-16 00:00:00 to 2026-06-14 00:00:00, 122/136 trains
+2026-07-16 12:29:43,646 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781395200_prediction.feather
+2026-07-16 12:29:43,650 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-18 00:00:00 to 2026-06-16 00:00:00, 123/136 trains
+2026-07-16 12:29:43,652 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781568000_prediction.feather
+2026-07-16 12:29:43,654 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-20 00:00:00 to 2026-06-18 00:00:00, 124/136 trains
+2026-07-16 12:29:43,656 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781740800_prediction.feather
+2026-07-16 12:29:43,659 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-22 00:00:00 to 2026-06-20 00:00:00, 125/136 trains
+2026-07-16 12:29:43,661 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1781913600_prediction.feather
+2026-07-16 12:29:43,663 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-24 00:00:00 to 2026-06-22 00:00:00, 126/136 trains
+2026-07-16 12:29:43,665 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782086400_prediction.feather
+2026-07-16 12:29:43,668 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-26 00:00:00 to 2026-06-24 00:00:00, 127/136 trains
+2026-07-16 12:29:43,670 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782259200_prediction.feather
+2026-07-16 12:29:43,673 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-28 00:00:00 to 2026-06-26 00:00:00, 128/136 trains
+2026-07-16 12:29:43,675 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782432000_prediction.feather
+2026-07-16 12:29:43,678 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-03-30 00:00:00 to 2026-06-28 00:00:00, 129/136 trains
+2026-07-16 12:29:43,681 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782604800_prediction.feather
+2026-07-16 12:29:43,683 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-01 00:00:00 to 2026-06-30 00:00:00, 130/136 trains
+2026-07-16 12:29:43,685 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782777600_prediction.feather
+2026-07-16 12:29:43,688 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-03 00:00:00 to 2026-07-02 00:00:00, 131/136 trains
+2026-07-16 12:29:43,689 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1782950400_prediction.feather
+2026-07-16 12:29:43,693 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-05 00:00:00 to 2026-07-04 00:00:00, 132/136 trains
+2026-07-16 12:29:43,695 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783123200_prediction.feather
+2026-07-16 12:29:43,698 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-07 00:00:00 to 2026-07-06 00:00:00, 133/136 trains
+2026-07-16 12:29:43,700 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783296000_prediction.feather
+2026-07-16 12:29:43,703 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-09 00:00:00 to 2026-07-08 00:00:00, 134/136 trains
+2026-07-16 12:29:43,706 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783468800_prediction.feather
+2026-07-16 12:29:43,708 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-11 00:00:00 to 2026-07-10 00:00:00, 135/136 trains
+2026-07-16 12:29:43,710 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783641600_prediction.feather
+2026-07-16 12:29:43,713 - freqtrade.freqai.freqai_interface - INFO - Training BTC/USDT:USDT, 1/1 pairs from 2026-04-13 00:00:00 to 2026-07-12 00:00:00, 136/136 trains
+2026-07-16 12:29:43,715 - freqtrade.freqai.data_kitchen - INFO - Found backtesting prediction file at /freqtrade/user_data/models/bt_x7/backtesting_predictions/cb_btc_1783814400_prediction.feather
+2026-07-16 12:29:43,748 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2025-10-15 00:00:00 up to 2026-07-14 00:00:00 (272 days).
+2026-07-16 12:29:43,751 - TradingMLStrategyV2 - INFO - 🔎 BTC/USDT:USDT | P(up)=0.00 P(down)=0.00 do_predict=0.0 | need p>0.6 margin>0.25
+2026-07-16 12:29:58,903 - freqtrade.misc - INFO - dumping json to "/freqtrade/user_data/backtest_results/backtest-result-2026-07-16_12-29-58.meta.json"
+Result for strategy TradingMLStrategyV2
+                                                BACKTESTING REPORT                                                
+┏━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃          Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ BTC/USDT:USDT │    429 │        -0.27 │        -276.421 │       -27.64 │      6:23:00 │  211     0   218  49.2 │
+│         TOTAL │    429 │        -0.27 │        -276.421 │       -27.64 │      6:23:00 │  211     0   218  49.2 │
+└───────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                         LEFT OPEN TRADES REPORT                                          
+┏━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Pair ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ TOTAL │      0 │          0.0 │           0.000 │          0.0 │         0:00 │    0     0     0     0 │
+└───────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                ENTER TAG STATS                                                
+┏━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃ Entries ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   0.01143 │       3 │         3.12 │          22.079 │         2.21 │      4:25:00 │    3     0     0   100 │
+│   0.01309 │       1 │         9.45 │          21.878 │         2.19 │      2:15:00 │    1     0     0   100 │
+│   0.01414 │       1 │         10.8 │          19.702 │         1.97 │      2:15:00 │    1     0     0   100 │
+│   0.01456 │       2 │          4.7 │          17.449 │         1.74 │      4:00:00 │    2     0     0   100 │
+│   0.00733 │       1 │         3.79 │          17.372 │         1.74 │      4:45:00 │    1     0     0   100 │
+│   0.01771 │       1 │         8.72 │          15.938 │         1.59 │      1:45:00 │    1     0     0   100 │
+│   0.01071 │       1 │         5.15 │          15.382 │         1.54 │     10:15:00 │    1     0     0   100 │
+│   0.01196 │       2 │         3.44 │          15.206 │         1.52 │      2:30:00 │    2     0     0   100 │
+│   0.01308 │       1 │         6.11 │          14.687 │         1.47 │      5:45:00 │    1     0     0   100 │
+│   0.01118 │       1 │         5.23 │          14.026 │          1.4 │      9:00:00 │    1     0     0   100 │
+│   0.01548 │       2 │         3.99 │          13.778 │         1.38 │      4:38:00 │    2     0     0   100 │
+│   0.01084 │       1 │         4.61 │          13.244 │         1.32 │      3:45:00 │    1     0     0   100 │
+│    0.0113 │       2 │         2.75 │          13.010 │          1.3 │      3:22:00 │    2     0     0   100 │
+│    0.0094 │       2 │         2.22 │          12.625 │         1.26 │      1:52:00 │    2     0     0   100 │
+│   0.00817 │       1 │         3.08 │          12.571 │         1.26 │      2:30:00 │    1     0     0   100 │
+│   0.01494 │       3 │         2.45 │          12.445 │         1.24 │      8:20:00 │    3     0     0   100 │
+│   0.01646 │       2 │         3.33 │          11.790 │         1.18 │      4:30:00 │    2     0     0   100 │
+│   0.01181 │       3 │         1.71 │          11.713 │         1.17 │      5:45:00 │    2     0     1  66.7 │
+│   0.01786 │       1 │         8.27 │          11.497 │         1.15 │      0:45:00 │    1     0     0   100 │
+│   0.01568 │       1 │         6.16 │          11.483 │         1.15 │     11:30:00 │    1     0     0   100 │
+│   0.00853 │       1 │         4.15 │          11.466 │         1.15 │      4:00:00 │    1     0     0   100 │
+│   0.01501 │       1 │         6.24 │          11.395 │         1.14 │     10:30:00 │    1     0     0   100 │
+│   0.01293 │       1 │         4.29 │          10.285 │         1.03 │      6:15:00 │    1     0     0   100 │
+│   0.01291 │       2 │         2.85 │          10.275 │         1.03 │      7:38:00 │    2     0     0   100 │
+│   0.01515 │       1 │         5.42 │          10.051 │         1.01 │      2:00:00 │    1     0     0   100 │
+│    0.0126 │       1 │         3.83 │           9.964 │          1.0 │      1:45:00 │    1     0     0   100 │
+│   0.01162 │       1 │         3.54 │           9.946 │         0.99 │      1:30:00 │    1     0     0   100 │
+│   0.01157 │       1 │         4.34 │           9.891 │         0.99 │      8:45:00 │    1     0     0   100 │
+│   0.00874 │       1 │         3.31 │           9.865 │         0.99 │      7:30:00 │    1     0     0   100 │
+│   0.00824 │       1 │         2.48 │           9.718 │         0.97 │     10:30:00 │    1     0     0   100 │
+│   0.00868 │       1 │         2.55 │           9.715 │         0.97 │      0:45:00 │    1     0     0   100 │
+│   0.00812 │       1 │          2.3 │           9.530 │         0.95 │      2:15:00 │    1     0     0   100 │
+│   0.00991 │       2 │         1.75 │           9.466 │         0.95 │      4:30:00 │    2     0     0   100 │
+│   0.01205 │       1 │         3.49 │           9.454 │         0.95 │     11:00:00 │    1     0     0   100 │
+│   0.00614 │       1 │          2.5 │           9.415 │         0.94 │      9:30:00 │    1     0     0   100 │
+│   0.00894 │       1 │         2.85 │           9.411 │         0.94 │     11:30:00 │    1     0     0   100 │
+│   0.01428 │       1 │         4.26 │           9.321 │         0.93 │      3:30:00 │    1     0     0   100 │
+│   0.01556 │       1 │         4.91 │           9.239 │         0.92 │     10:45:00 │    1     0     0   100 │
+│   0.01213 │       1 │         3.75 │           9.200 │         0.92 │      3:00:00 │    1     0     0   100 │
+│   0.01269 │       1 │         3.57 │           9.196 │         0.92 │     11:45:00 │    1     0     0   100 │
+│   0.01634 │       2 │         2.69 │           9.195 │         0.92 │     12:00:00 │    2     0     0   100 │
+│    0.0137 │       1 │          4.3 │           9.108 │         0.91 │      9:00:00 │    1     0     0   100 │
+│   0.02608 │       1 │         8.21 │           9.035 │          0.9 │      4:00:00 │    1     0     0   100 │
+│   0.01321 │       1 │         4.19 │           9.002 │          0.9 │      6:45:00 │    1     0     0   100 │
+│    0.0187 │       1 │         6.29 │           8.893 │         0.89 │      3:30:00 │    1     0     0   100 │
+│   0.01132 │       1 │         3.37 │           8.748 │         0.87 │     11:00:00 │    1     0     0   100 │
+│   0.01727 │       1 │          5.0 │           8.734 │         0.87 │      6:15:00 │    1     0     0   100 │
+│   0.02276 │       1 │         7.31 │           8.623 │         0.86 │      5:15:00 │    1     0     0   100 │
+│   0.01106 │       1 │         4.02 │           8.596 │         0.86 │      1:00:00 │    1     0     0   100 │
+│    0.0082 │       1 │         2.21 │           8.522 │         0.85 │      7:30:00 │    1     0     0   100 │
+│   0.01138 │       1 │         3.42 │           8.263 │         0.83 │      1:30:00 │    1     0     0   100 │
+│    0.0068 │       1 │         2.26 │           8.249 │         0.82 │      7:30:00 │    1     0     0   100 │
+│   0.01886 │       1 │         6.46 │           8.082 │         0.81 │      7:45:00 │    1     0     0   100 │
+│   0.00899 │       1 │         3.14 │           8.067 │         0.81 │      2:15:00 │    1     0     0   100 │
+│   0.01788 │       1 │         5.28 │           8.059 │         0.81 │      4:45:00 │    1     0     0   100 │
+│   0.00553 │       1 │         1.64 │           7.919 │         0.79 │      2:30:00 │    1     0     0   100 │
+│   0.00888 │       1 │         2.93 │           7.910 │         0.79 │     10:00:00 │    1     0     0   100 │
+│   0.01552 │       1 │         4.78 │           7.910 │         0.79 │      6:15:00 │    1     0     0   100 │
+│   0.01563 │       1 │         5.13 │           7.856 │         0.79 │      2:15:00 │    1     0     0   100 │
+│   0.01484 │       1 │         4.84 │           7.741 │         0.77 │      8:00:00 │    1     0     0   100 │
+│   0.01985 │       1 │         6.79 │           7.714 │         0.77 │      2:00:00 │    1     0     0   100 │
+│   0.01188 │       2 │         1.57 │           7.714 │         0.77 │      6:52:00 │    1     0     1  50.0 │
+│   0.01996 │       1 │         5.09 │           7.662 │         0.77 │     12:00:00 │    1     0     0   100 │
+│     0.012 │       1 │         3.77 │           7.572 │         0.76 │      6:30:00 │    1     0     0   100 │
+│    0.0088 │       1 │         2.94 │           7.543 │         0.75 │     10:00:00 │    1     0     0   100 │
+│   0.01175 │       1 │         3.66 │           7.264 │         0.73 │      9:00:00 │    1     0     0   100 │
+│   0.01178 │       1 │         3.83 │           7.220 │         0.72 │      0:45:00 │    1     0     0   100 │
+│   0.01228 │       1 │         3.78 │           7.161 │         0.72 │      2:30:00 │    1     0     0   100 │
+│   0.01047 │       1 │          3.3 │           7.067 │         0.71 │      8:45:00 │    1     0     0   100 │
+│   0.01749 │       1 │         5.04 │           7.052 │         0.71 │      3:30:00 │    1     0     0   100 │
+│   0.01034 │       1 │         3.04 │           6.961 │          0.7 │      8:15:00 │    1     0     0   100 │
+│   0.00504 │       1 │         1.39 │           6.873 │         0.69 │      4:15:00 │    1     0     0   100 │
+│   0.00859 │       1 │         1.79 │           6.820 │         0.68 │      4:15:00 │    1     0     0   100 │
+│   0.01361 │       1 │         3.83 │           6.762 │         0.68 │     10:30:00 │    1     0     0   100 │
+│   0.00827 │       1 │          2.3 │           6.722 │         0.67 │      3:45:00 │    1     0     0   100 │
+│   0.01393 │       1 │         3.97 │           6.666 │         0.67 │      2:45:00 │    1     0     0   100 │
+│    0.0092 │       1 │         2.56 │           6.639 │         0.66 │     10:30:00 │    1     0     0   100 │
+│   0.01248 │       1 │         3.15 │           6.508 │         0.65 │     12:00:00 │    1     0     0   100 │
+│   0.01779 │       1 │         4.39 │           6.490 │         0.65 │     12:00:00 │    1     0     0   100 │
+│   0.00855 │       1 │         1.68 │           6.448 │         0.64 │      5:00:00 │    1     0     0   100 │
+│   0.00756 │       1 │          1.5 │           6.408 │         0.64 │      9:15:00 │    1     0     0   100 │
+│   0.00625 │       1 │         1.63 │           6.358 │         0.64 │      8:15:00 │    1     0     0   100 │
+│   0.00889 │       1 │         2.46 │           6.185 │         0.62 │      1:45:00 │    1     0     0   100 │
+│   0.00971 │       1 │         1.67 │           5.360 │         0.54 │      2:15:00 │    1     0     0   100 │
+│   0.01483 │       1 │          2.9 │           5.349 │         0.53 │     12:00:00 │    1     0     0   100 │
+│   0.00893 │       2 │         0.98 │           5.164 │         0.52 │      1:52:00 │    2     0     0   100 │
+│   0.02182 │       1 │         3.43 │           4.960 │          0.5 │      8:15:00 │    1     0     0   100 │
+│   0.01036 │       1 │         1.58 │           4.953 │          0.5 │      8:00:00 │    1     0     0   100 │
+│   0.01813 │       1 │          2.8 │           4.945 │         0.49 │     12:00:00 │    1     0     0   100 │
+│   0.01264 │       1 │         1.97 │           4.875 │         0.49 │     12:00:00 │    1     0     0   100 │
+│   0.00968 │       1 │         1.74 │           4.830 │         0.48 │      3:45:00 │    1     0     0   100 │
+│   0.02103 │       1 │         3.94 │           4.731 │         0.47 │     12:00:00 │    1     0     0   100 │
+│   0.02201 │       1 │         4.09 │           4.724 │         0.47 │     12:00:00 │    1     0     0   100 │
+│   0.01454 │       1 │         2.96 │           4.685 │         0.47 │      3:15:00 │    1     0     0   100 │
+│   0.01384 │       2 │         1.38 │           4.629 │         0.46 │     11:38:00 │    1     0     1  50.0 │
+│   0.01491 │       2 │         1.28 │           4.549 │         0.45 │     12:00:00 │    1     0     1  50.0 │
+│   0.01139 │       1 │         2.33 │           4.541 │         0.45 │     12:00:00 │    1     0     0   100 │
+│   0.01026 │       1 │          1.5 │           4.493 │         0.45 │      6:30:00 │    1     0     0   100 │
+│   0.01334 │       1 │         2.46 │           4.478 │         0.45 │      3:30:00 │    1     0     0   100 │
+│   0.00709 │       1 │         0.97 │           4.312 │         0.43 │      8:30:00 │    1     0     0   100 │
+│   0.02035 │       1 │         3.62 │           4.293 │         0.43 │      3:15:00 │    1     0     0   100 │
+│   0.01062 │       1 │         1.62 │           4.290 │         0.43 │      7:45:00 │    1     0     0   100 │
+│   0.00807 │       1 │         1.39 │           4.288 │         0.43 │      2:00:00 │    1     0     0   100 │
+│   0.00648 │       1 │         0.85 │           4.231 │         0.42 │      2:45:00 │    1     0     0   100 │
+│   0.01307 │       1 │         2.35 │           4.111 │         0.41 │     12:00:00 │    1     0     0   100 │
+│   0.01302 │       2 │         0.76 │           4.099 │         0.41 │      5:38:00 │    1     0     1  50.0 │
+│   0.01458 │       1 │         2.22 │           4.005 │          0.4 │     12:00:00 │    1     0     0   100 │
+│   0.00969 │       1 │         1.63 │           4.003 │          0.4 │      7:00:00 │    1     0     0   100 │
+│   0.01367 │       1 │         1.97 │           3.931 │         0.39 │     12:00:00 │    1     0     0   100 │
+│   0.01147 │       1 │         1.62 │           3.714 │         0.37 │      3:15:00 │    1     0     0   100 │
+│   0.02295 │       1 │         3.75 │           3.667 │         0.37 │     12:00:00 │    1     0     0   100 │
+│   0.01144 │       1 │         1.64 │           3.485 │         0.35 │     12:00:00 │    1     0     0   100 │
+│   0.00913 │       1 │         1.37 │           3.479 │         0.35 │      7:45:00 │    1     0     0   100 │
+│   0.01168 │       1 │         1.52 │           3.472 │         0.35 │     10:45:00 │    1     0     0   100 │
+│    0.0124 │       1 │         1.61 │           3.366 │         0.34 │      8:45:00 │    1     0     0   100 │
+│   0.02441 │       1 │         2.96 │           3.303 │         0.33 │     12:00:00 │    1     0     0   100 │
+│   0.01448 │       1 │         1.53 │           3.299 │         0.33 │     12:00:00 │    1     0     0   100 │
+│   0.00929 │       1 │         1.31 │           3.282 │         0.33 │      4:00:00 │    1     0     0   100 │
+│   0.01059 │       2 │         0.83 │           3.230 │         0.32 │      9:30:00 │    1     0     1  50.0 │
+│   0.01395 │       1 │         1.51 │           3.173 │         0.32 │      3:00:00 │    1     0     0   100 │
+│   0.00959 │       1 │         1.26 │           3.042 │          0.3 │      1:30:00 │    1     0     0   100 │
+│   0.01344 │       1 │         1.42 │           3.030 │          0.3 │     12:00:00 │    1     0     0   100 │
+│   0.00837 │       1 │         1.06 │           3.005 │          0.3 │      2:00:00 │    1     0     0   100 │
+│   0.00904 │       1 │         1.16 │           2.989 │          0.3 │      1:45:00 │    1     0     0   100 │
+│   0.00674 │       1 │         0.86 │           2.954 │          0.3 │      7:00:00 │    1     0     0   100 │
+│   0.00645 │       3 │         0.22 │           2.896 │         0.29 │      7:05:00 │    2     0     1  66.7 │
+│   0.01337 │       1 │         1.62 │           2.877 │         0.29 │     12:00:00 │    1     0     0   100 │
+│   0.01256 │       1 │         1.08 │           2.785 │         0.28 │     11:45:00 │    1     0     0   100 │
+│   0.02334 │       1 │         2.31 │           2.743 │         0.27 │     12:00:00 │    1     0     0   100 │
+│    0.0125 │       1 │         1.32 │           2.695 │         0.27 │      1:00:00 │    1     0     0   100 │
+│   0.00852 │       2 │         0.34 │           2.634 │         0.26 │      2:45:00 │    1     0     1  50.0 │
+│   0.01611 │       1 │         1.66 │           2.479 │         0.25 │     12:00:00 │    1     0     0   100 │
+│   0.00947 │       1 │         0.94 │           2.429 │         0.24 │     12:00:00 │    1     0     0   100 │
+│   0.00497 │       1 │          0.5 │           2.372 │         0.24 │      2:15:00 │    1     0     0   100 │
+│   0.01775 │       1 │         1.81 │           2.229 │         0.22 │     12:00:00 │    1     0     0   100 │
+│   0.01099 │       1 │         0.97 │           2.100 │         0.21 │      6:00:00 │    1     0     0   100 │
+│   0.02559 │       1 │         2.04 │           2.062 │         0.21 │     12:00:00 │    1     0     0   100 │
+│   0.00995 │       1 │         0.61 │           2.030 │          0.2 │     12:00:00 │    1     0     0   100 │
+│   0.01042 │       1 │         0.78 │           1.908 │         0.19 │      1:00:00 │    1     0     0   100 │
+│   0.00512 │       1 │         0.38 │           1.904 │         0.19 │      7:30:00 │    1     0     0   100 │
+│   0.01505 │       3 │         0.19 │           1.835 │         0.18 │      9:40:00 │    2     0     1  66.7 │
+│   0.00764 │       1 │         0.57 │           1.794 │         0.18 │     12:00:00 │    1     0     0   100 │
+│   0.01532 │       1 │          0.8 │           1.723 │         0.17 │     12:00:00 │    1     0     0   100 │
+│   0.01583 │       1 │         0.89 │           1.688 │         0.17 │     12:00:00 │    1     0     0   100 │
+│   0.00916 │       1 │          0.6 │           1.682 │         0.17 │      1:30:00 │    1     0     0   100 │
+│   0.00749 │       1 │          0.4 │           1.674 │         0.17 │     12:00:00 │    1     0     0   100 │
+│    0.0073 │       1 │         0.45 │           1.564 │         0.16 │     12:00:00 │    1     0     0   100 │
+│   0.00787 │       1 │         0.39 │           1.556 │         0.16 │      5:15:00 │    1     0     0   100 │
+│   0.00999 │       1 │         0.57 │           1.526 │         0.15 │     12:00:00 │    1     0     0   100 │
+│     0.019 │       1 │         1.18 │           1.492 │         0.15 │     12:00:00 │    1     0     0   100 │
+│   0.01518 │       1 │         0.81 │           1.474 │         0.15 │     12:00:00 │    1     0     0   100 │
+│   0.01647 │       1 │         0.75 │           1.393 │         0.14 │     11:15:00 │    1     0     0   100 │
+│   0.01386 │       2 │         0.38 │           1.370 │         0.14 │      6:00:00 │    1     0     1  50.0 │
+│   0.00902 │       2 │         -0.1 │           1.323 │         0.13 │      6:22:00 │    1     0     1  50.0 │
+│    0.0101 │       1 │         0.52 │           1.317 │         0.13 │     12:00:00 │    1     0     0   100 │
+│   0.00748 │       1 │         0.42 │           1.302 │         0.13 │      0:30:00 │    1     0     0   100 │
+│   0.01366 │       1 │         0.75 │           1.274 │         0.13 │      9:45:00 │    1     0     0   100 │
+│   0.01017 │       1 │         0.57 │           1.258 │         0.13 │      6:45:00 │    1     0     0   100 │
+│   0.01242 │       1 │         0.61 │           1.236 │         0.12 │     12:00:00 │    1     0     0   100 │
+│   0.01166 │       1 │         0.55 │           1.232 │         0.12 │     12:00:00 │    1     0     0   100 │
+│   0.01152 │       1 │         0.53 │           1.204 │         0.12 │      4:45:00 │    1     0     0   100 │
+│   0.01221 │       1 │         0.59 │           1.172 │         0.12 │     10:00:00 │    1     0     0   100 │
+│   0.00757 │       1 │         0.26 │           1.142 │         0.11 │      4:30:00 │    1     0     0   100 │
+│   0.00976 │       1 │         0.49 │           1.139 │         0.11 │     12:00:00 │    1     0     0   100 │
+│     0.008 │       1 │         0.37 │           1.103 │         0.11 │      1:15:00 │    1     0     0   100 │
+│   0.00881 │       1 │         0.42 │           1.093 │         0.11 │     12:00:00 │    1     0     0   100 │
+│   0.01146 │       1 │         0.43 │           0.885 │         0.09 │     12:00:00 │    1     0     0   100 │
+│   0.00656 │       1 │         0.24 │           0.872 │         0.09 │      9:30:00 │    1     0     0   100 │
+│   0.01355 │       1 │         0.37 │           0.835 │         0.08 │      1:15:00 │    1     0     0   100 │
+│   0.00965 │       1 │         0.32 │           0.821 │         0.08 │     12:00:00 │    1     0     0   100 │
+│    0.0132 │       1 │         0.47 │           0.781 │         0.08 │     12:00:00 │    1     0     0   100 │
+│   0.00595 │       1 │         0.16 │           0.777 │         0.08 │     12:00:00 │    1     0     0   100 │
+│   0.01285 │       1 │         0.45 │           0.748 │         0.07 │      1:45:00 │    1     0     0   100 │
+│   0.01397 │       2 │        -0.19 │           0.612 │         0.06 │      1:52:00 │    1     0     1  50.0 │
+│   0.01216 │       1 │         0.26 │           0.511 │         0.05 │      1:15:00 │    1     0     0   100 │
+│   0.01559 │       1 │         0.24 │           0.388 │         0.04 │      6:15:00 │    1     0     0   100 │
+│   0.00836 │       1 │          0.1 │           0.372 │         0.04 │     12:00:00 │    1     0     0   100 │
+│   0.01095 │       2 │         0.14 │           0.063 │         0.01 │      7:00:00 │    1     0     1  50.0 │
+│   0.00919 │       1 │         0.01 │           0.020 │          0.0 │     12:00:00 │    1     0     0   100 │
+│   0.01741 │       1 │         0.01 │           0.016 │          0.0 │     12:00:00 │    1     0     0   100 │
+│   0.01281 │       1 │         -0.0 │          -0.002 │         -0.0 │     12:00:00 │    0     0     1     0 │
+│   0.01709 │       1 │        -0.07 │          -0.100 │        -0.01 │      1:00:00 │    0     0     1     0 │
+│   0.00996 │       1 │        -0.08 │          -0.167 │        -0.02 │      1:15:00 │    0     0     1     0 │
+│   0.01374 │       2 │          0.1 │          -0.297 │        -0.03 │      5:15:00 │    1     0     1  50.0 │
+│   0.01089 │       2 │        -0.01 │          -0.420 │        -0.04 │      6:45:00 │    1     0     1  50.0 │
+│   0.00897 │       1 │        -0.17 │          -0.450 │        -0.05 │      1:30:00 │    0     0     1     0 │
+│   0.00865 │       1 │        -0.17 │          -0.469 │        -0.05 │      3:00:00 │    0     0     1     0 │
+│   0.00834 │       1 │        -0.17 │          -0.477 │        -0.05 │      5:15:00 │    0     0     1     0 │
+│   0.01533 │       1 │        -0.31 │          -0.514 │        -0.05 │      7:15:00 │    0     0     1     0 │
+│   0.00825 │       1 │        -0.22 │          -0.616 │        -0.06 │      1:30:00 │    0     0     1     0 │
+│   0.00562 │       1 │        -0.14 │          -0.687 │        -0.07 │      4:45:00 │    0     0     1     0 │
+│   0.00804 │       1 │        -0.22 │          -0.689 │        -0.07 │      5:15:00 │    0     0     1     0 │
+│   0.01072 │       1 │        -0.34 │          -0.803 │        -0.08 │     12:00:00 │    0     0     1     0 │
+│    0.0105 │       3 │        -0.13 │          -0.856 │        -0.09 │      3:40:00 │    2     0     1  66.7 │
+│   0.02279 │       1 │        -0.91 │          -1.023 │         -0.1 │     12:00:00 │    0     0     1     0 │
+│   0.00668 │       1 │         -0.2 │          -1.038 │         -0.1 │      2:45:00 │    0     0     1     0 │
+│   0.01877 │       1 │        -0.78 │          -1.067 │        -0.11 │     12:00:00 │    0     0     1     0 │
+│   0.00994 │       1 │        -0.39 │          -1.247 │        -0.12 │      2:30:00 │    0     0     1     0 │
+│   0.00844 │       2 │        -0.24 │          -1.289 │        -0.13 │     12:00:00 │    1     0     1  50.0 │
+│   0.00927 │       1 │        -0.51 │          -1.309 │        -0.13 │      4:45:00 │    0     0     1     0 │
+│   0.01273 │       1 │        -0.75 │          -1.431 │        -0.14 │      1:00:00 │    0     0     1     0 │
+│    0.0084 │       1 │         -0.4 │          -1.478 │        -0.15 │     12:00:00 │    0     0     1     0 │
+│   0.01924 │       1 │        -0.97 │          -1.481 │        -0.15 │     12:00:00 │    0     0     1     0 │
+│   0.01481 │       1 │        -0.75 │          -1.588 │        -0.16 │     12:00:00 │    0     0     1     0 │
+│   0.01028 │       1 │        -0.51 │          -1.653 │        -0.17 │     10:30:00 │    0     0     1     0 │
+│   0.01627 │       1 │         -1.1 │          -1.711 │        -0.17 │      5:15:00 │    0     0     1     0 │
+│   0.01675 │       1 │        -1.24 │          -1.839 │        -0.18 │     12:00:00 │    0     0     1     0 │
+│    0.0108 │       1 │        -0.79 │          -1.878 │        -0.19 │     12:00:00 │    0     0     1     0 │
+│   0.00784 │       1 │         -0.7 │          -2.100 │        -0.21 │     12:00:00 │    0     0     1     0 │
+│   0.01426 │       1 │        -1.29 │          -2.108 │        -0.21 │     12:00:00 │    0     0     1     0 │
+│   0.00738 │       1 │        -0.67 │          -2.151 │        -0.22 │      1:15:00 │    0     0     1     0 │
+│   0.01449 │       1 │        -1.38 │          -2.163 │        -0.22 │     12:00:00 │    0     0     1     0 │
+│      0.01 │       2 │        -0.23 │          -2.183 │        -0.22 │      5:30:00 │    1     0     1  50.0 │
+│   0.02648 │       1 │        -2.77 │          -2.244 │        -0.22 │     12:00:00 │    0     0     1     0 │
+│   0.01497 │       1 │        -1.54 │          -2.314 │        -0.23 │     12:00:00 │    0     0     1     0 │
+│   0.01691 │       1 │        -1.44 │          -2.372 │        -0.24 │      3:00:00 │    0     0     1     0 │
+│   0.01258 │       1 │        -1.14 │          -2.774 │        -0.28 │     12:00:00 │    0     0     1     0 │
+│   0.01625 │       1 │        -1.63 │          -2.822 │        -0.28 │     12:00:00 │    0     0     1     0 │
+│   0.01184 │       1 │        -1.14 │          -2.950 │        -0.29 │      7:30:00 │    0     0     1     0 │
+│   0.00957 │       1 │        -1.19 │          -2.998 │         -0.3 │     12:00:00 │    0     0     1     0 │
+│   0.01223 │       1 │        -1.66 │          -3.105 │        -0.31 │     12:00:00 │    0     0     1     0 │
+│   0.01039 │       1 │        -1.31 │          -3.179 │        -0.32 │     12:00:00 │    0     0     1     0 │
+│    0.0054 │       1 │        -0.66 │          -3.192 │        -0.32 │     12:00:00 │    0     0     1     0 │
+│   0.00922 │       1 │        -1.25 │          -3.290 │        -0.33 │      8:45:00 │    0     0     1     0 │
+│   0.00846 │       2 │        -0.18 │          -3.453 │        -0.35 │      7:08:00 │    1     0     1  50.0 │
+│   0.02018 │       1 │        -3.37 │          -3.534 │        -0.35 │     12:00:00 │    0     0     1     0 │
+│   0.01173 │       1 │        -1.62 │          -3.836 │        -0.38 │     12:00:00 │    0     0     1     0 │
+│   0.00781 │       1 │        -1.15 │          -3.855 │        -0.39 │     12:00:00 │    0     0     1     0 │
+│   0.00862 │       1 │        -1.45 │          -4.058 │        -0.41 │      8:45:00 │    0     0     1     0 │
+│   0.01116 │       1 │        -1.83 │          -4.160 │        -0.42 │     12:00:00 │    0     0     1     0 │
+│   0.00997 │       1 │        -1.65 │          -4.188 │        -0.42 │      5:00:00 │    0     0     1     0 │
+│   0.01193 │       2 │        -0.97 │          -4.279 │        -0.43 │      3:38:00 │    0     0     2     0 │
+│   0.01161 │       2 │        -0.55 │          -4.618 │        -0.46 │      5:00:00 │    1     0     1  50.0 │
+│   0.01058 │       1 │        -1.88 │          -4.674 │        -0.47 │     12:00:00 │    0     0     1     0 │
+│   0.00826 │       1 │        -1.51 │          -4.685 │        -0.47 │      4:30:00 │    0     0     1     0 │
+│   0.02111 │       1 │        -4.32 │          -4.772 │        -0.48 │     12:00:00 │    0     0     1     0 │
+│   0.01843 │       1 │        -3.58 │          -4.994 │         -0.5 │     12:00:00 │    0     0     1     0 │
+│   0.01842 │       1 │        -3.02 │          -5.215 │        -0.52 │     12:00:00 │    0     0     1     0 │
+│   0.01041 │       1 │        -1.75 │          -5.219 │        -0.52 │     12:00:00 │    0     0     1     0 │
+│   0.01023 │       2 │        -0.94 │          -5.292 │        -0.53 │      2:22:00 │    1     0     1  50.0 │
+│   0.01274 │       1 │        -2.68 │          -5.435 │        -0.54 │     12:00:00 │    0     0     1     0 │
+│   0.00833 │       1 │        -2.08 │          -5.788 │        -0.58 │     12:00:00 │    0     0     1     0 │
+│   0.00759 │       1 │        -1.36 │          -5.872 │        -0.59 │      9:45:00 │    0     0     1     0 │
+│    0.0089 │       2 │        -1.09 │          -6.196 │        -0.62 │      1:15:00 │    1     0     1  50.0 │
+│   0.02067 │       1 │        -6.51 │          -6.668 │        -0.67 │      4:15:00 │    0     0     1     0 │
+│   0.01304 │       1 │        -4.21 │          -7.125 │        -0.71 │      2:15:00 │    0     0     1     0 │
+│   0.01851 │       1 │        -5.86 │          -7.232 │        -0.72 │      0:00:00 │    0     0     1     0 │
+│   0.01021 │       1 │        -3.39 │          -7.273 │        -0.73 │      0:45:00 │    0     0     1     0 │
+│   0.01562 │       1 │        -4.98 │          -7.302 │        -0.73 │     10:15:00 │    0     0     1     0 │
+│    0.0095 │       1 │        -3.15 │          -7.467 │        -0.75 │      4:15:00 │    0     0     1     0 │
+│   0.01738 │       1 │        -5.51 │          -7.495 │        -0.75 │      2:15:00 │    0     0     1     0 │
+│   0.01343 │       1 │        -4.31 │          -7.542 │        -0.75 │     10:00:00 │    0     0     1     0 │
+│   0.01728 │       1 │        -5.49 │          -7.608 │        -0.76 │      0:15:00 │    0     0     1     0 │
+│   0.01247 │       1 │        -4.03 │          -7.615 │        -0.76 │      4:00:00 │    0     0     1     0 │
+│   0.01001 │       1 │        -3.32 │          -7.616 │        -0.76 │      3:00:00 │    0     0     1     0 │
+│   0.01051 │       1 │        -3.45 │          -7.704 │        -0.77 │      3:00:00 │    0     0     1     0 │
+│   0.00939 │       3 │        -0.96 │          -7.736 │        -0.77 │      7:40:00 │    1     0     2  33.3 │
+│   0.00896 │       1 │        -2.99 │          -7.757 │        -0.78 │      0:45:00 │    0     0     1     0 │
+│   0.01076 │       1 │        -3.53 │          -7.786 │        -0.78 │      4:30:00 │    0     0     1     0 │
+│   0.00963 │       1 │         -3.2 │          -7.795 │        -0.78 │      9:00:00 │    0     0     1     0 │
+│   0.01156 │       1 │        -3.77 │          -7.847 │        -0.78 │      0:30:00 │    0     0     1     0 │
+│   0.00794 │       1 │        -2.69 │          -7.883 │        -0.79 │      1:45:00 │    0     0     1     0 │
+│   0.02216 │       1 │        -6.95 │          -7.888 │        -0.79 │      6:30:00 │    0     0     1     0 │
+│   0.01296 │       1 │        -4.18 │          -7.897 │        -0.79 │      7:30:00 │    0     0     1     0 │
+│   0.01215 │       1 │        -3.96 │          -7.900 │        -0.79 │      0:30:00 │    0     0     1     0 │
+│   0.00952 │       1 │        -3.15 │          -7.932 │        -0.79 │      1:30:00 │    0     0     1     0 │
+│   0.01108 │       1 │        -3.62 │          -7.942 │        -0.79 │      6:00:00 │    0     0     1     0 │
+│   0.00981 │       1 │        -3.24 │          -7.951 │         -0.8 │      4:45:00 │    0     0     1     0 │
+│   0.00943 │       1 │        -3.15 │          -7.979 │         -0.8 │      5:45:00 │    0     0     1     0 │
+│   0.00797 │       1 │        -2.69 │          -8.010 │         -0.8 │      0:45:00 │    0     0     1     0 │
+│   0.02792 │       1 │         -8.7 │          -8.020 │         -0.8 │      8:30:00 │    0     0     1     0 │
+│   0.00608 │       1 │        -2.12 │          -8.066 │        -0.81 │      2:15:00 │    0     0     1     0 │
+│   0.00829 │       1 │        -2.78 │          -8.095 │        -0.81 │      0:30:00 │    0     0     1     0 │
+│   0.01224 │       1 │        -3.97 │          -8.112 │        -0.81 │      1:00:00 │    0     0     1     0 │
+│   0.01617 │       1 │        -5.16 │          -8.141 │        -0.81 │      5:30:00 │    0     0     1     0 │
+│   0.00966 │       1 │        -3.19 │          -8.180 │        -0.82 │      4:15:00 │    0     0     1     0 │
+│   0.01423 │       1 │        -4.57 │          -8.189 │        -0.82 │      6:45:00 │    0     0     1     0 │
+│   0.01019 │       1 │        -3.38 │          -8.202 │        -0.82 │      7:15:00 │    0     0     1     0 │
+│     0.022 │       1 │        -6.91 │          -8.204 │        -0.82 │      4:15:00 │    0     0     1     0 │
+│   0.01032 │       1 │        -3.38 │          -8.239 │        -0.82 │      6:15:00 │    0     0     1     0 │
+│   0.01453 │       1 │        -4.69 │          -8.261 │        -0.83 │     11:30:00 │    0     0     1     0 │
+│   0.00872 │       1 │        -2.93 │          -8.269 │        -0.83 │      2:00:00 │    0     0     1     0 │
+│   0.01172 │       1 │        -3.82 │          -8.270 │        -0.83 │      2:30:00 │    0     0     1     0 │
+│   0.01298 │       1 │         -4.2 │          -8.276 │        -0.83 │      3:15:00 │    0     0     1     0 │
+│   0.00708 │       1 │        -2.42 │          -8.288 │        -0.83 │      5:30:00 │    0     0     1     0 │
+│   0.00785 │       1 │        -2.68 │          -8.288 │        -0.83 │      5:00:00 │    0     0     1     0 │
+│   0.01348 │       1 │        -4.35 │          -8.299 │        -0.83 │      2:30:00 │    0     0     1     0 │
+│   0.01981 │       1 │        -6.25 │          -8.304 │        -0.83 │      6:00:00 │    0     0     1     0 │
+│   0.01511 │       1 │        -4.84 │          -8.318 │        -0.83 │      5:00:00 │    0     0     1     0 │
+│   0.01718 │       1 │        -5.46 │          -8.324 │        -0.83 │      5:00:00 │    0     0     1     0 │
+│   0.02092 │       1 │        -6.57 │          -8.334 │        -0.83 │      1:30:00 │    0     0     1     0 │
+│   0.00974 │       1 │        -3.22 │          -8.353 │        -0.84 │      4:30:00 │    0     0     1     0 │
+│   0.01012 │       2 │        -1.79 │          -8.412 │        -0.84 │      6:52:00 │    0     0     2     0 │
+│   0.02804 │       1 │        -8.73 │          -8.422 │        -0.84 │      7:00:00 │    0     0     1     0 │
+│   0.01477 │       1 │        -4.73 │          -8.429 │        -0.84 │      3:30:00 │    0     0     1     0 │
+│   0.01345 │       1 │        -4.34 │          -8.454 │        -0.85 │      4:15:00 │    0     0     1     0 │
+│   0.01082 │       1 │        -3.55 │          -8.459 │        -0.85 │      0:00:00 │    0     0     1     0 │
+│   0.01165 │       1 │        -3.81 │          -8.509 │        -0.85 │      7:00:00 │    0     0     1     0 │
+│   0.00877 │       1 │        -2.93 │          -8.512 │        -0.85 │      3:00:00 │    0     0     1     0 │
+│   0.00496 │       1 │        -1.79 │          -8.513 │        -0.85 │      1:45:00 │    0     0     1     0 │
+│   0.01126 │       1 │        -3.67 │          -8.544 │        -0.85 │      2:30:00 │    0     0     1     0 │
+│   0.01926 │       1 │        -6.05 │          -8.563 │        -0.86 │      8:30:00 │    0     0     1     0 │
+│   0.01457 │       1 │        -4.69 │          -8.567 │        -0.86 │      8:30:00 │    0     0     1     0 │
+│    0.0157 │       1 │        -5.02 │          -8.608 │        -0.86 │      7:15:00 │    0     0     1     0 │
+│   0.02115 │       1 │        -6.64 │          -8.652 │        -0.87 │      5:15:00 │    0     0     1     0 │
+│   0.02073 │       1 │        -6.49 │          -8.767 │        -0.88 │     10:30:00 │    0     0     1     0 │
+│   0.03101 │       1 │        -9.59 │          -8.899 │        -0.89 │      2:15:00 │    0     0     1     0 │
+│    0.0155 │       1 │        -4.94 │          -8.906 │        -0.89 │      1:45:00 │    0     0     1     0 │
+│   0.01383 │       1 │        -4.44 │          -9.001 │         -0.9 │      4:30:00 │    0     0     1     0 │
+│   0.00691 │       1 │        -2.37 │          -9.065 │        -0.91 │      3:45:00 │    0     0     1     0 │
+│   0.01529 │       2 │         -2.7 │          -9.214 │        -0.92 │      7:22:00 │    0     0     2     0 │
+│   0.00669 │       1 │         -2.3 │          -9.284 │        -0.93 │      4:30:00 │    0     0     1     0 │
+│   0.01081 │       1 │        -3.54 │          -9.312 │        -0.93 │      9:15:00 │    0     0     1     0 │
+│   0.01479 │       1 │        -4.75 │          -9.331 │        -0.93 │      7:30:00 │    0     0     1     0 │
+│   0.01233 │       1 │        -3.99 │          -9.338 │        -0.93 │      9:45:00 │    0     0     1     0 │
+│   0.01212 │       1 │        -3.94 │          -9.345 │        -0.93 │      4:00:00 │    0     0     1     0 │
+│   0.01429 │       1 │        -4.59 │          -9.376 │        -0.94 │      2:15:00 │    0     0     1     0 │
+│   0.01067 │       1 │         -3.5 │          -9.384 │        -0.94 │      2:30:00 │    0     0     1     0 │
+│   0.01722 │       1 │        -5.46 │          -9.399 │        -0.94 │      4:15:00 │    0     0     1     0 │
+│   0.01091 │       1 │        -3.57 │          -9.629 │        -0.96 │      4:15:00 │    0     0     1     0 │
+│   0.01123 │       2 │        -1.76 │          -9.671 │        -0.97 │      6:08:00 │    1     0     1  50.0 │
+│   0.00696 │       3 │         -1.0 │          -9.752 │        -0.98 │      6:55:00 │    1     0     2  33.3 │
+│   0.01322 │       1 │        -4.27 │          -9.774 │        -0.98 │      2:30:00 │    0     0     1     0 │
+│   0.01137 │       1 │        -3.71 │          -9.801 │        -0.98 │      1:45:00 │    0     0     1     0 │
+│   0.01362 │       1 │         -4.4 │          -9.807 │        -0.98 │      1:00:00 │    0     0     1     0 │
+│   0.01335 │       1 │        -4.31 │          -9.980 │         -1.0 │      2:00:00 │    0     0     1     0 │
+│   0.01586 │       1 │        -5.06 │         -10.055 │        -1.01 │      3:00:00 │    0     0     1     0 │
+│   0.00907 │       1 │        -3.02 │         -10.071 │        -1.01 │      6:45:00 │    0     0     1     0 │
+│   0.01292 │       1 │        -4.18 │         -10.075 │        -1.01 │      4:45:00 │    0     0     1     0 │
+│   0.01267 │       1 │         -4.1 │         -10.101 │        -1.01 │      3:15:00 │    0     0     1     0 │
+│   0.01965 │       1 │        -6.22 │         -10.110 │        -1.01 │      6:45:00 │    0     0     1     0 │
+│     0.014 │       1 │        -4.51 │         -10.113 │        -1.01 │      1:15:00 │    0     0     1     0 │
+│   0.01079 │       1 │        -3.53 │         -10.129 │        -1.01 │      3:30:00 │    0     0     1     0 │
+│   0.01561 │       1 │        -4.97 │         -10.164 │        -1.02 │     10:45:00 │    0     0     1     0 │
+│    0.0147 │       1 │        -4.72 │         -10.223 │        -1.02 │      4:15:00 │    0     0     1     0 │
+│   0.01086 │       1 │        -3.56 │         -10.253 │        -1.03 │      2:30:00 │    0     0     1     0 │
+│   0.00883 │       1 │        -2.97 │         -10.264 │        -1.03 │      9:00:00 │    0     0     1     0 │
+│   0.01876 │       1 │         -5.9 │         -10.278 │        -1.03 │      9:00:00 │    0     0     1     0 │
+│   0.00925 │       3 │        -1.21 │         -10.325 │        -1.03 │      1:15:00 │    0     0     3     0 │
+│   0.02303 │       1 │         -7.2 │         -10.330 │        -1.03 │      2:30:00 │    0     0     1     0 │
+│   0.00814 │       1 │        -2.74 │         -10.361 │        -1.04 │      0:00:00 │    0     0     1     0 │
+│   0.00627 │       1 │        -2.19 │         -10.362 │        -1.04 │      4:00:00 │    0     0     1     0 │
+│   0.01064 │       1 │        -3.48 │         -10.376 │        -1.04 │      1:15:00 │    0     0     1     0 │
+│   0.01153 │       1 │        -3.76 │         -10.388 │        -1.04 │      2:30:00 │    0     0     1     0 │
+│   0.01551 │       1 │        -4.97 │         -10.447 │        -1.04 │      5:00:00 │    0     0     1     0 │
+│    0.0162 │       1 │        -5.15 │         -10.465 │        -1.05 │      2:15:00 │    0     0     1     0 │
+│   0.01498 │       1 │        -4.79 │         -10.466 │        -1.05 │      8:15:00 │    0     0     1     0 │
+│   0.01628 │       1 │        -5.19 │         -10.478 │        -1.05 │      9:45:00 │    0     0     1     0 │
+│   0.01077 │       1 │        -3.54 │         -10.557 │        -1.06 │      2:45:00 │    0     0     1     0 │
+│   0.00724 │       1 │        -2.47 │         -10.703 │        -1.07 │      1:00:00 │    0     0     1     0 │
+│   0.00793 │       1 │        -2.68 │         -10.727 │        -1.07 │      2:30:00 │    0     0     1     0 │
+│   0.01008 │       1 │        -3.33 │         -10.744 │        -1.07 │      1:15:00 │    0     0     1     0 │
+│   0.00885 │       1 │        -2.94 │         -10.765 │        -1.08 │      0:45:00 │    0     0     1     0 │
+│   0.00948 │       1 │        -3.15 │         -10.802 │        -1.08 │      3:30:00 │    0     0     1     0 │
+│   0.00951 │       1 │        -3.16 │         -10.823 │        -1.08 │      6:30:00 │    0     0     1     0 │
+│   0.00629 │       1 │        -2.16 │         -10.837 │        -1.08 │     10:00:00 │    0     0     1     0 │
+│   0.01033 │       1 │        -3.39 │         -10.994 │         -1.1 │      5:00:00 │    0     0     1     0 │
+│   0.01078 │       1 │        -3.54 │         -11.000 │         -1.1 │      2:15:00 │    0     0     1     0 │
+│   0.00815 │       1 │        -2.74 │         -11.216 │        -1.12 │      0:15:00 │    0     0     1     0 │
+│   0.00813 │       1 │        -2.74 │         -11.219 │        -1.12 │      1:15:00 │    0     0     1     0 │
+│   0.00747 │       1 │        -2.54 │         -11.355 │        -1.14 │      8:00:00 │    0     0     1     0 │
+│   0.00704 │       1 │        -2.41 │         -11.510 │        -1.15 │      2:30:00 │    0     0     1     0 │
+│   0.00936 │       3 │        -1.22 │         -12.307 │        -1.23 │     10:05:00 │    1     0     2  33.3 │
+│   0.01612 │       3 │        -2.81 │         -13.962 │         -1.4 │     11:40:00 │    0     0     3     0 │
+│     0.013 │       2 │         -4.2 │         -14.509 │        -1.45 │      1:38:00 │    0     0     2     0 │
+│   0.00845 │       2 │        -2.84 │         -16.443 │        -1.64 │      3:15:00 │    0     0     2     0 │
+│   0.01597 │       2 │         -5.1 │         -16.525 │        -1.65 │      5:52:00 │    0     0     2     0 │
+│   0.01261 │       2 │        -4.08 │         -18.280 │        -1.83 │      5:45:00 │    0     0     2     0 │
+│   0.00878 │       3 │        -2.93 │         -29.731 │        -2.97 │      3:10:00 │    0     0     3     0 │
+│     TOTAL │     429 │        -0.27 │        -276.421 │       -27.64 │      6:23:00 │  211     0   218  49.2 │
+└───────────┴─────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                               EXIT REASON STATS                                                
+┏━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  Exit Reason ┃ Exits ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   tp_barrier │    88 │         4.18 │         805.057 │        80.51 │      5:46:00 │   88     0     0   100 │
+│  exit_signal │   101 │         0.85 │         209.975 │         21.0 │      4:49:00 │   72     0    29  71.3 │
+│ time_barrier │    94 │         0.19 │          15.270 │         1.53 │     12:00:00 │   51     0    43  54.3 │
+│    stop_loss │   146 │        -4.04 │       -1306.723 │      -130.67 │      4:14:00 │    0     0   146     0 │
+│        TOTAL │   429 │        -0.27 │        -276.421 │       -27.64 │      6:23:00 │  211     0   218  49.2 │
+└──────────────┴───────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                                                       MIXED TAG STATS                                                       
+┏━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Enter Tag ┃  Exit Reason ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃
+┡━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   0.01309 │   tp_barrier │      1 │         9.45 │          21.878 │         2.19 │      2:15:00 │    1     0     0   100 │
+│   0.01414 │   tp_barrier │      1 │         10.8 │          19.702 │         1.97 │      2:15:00 │    1     0     0   100 │
+│   0.01143 │   tp_barrier │      2 │         3.65 │          18.024 │          1.8 │      1:00:00 │    2     0     0   100 │
+│   0.01456 │   tp_barrier │      2 │          4.7 │          17.449 │         1.74 │      4:00:00 │    2     0     0   100 │
+│   0.00733 │   tp_barrier │      1 │         3.79 │          17.372 │         1.74 │      4:45:00 │    1     0     0   100 │
+│   0.01771 │   tp_barrier │      1 │         8.72 │          15.938 │         1.59 │      1:45:00 │    1     0     0   100 │
+│   0.01071 │   tp_barrier │      1 │         5.15 │          15.382 │         1.54 │     10:15:00 │    1     0     0   100 │
+│   0.01196 │   tp_barrier │      2 │         3.44 │          15.206 │         1.52 │      2:30:00 │    2     0     0   100 │
+│   0.01308 │  exit_signal │      1 │         6.11 │          14.687 │         1.47 │      5:45:00 │    1     0     0   100 │
+│   0.01118 │   tp_barrier │      1 │         5.23 │          14.026 │          1.4 │      9:00:00 │    1     0     0   100 │
+│   0.01084 │   tp_barrier │      1 │         4.61 │          13.244 │         1.32 │      3:45:00 │    1     0     0   100 │
+│   0.00817 │   tp_barrier │      1 │         3.08 │          12.571 │         1.26 │      2:30:00 │    1     0     0   100 │
+│   0.01181 │  exit_signal │      3 │         1.71 │          11.713 │         1.17 │      5:45:00 │    2     0     1  66.7 │
+│   0.01302 │   tp_barrier │      1 │         5.73 │          11.581 │         1.16 │      9:45:00 │    1     0     0   100 │
+│   0.01786 │   tp_barrier │      1 │         8.27 │          11.497 │         1.15 │      0:45:00 │    1     0     0   100 │
+│   0.01568 │   tp_barrier │      1 │         6.16 │          11.483 │         1.15 │     11:30:00 │    1     0     0   100 │
+│   0.00853 │   tp_barrier │      1 │         4.15 │          11.466 │         1.15 │      4:00:00 │    1     0     0   100 │
+│   0.01501 │   tp_barrier │      1 │         6.24 │          11.395 │         1.14 │     10:30:00 │    1     0     0   100 │
+│   0.01386 │   tp_barrier │      1 │         5.23 │          10.439 │         1.04 │      5:30:00 │    1     0     0   100 │
+│   0.01293 │   tp_barrier │      1 │         4.29 │          10.285 │         1.03 │      6:15:00 │    1     0     0   100 │
+│   0.01515 │   tp_barrier │      1 │         5.42 │          10.051 │         1.01 │      2:00:00 │    1     0     0   100 │
+│    0.0126 │   tp_barrier │      1 │         3.83 │           9.964 │          1.0 │      1:45:00 │    1     0     0   100 │
+│   0.01162 │   tp_barrier │      1 │         3.54 │           9.946 │         0.99 │      1:30:00 │    1     0     0   100 │
+│   0.01157 │   tp_barrier │      1 │         4.34 │           9.891 │         0.99 │      8:45:00 │    1     0     0   100 │
+│   0.00874 │   tp_barrier │      1 │         3.31 │           9.865 │         0.99 │      7:30:00 │    1     0     0   100 │
+│   0.01548 │   tp_barrier │      1 │         5.54 │           9.779 │         0.98 │      2:45:00 │    1     0     0   100 │
+│   0.00824 │   tp_barrier │      1 │         2.48 │           9.718 │         0.97 │     10:30:00 │    1     0     0   100 │
+│   0.00868 │   tp_barrier │      1 │         2.55 │           9.715 │         0.97 │      0:45:00 │    1     0     0   100 │
+│   0.00812 │   tp_barrier │      1 │          2.3 │           9.530 │         0.95 │      2:15:00 │    1     0     0   100 │
+│   0.00991 │  exit_signal │      2 │         1.75 │           9.466 │         0.95 │      4:30:00 │    2     0     0   100 │
+│   0.01205 │   tp_barrier │      1 │         3.49 │           9.454 │         0.95 │     11:00:00 │    1     0     0   100 │
+│   0.00614 │   tp_barrier │      1 │          2.5 │           9.415 │         0.94 │      9:30:00 │    1     0     0   100 │
+│   0.00894 │   tp_barrier │      1 │         2.85 │           9.411 │         0.94 │     11:30:00 │    1     0     0   100 │
+│   0.00902 │   tp_barrier │      1 │          2.8 │           9.333 │         0.93 │     11:30:00 │    1     0     0   100 │
+│   0.01646 │   tp_barrier │      1 │         5.05 │           9.324 │         0.93 │      2:45:00 │    1     0     0   100 │
+│   0.01428 │   tp_barrier │      1 │         4.26 │           9.321 │         0.93 │      3:30:00 │    1     0     0   100 │
+│   0.01556 │   tp_barrier │      1 │         4.91 │           9.239 │         0.92 │     10:45:00 │    1     0     0   100 │
+│   0.01213 │   tp_barrier │      1 │         3.75 │           9.200 │         0.92 │      3:00:00 │    1     0     0   100 │
+│   0.01269 │   tp_barrier │      1 │         3.57 │           9.196 │         0.92 │     11:45:00 │    1     0     0   100 │
+│   0.01634 │ time_barrier │      2 │         2.69 │           9.195 │         0.92 │     12:00:00 │    2     0     0   100 │
+│    0.0137 │   tp_barrier │      1 │          4.3 │           9.108 │         0.91 │      9:00:00 │    1     0     0   100 │
+│   0.02608 │   tp_barrier │      1 │         8.21 │           9.035 │          0.9 │      4:00:00 │    1     0     0   100 │
+│   0.01321 │   tp_barrier │      1 │         4.19 │           9.002 │          0.9 │      6:45:00 │    1     0     0   100 │
+│   0.00936 │  exit_signal │      1 │          2.5 │           8.915 │         0.89 │     12:00:00 │    1     0     0   100 │
+│    0.0187 │   tp_barrier │      1 │         6.29 │           8.893 │         0.89 │      3:30:00 │    1     0     0   100 │
+│   0.01132 │   tp_barrier │      1 │         3.37 │           8.748 │         0.87 │     11:00:00 │    1     0     0   100 │
+│   0.01727 │   tp_barrier │      1 │          5.0 │           8.734 │         0.87 │      6:15:00 │    1     0     0   100 │
+│    0.0094 │   tp_barrier │      1 │         3.28 │           8.713 │         0.87 │      2:15:00 │    1     0     0   100 │
+│   0.02276 │   tp_barrier │      1 │         7.31 │           8.623 │         0.86 │      5:15:00 │    1     0     0   100 │
+│   0.01106 │   tp_barrier │      1 │         4.02 │           8.596 │         0.86 │      1:00:00 │    1     0     0   100 │
+│    0.0082 │   tp_barrier │      1 │         2.21 │           8.522 │         0.85 │      7:30:00 │    1     0     0   100 │
+│   0.01374 │   tp_barrier │      1 │         4.61 │           8.349 │         0.83 │      9:15:00 │    1     0     0   100 │
+│   0.01188 │   tp_barrier │      1 │         3.47 │           8.347 │         0.83 │      1:45:00 │    1     0     0   100 │
+│   0.01138 │   tp_barrier │      1 │         3.42 │           8.263 │         0.83 │      1:30:00 │    1     0     0   100 │
+│    0.0068 │   tp_barrier │      1 │         2.26 │           8.249 │         0.82 │      7:30:00 │    1     0     0   100 │
+│   0.01886 │   tp_barrier │      1 │         6.46 │           8.082 │         0.81 │      7:45:00 │    1     0     0   100 │
+│   0.00899 │   tp_barrier │      1 │         3.14 │           8.067 │         0.81 │      2:15:00 │    1     0     0   100 │
+│   0.01788 │   tp_barrier │      1 │         5.28 │           8.059 │         0.81 │      4:45:00 │    1     0     0   100 │
+│   0.00553 │   tp_barrier │      1 │         1.64 │           7.919 │         0.79 │      2:30:00 │    1     0     0   100 │
+│   0.00888 │   tp_barrier │      1 │         2.93 │           7.910 │         0.79 │     10:00:00 │    1     0     0   100 │
+│   0.01552 │   tp_barrier │      1 │         4.78 │           7.910 │         0.79 │      6:15:00 │    1     0     0   100 │
+│   0.01563 │   tp_barrier │      1 │         5.13 │           7.856 │         0.79 │      2:15:00 │    1     0     0   100 │
+│   0.01484 │   tp_barrier │      1 │         4.84 │           7.741 │         0.77 │      8:00:00 │    1     0     0   100 │
+│   0.01985 │   tp_barrier │      1 │         6.79 │           7.714 │         0.77 │      2:00:00 │    1     0     0   100 │
+│   0.01996 │ time_barrier │      1 │         5.09 │           7.662 │         0.77 │     12:00:00 │    1     0     0   100 │
+│   0.01397 │   tp_barrier │      1 │         4.12 │           7.637 │         0.76 │      3:15:00 │    1     0     0   100 │
+│   0.01089 │   tp_barrier │      1 │         3.52 │           7.626 │         0.76 │      5:15:00 │    1     0     0   100 │
+│     0.012 │   tp_barrier │      1 │         3.77 │           7.572 │         0.76 │      6:30:00 │    1     0     0   100 │
+│    0.0088 │   tp_barrier │      1 │         2.94 │           7.543 │         0.75 │     10:00:00 │    1     0     0   100 │
+│   0.01505 │  exit_signal │      1 │         3.65 │           7.477 │         0.75 │     10:15:00 │    1     0     0   100 │
+│   0.01494 │   tp_barrier │      1 │         4.61 │           7.351 │         0.74 │     11:30:00 │    1     0     0   100 │
+│   0.01291 │   tp_barrier │      1 │         4.42 │           7.290 │         0.73 │      3:15:00 │    1     0     0   100 │
+│   0.01175 │   tp_barrier │      1 │         3.66 │           7.264 │         0.73 │      9:00:00 │    1     0     0   100 │
+│   0.01178 │   tp_barrier │      1 │         3.83 │           7.220 │         0.72 │      0:45:00 │    1     0     0   100 │
+│   0.01228 │   tp_barrier │      1 │         3.78 │           7.161 │         0.72 │      2:30:00 │    1     0     0   100 │
+│   0.00846 │   tp_barrier │      1 │          2.5 │           7.084 │         0.71 │      3:45:00 │    1     0     0   100 │
+│   0.01047 │   tp_barrier │      1 │          3.3 │           7.067 │         0.71 │      8:45:00 │    1     0     0   100 │
+│   0.01749 │   tp_barrier │      1 │         5.04 │           7.052 │         0.71 │      3:30:00 │    1     0     0   100 │
+│   0.00645 │   tp_barrier │      1 │         1.91 │           7.021 │          0.7 │      7:45:00 │    1     0     0   100 │
+│   0.01384 │   tp_barrier │      1 │         4.19 │           6.974 │          0.7 │     11:15:00 │    1     0     0   100 │
+│   0.01034 │   tp_barrier │      1 │         3.04 │           6.961 │          0.7 │      8:15:00 │    1     0     0   100 │
+│   0.00504 │   tp_barrier │      1 │         1.39 │           6.873 │         0.69 │      4:15:00 │    1     0     0   100 │
+│   0.00859 │  exit_signal │      1 │         1.79 │           6.820 │         0.68 │      4:15:00 │    1     0     0   100 │
+│   0.01361 │   tp_barrier │      1 │         3.83 │           6.762 │         0.68 │     10:30:00 │    1     0     0   100 │
+│   0.00827 │   tp_barrier │      1 │          2.3 │           6.722 │         0.67 │      3:45:00 │    1     0     0   100 │
+│   0.01393 │   tp_barrier │      1 │         3.97 │           6.666 │         0.67 │      2:45:00 │    1     0     0   100 │
+│    0.0113 │   tp_barrier │      1 │         3.11 │           6.660 │         0.67 │      4:15:00 │    1     0     0   100 │
+│    0.0092 │   tp_barrier │      1 │         2.56 │           6.639 │         0.66 │     10:30:00 │    1     0     0   100 │
+│   0.01059 │   tp_barrier │      1 │         3.09 │           6.531 │         0.65 │      7:00:00 │    1     0     0   100 │
+│   0.01248 │ time_barrier │      1 │         3.15 │           6.508 │         0.65 │     12:00:00 │    1     0     0   100 │
+│      0.01 │   tp_barrier │      1 │         2.83 │           6.495 │         0.65 │      9:30:00 │    1     0     0   100 │
+│   0.01779 │ time_barrier │      1 │         4.39 │           6.490 │         0.65 │     12:00:00 │    1     0     0   100 │
+│   0.00696 │   tp_barrier │      1 │         1.79 │           6.477 │         0.65 │     12:00:00 │    1     0     0   100 │
+│   0.00855 │  exit_signal │      1 │         1.68 │           6.448 │         0.64 │      5:00:00 │    1     0     0   100 │
+│   0.00756 │  exit_signal │      1 │          1.5 │           6.408 │         0.64 │      9:15:00 │    1     0     0   100 │
+│   0.00625 │   tp_barrier │      1 │         1.63 │           6.358 │         0.64 │      8:15:00 │    1     0     0   100 │
+│    0.0113 │  exit_signal │      1 │         2.38 │           6.350 │         0.63 │      2:30:00 │    1     0     0   100 │
+│    0.0105 │   tp_barrier │      1 │         2.89 │           6.326 │         0.63 │      4:15:00 │    1     0     0   100 │
+│   0.00889 │  exit_signal │      1 │         2.46 │           6.185 │         0.62 │      1:45:00 │    1     0     0   100 │
+│   0.01161 │  exit_signal │      1 │         2.69 │           6.173 │         0.62 │      4:30:00 │    1     0     0   100 │
+│   0.00971 │  exit_signal │      1 │         1.67 │           5.360 │         0.54 │      2:15:00 │    1     0     0   100 │
+│   0.01483 │ time_barrier │      1 │          2.9 │           5.349 │         0.53 │     12:00:00 │    1     0     0   100 │
+│   0.00893 │  exit_signal │      2 │         0.98 │           5.164 │         0.52 │      1:52:00 │    2     0     0   100 │
+│   0.01494 │  exit_signal │      1 │         2.69 │           5.009 │          0.5 │      1:30:00 │    1     0     0   100 │
+│   0.02182 │  exit_signal │      1 │         3.43 │           4.960 │          0.5 │      8:15:00 │    1     0     0   100 │
+│   0.01036 │  exit_signal │      1 │         1.58 │           4.953 │          0.5 │      8:00:00 │    1     0     0   100 │
+│   0.01813 │ time_barrier │      1 │          2.8 │           4.945 │         0.49 │     12:00:00 │    1     0     0   100 │
+│   0.01264 │ time_barrier │      1 │         1.97 │           4.875 │         0.49 │     12:00:00 │    1     0     0   100 │
+│   0.00645 │  exit_signal │      1 │         0.98 │           4.848 │         0.48 │      7:30:00 │    1     0     0   100 │
+│   0.00968 │  exit_signal │      1 │         1.74 │           4.830 │         0.48 │      3:45:00 │    1     0     0   100 │
+│   0.02103 │ time_barrier │      1 │         3.94 │           4.731 │         0.47 │     12:00:00 │    1     0     0   100 │
+│   0.02201 │ time_barrier │      1 │         4.09 │           4.724 │         0.47 │     12:00:00 │    1     0     0   100 │
+│   0.01454 │  exit_signal │      1 │         2.96 │           4.685 │         0.47 │      3:15:00 │    1     0     0   100 │
+│   0.01491 │ time_barrier │      2 │         1.28 │           4.549 │         0.45 │     12:00:00 │    1     0     1  50.0 │
+│   0.01139 │ time_barrier │      1 │         2.33 │           4.541 │         0.45 │     12:00:00 │    1     0     0   100 │
+│   0.01026 │  exit_signal │      1 │          1.5 │           4.493 │         0.45 │      6:30:00 │    1     0     0   100 │
+│   0.01023 │  exit_signal │      1 │         1.49 │           4.484 │         0.45 │      2:30:00 │    1     0     0   100 │
+│   0.01334 │  exit_signal │      1 │         2.46 │           4.478 │         0.45 │      3:30:00 │    1     0     0   100 │
+│   0.00709 │  exit_signal │      1 │         0.97 │           4.312 │         0.43 │      8:30:00 │    1     0     0   100 │
+│   0.02035 │  exit_signal │      1 │         3.62 │           4.293 │         0.43 │      3:15:00 │    1     0     0   100 │
+│   0.01062 │  exit_signal │      1 │         1.62 │           4.290 │         0.43 │      7:45:00 │    1     0     0   100 │
+│   0.00807 │  exit_signal │      1 │         1.39 │           4.288 │         0.43 │      2:00:00 │    1     0     0   100 │
+│   0.00648 │  exit_signal │      1 │         0.85 │           4.231 │         0.42 │      2:45:00 │    1     0     0   100 │
+│   0.01307 │ time_barrier │      1 │         2.35 │           4.111 │         0.41 │     12:00:00 │    1     0     0   100 │
+│   0.01143 │  exit_signal │      1 │         2.05 │           4.055 │         0.41 │     11:15:00 │    1     0     0   100 │
+│   0.01458 │ time_barrier │      1 │         2.22 │           4.005 │          0.4 │     12:00:00 │    1     0     0   100 │
+│   0.00969 │  exit_signal │      1 │         1.63 │           4.003 │          0.4 │      7:00:00 │    1     0     0   100 │
+│   0.01548 │  exit_signal │      1 │         2.43 │           3.999 │          0.4 │      6:30:00 │    1     0     0   100 │
+│   0.01367 │ time_barrier │      1 │         1.97 │           3.931 │         0.39 │     12:00:00 │    1     0     0   100 │
+│    0.0094 │  exit_signal │      1 │         1.17 │           3.912 │         0.39 │      1:30:00 │    1     0     0   100 │
+│   0.01147 │  exit_signal │      1 │         1.62 │           3.714 │         0.37 │      3:15:00 │    1     0     0   100 │
+│   0.02295 │ time_barrier │      1 │         3.75 │           3.667 │         0.37 │     12:00:00 │    1     0     0   100 │
+│   0.01144 │ time_barrier │      1 │         1.64 │           3.485 │         0.35 │     12:00:00 │    1     0     0   100 │
+│   0.00913 │  exit_signal │      1 │         1.37 │           3.479 │         0.35 │      7:45:00 │    1     0     0   100 │
+│   0.01168 │  exit_signal │      1 │         1.52 │           3.472 │         0.35 │     10:45:00 │    1     0     0   100 │
+│    0.0124 │  exit_signal │      1 │         1.61 │           3.366 │         0.34 │      8:45:00 │    1     0     0   100 │
+│   0.02441 │ time_barrier │      1 │         2.96 │           3.303 │         0.33 │     12:00:00 │    1     0     0   100 │
+│   0.01448 │ time_barrier │      1 │         1.53 │           3.299 │         0.33 │     12:00:00 │    1     0     0   100 │
+│   0.00929 │  exit_signal │      1 │         1.31 │           3.282 │         0.33 │      4:00:00 │    1     0     0   100 │
+│   0.01395 │  exit_signal │      1 │         1.51 │           3.173 │         0.32 │      3:00:00 │    1     0     0   100 │
+│   0.00959 │  exit_signal │      1 │         1.26 │           3.042 │          0.3 │      1:30:00 │    1     0     0   100 │
+│   0.01344 │ time_barrier │      1 │         1.42 │           3.030 │          0.3 │     12:00:00 │    1     0     0   100 │
+│   0.00837 │  exit_signal │      1 │         1.06 │           3.005 │          0.3 │      2:00:00 │    1     0     0   100 │
+│   0.00904 │  exit_signal │      1 │         1.16 │           2.989 │          0.3 │      1:45:00 │    1     0     0   100 │
+│   0.01291 │ time_barrier │      1 │         1.28 │           2.985 │          0.3 │     12:00:00 │    1     0     0   100 │
+│   0.00674 │  exit_signal │      1 │         0.86 │           2.954 │          0.3 │      7:00:00 │    1     0     0   100 │
+│   0.01505 │ time_barrier │      1 │         1.75 │           2.919 │         0.29 │     12:00:00 │    1     0     0   100 │
+│   0.01337 │ time_barrier │      1 │         1.62 │           2.877 │         0.29 │     12:00:00 │    1     0     0   100 │
+│   0.01256 │  exit_signal │      1 │         1.08 │           2.785 │         0.28 │     11:45:00 │    1     0     0   100 │
+│   0.02334 │ time_barrier │      1 │         2.31 │           2.743 │         0.27 │     12:00:00 │    1     0     0   100 │
+│    0.0125 │  exit_signal │      1 │         1.32 │           2.695 │         0.27 │      1:00:00 │    1     0     0   100 │
+│   0.00852 │  exit_signal │      2 │         0.34 │           2.634 │         0.26 │      2:45:00 │    1     0     1  50.0 │
+│   0.01611 │ time_barrier │      1 │         1.66 │           2.479 │         0.25 │     12:00:00 │    1     0     0   100 │
+│   0.01646 │  exit_signal │      1 │         1.61 │           2.467 │         0.25 │      6:15:00 │    1     0     0   100 │
+│   0.00947 │ time_barrier │      1 │         0.94 │           2.429 │         0.24 │     12:00:00 │    1     0     0   100 │
+│   0.00497 │  exit_signal │      1 │          0.5 │           2.372 │         0.24 │      2:15:00 │    1     0     0   100 │
+│   0.01775 │ time_barrier │      1 │         1.81 │           2.229 │         0.22 │     12:00:00 │    1     0     0   100 │
+│   0.01095 │  exit_signal │      1 │         1.01 │           2.202 │         0.22 │      2:00:00 │    1     0     0   100 │
+│    0.0089 │  exit_signal │      1 │         0.79 │           2.147 │         0.21 │      1:15:00 │    1     0     0   100 │
+│   0.01099 │  exit_signal │      1 │         0.97 │           2.100 │         0.21 │      6:00:00 │    1     0     0   100 │
+│   0.02559 │  exit_signal │      1 │         2.04 │           2.062 │         0.21 │     12:00:00 │    1     0     0   100 │
+│   0.00995 │ time_barrier │      1 │         0.61 │           2.030 │          0.2 │     12:00:00 │    1     0     0   100 │
+│   0.01042 │  exit_signal │      1 │         0.78 │           1.908 │         0.19 │      1:00:00 │    1     0     0   100 │
+│   0.00512 │  exit_signal │      1 │         0.38 │           1.904 │         0.19 │      7:30:00 │    1     0     0   100 │
+│   0.00939 │  exit_signal │      1 │         0.68 │           1.829 │         0.18 │      4:00:00 │    1     0     0   100 │
+│   0.00764 │ time_barrier │      1 │         0.57 │           1.794 │         0.18 │     12:00:00 │    1     0     0   100 │
+│   0.01532 │ time_barrier │      1 │          0.8 │           1.723 │         0.17 │     12:00:00 │    1     0     0   100 │
+│   0.01583 │ time_barrier │      1 │         0.89 │           1.688 │         0.17 │     12:00:00 │    1     0     0   100 │
+│   0.00916 │  exit_signal │      1 │          0.6 │           1.682 │         0.17 │      1:30:00 │    1     0     0   100 │
+│   0.00749 │ time_barrier │      1 │          0.4 │           1.674 │         0.17 │     12:00:00 │    1     0     0   100 │
+│    0.0073 │ time_barrier │      1 │         0.45 │           1.564 │         0.16 │     12:00:00 │    1     0     0   100 │
+│   0.00787 │  exit_signal │      1 │         0.39 │           1.556 │         0.16 │      5:15:00 │    1     0     0   100 │
+│   0.00999 │ time_barrier │      1 │         0.57 │           1.526 │         0.15 │     12:00:00 │    1     0     0   100 │
+│     0.019 │ time_barrier │      1 │         1.18 │           1.492 │         0.15 │     12:00:00 │    1     0     0   100 │
+│   0.01518 │ time_barrier │      1 │         0.81 │           1.474 │         0.15 │     12:00:00 │    1     0     0   100 │
+│   0.01647 │  exit_signal │      1 │         0.75 │           1.393 │         0.14 │     11:15:00 │    1     0     0   100 │
+│    0.0101 │ time_barrier │      1 │         0.52 │           1.317 │         0.13 │     12:00:00 │    1     0     0   100 │
+│   0.00748 │  exit_signal │      1 │         0.42 │           1.302 │         0.13 │      0:30:00 │    1     0     0   100 │
+│   0.01366 │  exit_signal │      1 │         0.75 │           1.274 │         0.13 │      9:45:00 │    1     0     0   100 │
+│   0.01017 │  exit_signal │      1 │         0.57 │           1.258 │         0.13 │      6:45:00 │    1     0     0   100 │
+│   0.01242 │ time_barrier │      1 │         0.61 │           1.236 │         0.12 │     12:00:00 │    1     0     0   100 │
+│   0.01166 │ time_barrier │      1 │         0.55 │           1.232 │         0.12 │     12:00:00 │    1     0     0   100 │
+│   0.01152 │  exit_signal │      1 │         0.53 │           1.204 │         0.12 │      4:45:00 │    1     0     0   100 │
+│   0.01221 │  exit_signal │      1 │         0.59 │           1.172 │         0.12 │     10:00:00 │    1     0     0   100 │
+│   0.00757 │  exit_signal │      1 │         0.26 │           1.142 │         0.11 │      4:30:00 │    1     0     0   100 │
+│   0.00976 │ time_barrier │      1 │         0.49 │           1.139 │         0.11 │     12:00:00 │    1     0     0   100 │
+│     0.008 │  exit_signal │      1 │         0.37 │           1.103 │         0.11 │      1:15:00 │    1     0     0   100 │
+│   0.00881 │ time_barrier │      1 │         0.42 │           1.093 │         0.11 │     12:00:00 │    1     0     0   100 │
+│   0.01146 │ time_barrier │      1 │         0.43 │           0.885 │         0.09 │     12:00:00 │    1     0     0   100 │
+│   0.00656 │  exit_signal │      1 │         0.24 │           0.872 │         0.09 │      9:30:00 │    1     0     0   100 │
+│   0.01355 │  exit_signal │      1 │         0.37 │           0.835 │         0.08 │      1:15:00 │    1     0     0   100 │
+│   0.00965 │ time_barrier │      1 │         0.32 │           0.821 │         0.08 │     12:00:00 │    1     0     0   100 │
+│    0.0132 │ time_barrier │      1 │         0.47 │           0.781 │         0.08 │     12:00:00 │    1     0     0   100 │
+│   0.00595 │ time_barrier │      1 │         0.16 │           0.777 │         0.08 │     12:00:00 │    1     0     0   100 │
+│   0.01285 │  exit_signal │      1 │         0.45 │           0.748 │         0.07 │      1:45:00 │    1     0     0   100 │
+│   0.01216 │  exit_signal │      1 │         0.26 │           0.511 │         0.05 │      1:15:00 │    1     0     0   100 │
+│    0.0105 │  exit_signal │      1 │         0.17 │           0.504 │         0.05 │      1:45:00 │    1     0     0   100 │
+│   0.01123 │ time_barrier │      1 │         0.15 │           0.405 │         0.04 │     12:00:00 │    1     0     0   100 │
+│   0.01559 │  exit_signal │      1 │         0.24 │           0.388 │         0.04 │      6:15:00 │    1     0     0   100 │
+│   0.00836 │ time_barrier │      1 │          0.1 │           0.372 │         0.04 │     12:00:00 │    1     0     0   100 │
+│   0.01494 │ time_barrier │      1 │         0.05 │           0.085 │         0.01 │     12:00:00 │    1     0     0   100 │
+│   0.00919 │ time_barrier │      1 │         0.01 │           0.020 │          0.0 │     12:00:00 │    1     0     0   100 │
+│   0.01741 │ time_barrier │      1 │         0.01 │           0.016 │          0.0 │     12:00:00 │    1     0     0   100 │
+│   0.01281 │ time_barrier │      1 │         -0.0 │          -0.002 │         -0.0 │     12:00:00 │    0     0     1     0 │
+│   0.01709 │  exit_signal │      1 │        -0.07 │          -0.100 │        -0.01 │      1:00:00 │    0     0     1     0 │
+│   0.00996 │  exit_signal │      1 │        -0.08 │          -0.167 │        -0.02 │      1:15:00 │    0     0     1     0 │
+│   0.00897 │  exit_signal │      1 │        -0.17 │          -0.450 │        -0.05 │      1:30:00 │    0     0     1     0 │
+│   0.00865 │  exit_signal │      1 │        -0.17 │          -0.469 │        -0.05 │      3:00:00 │    0     0     1     0 │
+│   0.00834 │  exit_signal │      1 │        -0.17 │          -0.477 │        -0.05 │      5:15:00 │    0     0     1     0 │
+│   0.01533 │  exit_signal │      1 │        -0.31 │          -0.514 │        -0.05 │      7:15:00 │    0     0     1     0 │
+│   0.00825 │  exit_signal │      1 │        -0.22 │          -0.616 │        -0.06 │      1:30:00 │    0     0     1     0 │
+│   0.01188 │ time_barrier │      1 │        -0.33 │          -0.633 │        -0.06 │     12:00:00 │    0     0     1     0 │
+│   0.00562 │  exit_signal │      1 │        -0.14 │          -0.687 │        -0.07 │      4:45:00 │    0     0     1     0 │
+│   0.00804 │  exit_signal │      1 │        -0.22 │          -0.689 │        -0.07 │      5:15:00 │    0     0     1     0 │
+│   0.01072 │ time_barrier │      1 │        -0.34 │          -0.803 │        -0.08 │     12:00:00 │    0     0     1     0 │
+│   0.01012 │ time_barrier │      1 │        -0.28 │          -0.897 │        -0.09 │     12:00:00 │    0     0     1     0 │
+│   0.01529 │ time_barrier │      1 │        -0.51 │          -0.953 │         -0.1 │     12:00:00 │    0     0     1     0 │
+│   0.02279 │ time_barrier │      1 │        -0.91 │          -1.023 │         -0.1 │     12:00:00 │    0     0     1     0 │
+│   0.00668 │  exit_signal │      1 │         -0.2 │          -1.038 │         -0.1 │      2:45:00 │    0     0     1     0 │
+│   0.01877 │ time_barrier │      1 │        -0.78 │          -1.067 │        -0.11 │     12:00:00 │    0     0     1     0 │
+│   0.00994 │  exit_signal │      1 │        -0.39 │          -1.247 │        -0.12 │      2:30:00 │    0     0     1     0 │
+│   0.00844 │ time_barrier │      2 │        -0.24 │          -1.289 │        -0.13 │     12:00:00 │    1     0     1  50.0 │
+│   0.00927 │  exit_signal │      1 │        -0.51 │          -1.309 │        -0.13 │      4:45:00 │    0     0     1     0 │
+│   0.01273 │  exit_signal │      1 │        -0.75 │          -1.431 │        -0.14 │      1:00:00 │    0     0     1     0 │
+│   0.00925 │  exit_signal │      2 │        -0.27 │          -1.440 │        -0.14 │      1:52:00 │    0     0     2     0 │
+│    0.0084 │ time_barrier │      1 │         -0.4 │          -1.478 │        -0.15 │     12:00:00 │    0     0     1     0 │
+│   0.01924 │ time_barrier │      1 │        -0.97 │          -1.481 │        -0.15 │     12:00:00 │    0     0     1     0 │
+│   0.00939 │ time_barrier │      1 │        -0.44 │          -1.507 │        -0.15 │     12:00:00 │    0     0     1     0 │
+│   0.01481 │ time_barrier │      1 │        -0.75 │          -1.588 │        -0.16 │     12:00:00 │    0     0     1     0 │
+│   0.01028 │  exit_signal │      1 │        -0.51 │          -1.653 │        -0.17 │     10:30:00 │    0     0     1     0 │
+│   0.01627 │  exit_signal │      1 │         -1.1 │          -1.711 │        -0.17 │      5:15:00 │    0     0     1     0 │
+│   0.01675 │ time_barrier │      1 │        -1.24 │          -1.839 │        -0.18 │     12:00:00 │    0     0     1     0 │
+│    0.0108 │ time_barrier │      1 │        -0.79 │          -1.878 │        -0.19 │     12:00:00 │    0     0     1     0 │
+│   0.00784 │ time_barrier │      1 │         -0.7 │          -2.100 │        -0.21 │     12:00:00 │    0     0     1     0 │
+│   0.01426 │ time_barrier │      1 │        -1.29 │          -2.108 │        -0.21 │     12:00:00 │    0     0     1     0 │
+│   0.01095 │ time_barrier │      1 │        -0.73 │          -2.140 │        -0.21 │     12:00:00 │    0     0     1     0 │
+│   0.00738 │  exit_signal │      1 │        -0.67 │          -2.151 │        -0.22 │      1:15:00 │    0     0     1     0 │
+│   0.01449 │ time_barrier │      1 │        -1.38 │          -2.163 │        -0.22 │     12:00:00 │    0     0     1     0 │
+│   0.02648 │ time_barrier │      1 │        -2.77 │          -2.244 │        -0.22 │     12:00:00 │    0     0     1     0 │
+│   0.01497 │ time_barrier │      1 │        -1.54 │          -2.314 │        -0.23 │     12:00:00 │    0     0     1     0 │
+│   0.01384 │ time_barrier │      1 │        -1.43 │          -2.345 │        -0.23 │     12:00:00 │    0     0     1     0 │
+│   0.01691 │  exit_signal │      1 │        -1.44 │          -2.372 │        -0.24 │      3:00:00 │    0     0     1     0 │
+│   0.01258 │ time_barrier │      1 │        -1.14 │          -2.774 │        -0.28 │     12:00:00 │    0     0     1     0 │
+│   0.01625 │ time_barrier │      1 │        -1.63 │          -2.822 │        -0.28 │     12:00:00 │    0     0     1     0 │
+│   0.01184 │  exit_signal │      1 │        -1.14 │          -2.950 │        -0.29 │      7:30:00 │    0     0     1     0 │
+│   0.00957 │ time_barrier │      1 │        -1.19 │          -2.998 │         -0.3 │     12:00:00 │    0     0     1     0 │
+│   0.01223 │ time_barrier │      1 │        -1.66 │          -3.105 │        -0.31 │     12:00:00 │    0     0     1     0 │
+│   0.01039 │ time_barrier │      1 │        -1.31 │          -3.179 │        -0.32 │     12:00:00 │    0     0     1     0 │
+│    0.0054 │ time_barrier │      1 │        -0.66 │          -3.192 │        -0.32 │     12:00:00 │    0     0     1     0 │
+│   0.00922 │  exit_signal │      1 │        -1.25 │          -3.290 │        -0.33 │      8:45:00 │    0     0     1     0 │
+│   0.01059 │ time_barrier │      1 │        -1.43 │          -3.301 │        -0.33 │     12:00:00 │    0     0     1     0 │
+│   0.02018 │ time_barrier │      1 │        -3.37 │          -3.534 │        -0.35 │     12:00:00 │    0     0     1     0 │
+│   0.01173 │ time_barrier │      1 │        -1.62 │          -3.836 │        -0.38 │     12:00:00 │    0     0     1     0 │
+│   0.00781 │ time_barrier │      1 │        -1.15 │          -3.855 │        -0.39 │     12:00:00 │    0     0     1     0 │
+│   0.00862 │  exit_signal │      1 │        -1.45 │          -4.058 │        -0.41 │      8:45:00 │    0     0     1     0 │
+│   0.01116 │ time_barrier │      1 │        -1.83 │          -4.160 │        -0.42 │     12:00:00 │    0     0     1     0 │
+│   0.00997 │  exit_signal │      1 │        -1.65 │          -4.188 │        -0.42 │      5:00:00 │    0     0     1     0 │
+│   0.01193 │  exit_signal │      2 │        -0.97 │          -4.279 │        -0.43 │      3:38:00 │    0     0     2     0 │
+│   0.01058 │ time_barrier │      1 │        -1.88 │          -4.674 │        -0.47 │     12:00:00 │    0     0     1     0 │
+│   0.00826 │  exit_signal │      1 │        -1.51 │          -4.685 │        -0.47 │      4:30:00 │    0     0     1     0 │
+│   0.02111 │ time_barrier │      1 │        -4.32 │          -4.772 │        -0.48 │     12:00:00 │    0     0     1     0 │
+│   0.01843 │ time_barrier │      1 │        -3.58 │          -4.994 │         -0.5 │     12:00:00 │    0     0     1     0 │
+│   0.01842 │ time_barrier │      1 │        -3.02 │          -5.215 │        -0.52 │     12:00:00 │    0     0     1     0 │
+│   0.01041 │ time_barrier │      1 │        -1.75 │          -5.219 │        -0.52 │     12:00:00 │    0     0     1     0 │
+│   0.01274 │ time_barrier │      1 │        -2.68 │          -5.435 │        -0.54 │     12:00:00 │    0     0     1     0 │
+│   0.01612 │ time_barrier │      2 │        -1.65 │          -5.492 │        -0.55 │     12:00:00 │    0     0     2     0 │
+│   0.00833 │ time_barrier │      1 │        -2.08 │          -5.788 │        -0.58 │     12:00:00 │    0     0     1     0 │
+│   0.00759 │  exit_signal │      1 │        -1.36 │          -5.872 │        -0.59 │      9:45:00 │    0     0     1     0 │
+│   0.02067 │    stop_loss │      1 │        -6.51 │          -6.668 │        -0.67 │      4:15:00 │    0     0     1     0 │
+│   0.01397 │    stop_loss │      1 │        -4.49 │          -7.025 │         -0.7 │      0:30:00 │    0     0     1     0 │
+│   0.01304 │    stop_loss │      1 │        -4.21 │          -7.125 │        -0.71 │      2:15:00 │    0     0     1     0 │
+│   0.01851 │    stop_loss │      1 │        -5.86 │          -7.232 │        -0.72 │      0:00:00 │    0     0     1     0 │
+│   0.01021 │    stop_loss │      1 │        -3.39 │          -7.273 │        -0.73 │      0:45:00 │    0     0     1     0 │
+│   0.01562 │    stop_loss │      1 │        -4.98 │          -7.302 │        -0.73 │     10:15:00 │    0     0     1     0 │
+│    0.0095 │    stop_loss │      1 │        -3.15 │          -7.467 │        -0.75 │      4:15:00 │    0     0     1     0 │
+│   0.01302 │    stop_loss │      1 │        -4.21 │          -7.482 │        -0.75 │      1:30:00 │    0     0     1     0 │
+│   0.01738 │    stop_loss │      1 │        -5.51 │          -7.495 │        -0.75 │      2:15:00 │    0     0     1     0 │
+│   0.01012 │    stop_loss │      1 │         -3.3 │          -7.515 │        -0.75 │      1:45:00 │    0     0     1     0 │
+│   0.01343 │    stop_loss │      1 │        -4.31 │          -7.542 │        -0.75 │     10:00:00 │    0     0     1     0 │
+│   0.01728 │    stop_loss │      1 │        -5.49 │          -7.608 │        -0.76 │      0:15:00 │    0     0     1     0 │
+│   0.01247 │    stop_loss │      1 │        -4.03 │          -7.615 │        -0.76 │      4:00:00 │    0     0     1     0 │
+│   0.01001 │    stop_loss │      1 │        -3.32 │          -7.616 │        -0.76 │      3:00:00 │    0     0     1     0 │
+│    0.0105 │    stop_loss │      1 │        -3.45 │          -7.686 │        -0.77 │      5:00:00 │    0     0     1     0 │
+│   0.01051 │    stop_loss │      1 │        -3.45 │          -7.704 │        -0.77 │      3:00:00 │    0     0     1     0 │
+│   0.00896 │    stop_loss │      1 │        -2.99 │          -7.757 │        -0.78 │      0:45:00 │    0     0     1     0 │
+│   0.01076 │    stop_loss │      1 │        -3.53 │          -7.786 │        -0.78 │      4:30:00 │    0     0     1     0 │
+│   0.00963 │    stop_loss │      1 │         -3.2 │          -7.795 │        -0.78 │      9:00:00 │    0     0     1     0 │
+│   0.01156 │    stop_loss │      1 │        -3.77 │          -7.847 │        -0.78 │      0:30:00 │    0     0     1     0 │
+│   0.00794 │    stop_loss │      1 │        -2.69 │          -7.883 │        -0.79 │      1:45:00 │    0     0     1     0 │
+│   0.02216 │    stop_loss │      1 │        -6.95 │          -7.888 │        -0.79 │      6:30:00 │    0     0     1     0 │
+│   0.01296 │    stop_loss │      1 │        -4.18 │          -7.897 │        -0.79 │      7:30:00 │    0     0     1     0 │
+│   0.01215 │    stop_loss │      1 │        -3.96 │          -7.900 │        -0.79 │      0:30:00 │    0     0     1     0 │
+│   0.00952 │    stop_loss │      1 │        -3.15 │          -7.932 │        -0.79 │      1:30:00 │    0     0     1     0 │
+│   0.01108 │    stop_loss │      1 │        -3.62 │          -7.942 │        -0.79 │      6:00:00 │    0     0     1     0 │
+│   0.00981 │    stop_loss │      1 │        -3.24 │          -7.951 │         -0.8 │      4:45:00 │    0     0     1     0 │
+│   0.00943 │    stop_loss │      1 │        -3.15 │          -7.979 │         -0.8 │      5:45:00 │    0     0     1     0 │
+│   0.00902 │    stop_loss │      1 │        -3.01 │          -8.010 │         -0.8 │      1:15:00 │    0     0     1     0 │
+│   0.00797 │    stop_loss │      1 │        -2.69 │          -8.010 │         -0.8 │      0:45:00 │    0     0     1     0 │
+│   0.02792 │    stop_loss │      1 │         -8.7 │          -8.020 │         -0.8 │      8:30:00 │    0     0     1     0 │
+│   0.01089 │    stop_loss │      1 │        -3.54 │          -8.046 │         -0.8 │      8:15:00 │    0     0     1     0 │
+│   0.00939 │    stop_loss │      1 │        -3.11 │          -8.057 │        -0.81 │      7:00:00 │    0     0     1     0 │
+│   0.00608 │    stop_loss │      1 │        -2.12 │          -8.066 │        -0.81 │      2:15:00 │    0     0     1     0 │
+│   0.00829 │    stop_loss │      1 │        -2.78 │          -8.095 │        -0.81 │      0:30:00 │    0     0     1     0 │
+│   0.01224 │    stop_loss │      1 │        -3.97 │          -8.112 │        -0.81 │      1:00:00 │    0     0     1     0 │
+│   0.01617 │    stop_loss │      1 │        -5.16 │          -8.141 │        -0.81 │      5:30:00 │    0     0     1     0 │
+│   0.00966 │    stop_loss │      1 │        -3.19 │          -8.180 │        -0.82 │      4:15:00 │    0     0     1     0 │
+│   0.01423 │    stop_loss │      1 │        -4.57 │          -8.189 │        -0.82 │      6:45:00 │    0     0     1     0 │
+│   0.01019 │    stop_loss │      1 │        -3.38 │          -8.202 │        -0.82 │      7:15:00 │    0     0     1     0 │
+│     0.022 │    stop_loss │      1 │        -6.91 │          -8.204 │        -0.82 │      4:15:00 │    0     0     1     0 │
+│   0.01032 │    stop_loss │      1 │        -3.38 │          -8.239 │        -0.82 │      6:15:00 │    0     0     1     0 │
+│   0.01453 │    stop_loss │      1 │        -4.69 │          -8.261 │        -0.83 │     11:30:00 │    0     0     1     0 │
+│   0.01529 │    stop_loss │      1 │        -4.89 │          -8.262 │        -0.83 │      2:45:00 │    0     0     1     0 │
+│   0.00872 │    stop_loss │      1 │        -2.93 │          -8.269 │        -0.83 │      2:00:00 │    0     0     1     0 │
+│   0.01172 │    stop_loss │      1 │        -3.82 │          -8.270 │        -0.83 │      2:30:00 │    0     0     1     0 │
+│   0.01298 │    stop_loss │      1 │         -4.2 │          -8.276 │        -0.83 │      3:15:00 │    0     0     1     0 │
+│   0.00708 │    stop_loss │      1 │        -2.42 │          -8.288 │        -0.83 │      5:30:00 │    0     0     1     0 │
+│   0.00785 │    stop_loss │      1 │        -2.68 │          -8.288 │        -0.83 │      5:00:00 │    0     0     1     0 │
+│   0.01348 │    stop_loss │      1 │        -4.35 │          -8.299 │        -0.83 │      2:30:00 │    0     0     1     0 │
+│   0.01981 │    stop_loss │      1 │        -6.25 │          -8.304 │        -0.83 │      6:00:00 │    0     0     1     0 │
+│   0.01511 │    stop_loss │      1 │        -4.84 │          -8.318 │        -0.83 │      5:00:00 │    0     0     1     0 │
+│   0.01718 │    stop_loss │      1 │        -5.46 │          -8.324 │        -0.83 │      5:00:00 │    0     0     1     0 │
+│   0.02092 │    stop_loss │      1 │        -6.57 │          -8.334 │        -0.83 │      1:30:00 │    0     0     1     0 │
+│    0.0089 │    stop_loss │      1 │        -2.97 │          -8.344 │        -0.83 │      1:15:00 │    0     0     1     0 │
+│   0.00974 │    stop_loss │      1 │        -3.22 │          -8.353 │        -0.84 │      4:30:00 │    0     0     1     0 │
+│   0.02804 │    stop_loss │      1 │        -8.73 │          -8.422 │        -0.84 │      7:00:00 │    0     0     1     0 │
+│   0.01477 │    stop_loss │      1 │        -4.73 │          -8.429 │        -0.84 │      3:30:00 │    0     0     1     0 │
+│   0.01345 │    stop_loss │      1 │        -4.34 │          -8.454 │        -0.85 │      4:15:00 │    0     0     1     0 │
+│   0.01082 │    stop_loss │      1 │        -3.55 │          -8.459 │        -0.85 │      0:00:00 │    0     0     1     0 │
+│   0.01612 │    stop_loss │      1 │        -5.14 │          -8.470 │        -0.85 │     11:00:00 │    0     0     1     0 │
+│   0.01165 │    stop_loss │      1 │        -3.81 │          -8.509 │        -0.85 │      7:00:00 │    0     0     1     0 │
+│   0.00877 │    stop_loss │      1 │        -2.93 │          -8.512 │        -0.85 │      3:00:00 │    0     0     1     0 │
+│   0.00496 │    stop_loss │      1 │        -1.79 │          -8.513 │        -0.85 │      1:45:00 │    0     0     1     0 │
+│   0.01126 │    stop_loss │      1 │        -3.67 │          -8.544 │        -0.85 │      2:30:00 │    0     0     1     0 │
+│   0.01505 │    stop_loss │      1 │        -4.84 │          -8.561 │        -0.86 │      6:45:00 │    0     0     1     0 │
+│   0.01926 │    stop_loss │      1 │        -6.05 │          -8.563 │        -0.86 │      8:30:00 │    0     0     1     0 │
+│   0.01457 │    stop_loss │      1 │        -4.69 │          -8.567 │        -0.86 │      8:30:00 │    0     0     1     0 │
+│    0.0157 │    stop_loss │      1 │        -5.02 │          -8.608 │        -0.86 │      7:15:00 │    0     0     1     0 │
+│   0.01374 │    stop_loss │      1 │        -4.42 │          -8.646 │        -0.86 │      1:15:00 │    0     0     1     0 │
+│   0.02115 │    stop_loss │      1 │        -6.64 │          -8.652 │        -0.87 │      5:15:00 │    0     0     1     0 │
+│      0.01 │    stop_loss │      1 │         -3.3 │          -8.678 │        -0.87 │      1:30:00 │    0     0     1     0 │
+│   0.02073 │    stop_loss │      1 │        -6.49 │          -8.767 │        -0.88 │     10:30:00 │    0     0     1     0 │
+│   0.00925 │    stop_loss │      1 │        -3.07 │          -8.884 │        -0.89 │      0:00:00 │    0     0     1     0 │
+│   0.03101 │    stop_loss │      1 │        -9.59 │          -8.899 │        -0.89 │      2:15:00 │    0     0     1     0 │
+│    0.0155 │    stop_loss │      1 │        -4.94 │          -8.906 │        -0.89 │      1:45:00 │    0     0     1     0 │
+│   0.00645 │    stop_loss │      1 │        -2.24 │          -8.973 │         -0.9 │      6:00:00 │    0     0     1     0 │
+│   0.01383 │    stop_loss │      1 │        -4.44 │          -9.001 │         -0.9 │      4:30:00 │    0     0     1     0 │
+│   0.00691 │    stop_loss │      1 │        -2.37 │          -9.065 │        -0.91 │      3:45:00 │    0     0     1     0 │
+│   0.01386 │    stop_loss │      1 │        -4.46 │          -9.069 │        -0.91 │      6:30:00 │    0     0     1     0 │
+│   0.00669 │    stop_loss │      1 │         -2.3 │          -9.284 │        -0.93 │      4:30:00 │    0     0     1     0 │
+│   0.01081 │    stop_loss │      1 │        -3.54 │          -9.312 │        -0.93 │      9:15:00 │    0     0     1     0 │
+│   0.01479 │    stop_loss │      1 │        -4.75 │          -9.331 │        -0.93 │      7:30:00 │    0     0     1     0 │
+│   0.01233 │    stop_loss │      1 │        -3.99 │          -9.338 │        -0.93 │      9:45:00 │    0     0     1     0 │
+│   0.01212 │    stop_loss │      1 │        -3.94 │          -9.345 │        -0.93 │      4:00:00 │    0     0     1     0 │
+│   0.01429 │    stop_loss │      1 │        -4.59 │          -9.376 │        -0.94 │      2:15:00 │    0     0     1     0 │
+│   0.01067 │    stop_loss │      1 │         -3.5 │          -9.384 │        -0.94 │      2:30:00 │    0     0     1     0 │
+│   0.01722 │    stop_loss │      1 │        -5.46 │          -9.399 │        -0.94 │      4:15:00 │    0     0     1     0 │
+│   0.01091 │    stop_loss │      1 │        -3.57 │          -9.629 │        -0.96 │      4:15:00 │    0     0     1     0 │
+│   0.01322 │    stop_loss │      1 │        -4.27 │          -9.774 │        -0.98 │      2:30:00 │    0     0     1     0 │
+│   0.01023 │    stop_loss │      1 │        -3.37 │          -9.777 │        -0.98 │      2:15:00 │    0     0     1     0 │
+│   0.01137 │    stop_loss │      1 │        -3.71 │          -9.801 │        -0.98 │      1:45:00 │    0     0     1     0 │
+│   0.01362 │    stop_loss │      1 │         -4.4 │          -9.807 │        -0.98 │      1:00:00 │    0     0     1     0 │
+│   0.01335 │    stop_loss │      1 │        -4.31 │          -9.980 │         -1.0 │      2:00:00 │    0     0     1     0 │
+│   0.01586 │    stop_loss │      1 │        -5.06 │         -10.055 │        -1.01 │      3:00:00 │    0     0     1     0 │
+│   0.00907 │    stop_loss │      1 │        -3.02 │         -10.071 │        -1.01 │      6:45:00 │    0     0     1     0 │
+│   0.01292 │    stop_loss │      1 │        -4.18 │         -10.075 │        -1.01 │      4:45:00 │    0     0     1     0 │
+│   0.01123 │    stop_loss │      1 │        -3.67 │         -10.076 │        -1.01 │      0:15:00 │    0     0     1     0 │
+│   0.01267 │    stop_loss │      1 │         -4.1 │         -10.101 │        -1.01 │      3:15:00 │    0     0     1     0 │
+│   0.01965 │    stop_loss │      1 │        -6.22 │         -10.110 │        -1.01 │      6:45:00 │    0     0     1     0 │
+│     0.014 │    stop_loss │      1 │        -4.51 │         -10.113 │        -1.01 │      1:15:00 │    0     0     1     0 │
+│   0.01079 │    stop_loss │      1 │        -3.53 │         -10.129 │        -1.01 │      3:30:00 │    0     0     1     0 │
+│   0.01561 │    stop_loss │      1 │        -4.97 │         -10.164 │        -1.02 │     10:45:00 │    0     0     1     0 │
+│    0.0147 │    stop_loss │      1 │        -4.72 │         -10.223 │        -1.02 │      4:15:00 │    0     0     1     0 │
+│   0.01086 │    stop_loss │      1 │        -3.56 │         -10.253 │        -1.03 │      2:30:00 │    0     0     1     0 │
+│   0.00883 │    stop_loss │      1 │        -2.97 │         -10.264 │        -1.03 │      9:00:00 │    0     0     1     0 │
+│   0.01876 │    stop_loss │      1 │         -5.9 │         -10.278 │        -1.03 │      9:00:00 │    0     0     1     0 │
+│   0.02303 │    stop_loss │      1 │         -7.2 │         -10.330 │        -1.03 │      2:30:00 │    0     0     1     0 │
+│   0.00814 │    stop_loss │      1 │        -2.74 │         -10.361 │        -1.04 │      0:00:00 │    0     0     1     0 │
+│   0.00627 │    stop_loss │      1 │        -2.19 │         -10.362 │        -1.04 │      4:00:00 │    0     0     1     0 │
+│   0.01064 │    stop_loss │      1 │        -3.48 │         -10.376 │        -1.04 │      1:15:00 │    0     0     1     0 │
+│   0.01153 │    stop_loss │      1 │        -3.76 │         -10.388 │        -1.04 │      2:30:00 │    0     0     1     0 │
+│   0.01551 │    stop_loss │      1 │        -4.97 │         -10.447 │        -1.04 │      5:00:00 │    0     0     1     0 │
+│    0.0162 │    stop_loss │      1 │        -5.15 │         -10.465 │        -1.05 │      2:15:00 │    0     0     1     0 │
+│   0.01498 │    stop_loss │      1 │        -4.79 │         -10.466 │        -1.05 │      8:15:00 │    0     0     1     0 │
+│   0.01628 │    stop_loss │      1 │        -5.19 │         -10.478 │        -1.05 │      9:45:00 │    0     0     1     0 │
+│   0.00936 │    stop_loss │      1 │        -3.11 │         -10.482 │        -1.05 │      6:15:00 │    0     0     1     0 │
+│   0.00846 │    stop_loss │      1 │        -2.87 │         -10.536 │        -1.05 │     10:30:00 │    0     0     1     0 │
+│   0.01077 │    stop_loss │      1 │        -3.54 │         -10.557 │        -1.06 │      2:45:00 │    0     0     1     0 │
+│   0.00724 │    stop_loss │      1 │        -2.47 │         -10.703 │        -1.07 │      1:00:00 │    0     0     1     0 │
+│   0.00793 │    stop_loss │      1 │        -2.68 │         -10.727 │        -1.07 │      2:30:00 │    0     0     1     0 │
+│   0.00936 │ time_barrier │      1 │        -3.06 │         -10.740 │        -1.07 │     12:00:00 │    0     0     1     0 │
+│   0.01008 │    stop_loss │      1 │        -3.33 │         -10.744 │        -1.07 │      1:15:00 │    0     0     1     0 │
+│   0.00885 │    stop_loss │      1 │        -2.94 │         -10.765 │        -1.08 │      0:45:00 │    0     0     1     0 │
+│   0.01161 │    stop_loss │      1 │        -3.79 │         -10.791 │        -1.08 │      5:30:00 │    0     0     1     0 │
+│   0.00948 │    stop_loss │      1 │        -3.15 │         -10.802 │        -1.08 │      3:30:00 │    0     0     1     0 │
+│   0.00951 │    stop_loss │      1 │        -3.16 │         -10.823 │        -1.08 │      6:30:00 │    0     0     1     0 │
+│   0.00629 │    stop_loss │      1 │        -2.16 │         -10.837 │        -1.08 │     10:00:00 │    0     0     1     0 │
+│   0.01033 │    stop_loss │      1 │        -3.39 │         -10.994 │         -1.1 │      5:00:00 │    0     0     1     0 │
+│   0.01078 │    stop_loss │      1 │        -3.54 │         -11.000 │         -1.1 │      2:15:00 │    0     0     1     0 │
+│   0.00815 │    stop_loss │      1 │        -2.74 │         -11.216 │        -1.12 │      0:15:00 │    0     0     1     0 │
+│   0.00813 │    stop_loss │      1 │        -2.74 │         -11.219 │        -1.12 │      1:15:00 │    0     0     1     0 │
+│   0.00747 │    stop_loss │      1 │        -2.54 │         -11.355 │        -1.14 │      8:00:00 │    0     0     1     0 │
+│   0.00704 │    stop_loss │      1 │        -2.41 │         -11.510 │        -1.15 │      2:30:00 │    0     0     1     0 │
+│     0.013 │    stop_loss │      2 │         -4.2 │         -14.509 │        -1.45 │      1:38:00 │    0     0     2     0 │
+│   0.00696 │    stop_loss │      2 │        -2.39 │         -16.230 │        -1.62 │      4:22:00 │    0     0     2     0 │
+│   0.00845 │    stop_loss │      2 │        -2.84 │         -16.443 │        -1.64 │      3:15:00 │    0     0     2     0 │
+│   0.01597 │    stop_loss │      2 │         -5.1 │         -16.525 │        -1.65 │      5:52:00 │    0     0     2     0 │
+│   0.01261 │    stop_loss │      2 │        -4.08 │         -18.280 │        -1.83 │      5:45:00 │    0     0     2     0 │
+│   0.00878 │    stop_loss │      3 │        -2.93 │         -29.731 │        -2.97 │      3:10:00 │    0     0     3     0 │
+│     TOTAL │              │    429 │        -0.27 │        -276.421 │       -27.64 │      6:23:00 │  211     0   218  49.2 │
+└───────────┴──────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┘
+                         SUMMARY METRICS                          
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                        ┃ Value                          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Backtesting from              │ 2025-10-15 00:00:00            │
+│ Backtesting to                │ 2026-07-14 00:00:00            │
+│ Trading Mode                  │ Isolated Futures               │
+│ Max open trades               │ 1                              │
+│                               │                                │
+│ Total/Daily Avg Trades        │ 429 / 1.58                     │
+│ Starting balance              │ 1000 USDT                      │
+│ Final balance                 │ 723.579 USDT                   │
+│ Absolute profit               │ -276.421 USDT                  │
+│ Total profit %                │ -27.64%                        │
+│ CAGR %                        │ -35.22%                        │
+│ Sortino                       │ -5.74                          │
+│ Sharpe                        │ -2.69                          │
+│ Calmar                        │ -6.05                          │
+│ SQN                           │ -1.85                          │
+│ Profit factor                 │ 0.81                           │
+│ Expectancy (Ratio)            │ -0.64 (-0.09)                  │
+│ Avg. daily profit             │ -1.016 USDT                    │
+│ Avg. stake amount             │ 244.996 USDT                   │
+│ Total trade volume            │ 631107.047 USDT                │
+│                               │                                │
+│ Long / Short trades           │ 203 / 226                      │
+│ Long / Short profit %         │ -5.67% / -21.97%               │
+│ Long / Short profit USDT      │ -56.709 / -219.712             │
+│                               │                                │
+│ Best Pair                     │ BTC/USDT:USDT -27.64%          │
+│ Worst Pair                    │ BTC/USDT:USDT -27.64%          │
+│ Best trade                    │ BTC/USDT:USDT 10.80%           │
+│ Worst trade                   │ BTC/USDT:USDT -9.59%           │
+│ Best day                      │ 29.355 USDT                    │
+│ Worst day                     │ -30.427 USDT                   │
+│ Days win/draw/lose            │ 104 / 46 / 121                 │
+│ Min/Max/Avg. Duration Winners │ 0d 00:30 / 0d 12:00 / 0d 07:02 │
+│ Min/Max/Avg. Duration Losers  │ 0d 00:00 / 0d 12:00 / 0d 05:46 │
+│ Max Consecutive Wins / Loss   │ 7 / 9                          │
+│ Rejected Entry signals        │ 0                              │
+│ Entry/Exit Timeouts           │ 0 / 0                          │
+│                               │                                │
+│ Min balance                   │ 699.221 USDT                   │
+│ Max balance                   │ 1029.821 USDT                  │
+│ Max % of account underwater   │ 32.10%                         │
+│ Absolute drawdown             │ 330.6 USDT (32.10%)            │
+│ Drawdown duration             │ 171 days 14:45:00              │
+│ Profit at drawdown start      │ 29.821 USDT                    │
+│ Profit at drawdown end        │ -300.779 USDT                  │
+│ Drawdown start                │ 2025-12-29 00:30:00            │
+│ Drawdown end                  │ 2026-06-18 15:15:00            │
+│ Market change                 │ -44.64%                        │
+└───────────────────────────────┴────────────────────────────────┘
+
+Backtested 2025-10-15 00:00:00 -> 2026-07-14 00:00:00 | Max open trades : 1
+                                                              STRATEGY SUMMARY                                                               
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃            Strategy ┃ Trades ┃ Avg Profit % ┃ Tot Profit USDT ┃ Tot Profit % ┃ Avg Duration ┃  Win  Draw  Loss  Win% ┃           Drawdown ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ TradingMLStrategyV2 │    429 │        -0.27 │        -276.421 │       -27.64 │      6:23:00 │  211     0   218  49.2 │ 330.6 USDT  32.10% │
+└─────────────────────┴────────┴──────────────┴─────────────────┴──────────────┴──────────────┴────────────────────────┴────────────────────┘
